@@ -1,12 +1,12 @@
 # SISTEMA DE INTEGRAÇÃO DE ESTUDANTES
 
-`Análise e Desenvolvimento de Sistemas`
+### `Análise e Desenvolvimento de Sistemas`
 
-`Projeto: Desenvolvimento de uma Aplicação Interativa`
+### `Projeto: Desenvolvimento de uma Aplicação Interativa`
 
-`2° SEMESTRE`
+## `EIXO 2`
 
-Temos como objetivo a criação de um sistema que integre os estudantes de um mesmo curso na modalidade EAD e que permita uma interação entre eles a partir de gostos em comum para jogos online; e que esta interação estabeleça relações entre eles, suprindo a falta de convívio proporcionada por cursos a distância. Melhorando, também, suas experiências com os jogos.
+Temos como objetivo a criação de um sistema que **integre os estudantes** de um mesmo curso na modalidade EAD e que **permita uma interação** entre eles a partir de gostos em comum para jogos online; e que esta **interação estabeleça relações entre eles, suprindo a falta de convívio** proporcionada por cursos a distância. Melhorando, também, suas experiências com os jogos.
 
 ## Integrantes
 
