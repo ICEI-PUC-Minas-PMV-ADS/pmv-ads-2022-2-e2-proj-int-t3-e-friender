@@ -11,7 +11,7 @@ Temos como objetivo a criação de um sistema que **integre os estudantes** de u
 ## Integrantes
 
 * Alex Vinicius Dutra Berton
-* Bruno Feza
+* Bruno Cesar Feza Rodrigues
 * Erick Machado Reis
 * Gervasio Felipe Ferreira Duarte
 
