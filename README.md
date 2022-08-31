@@ -12,7 +12,7 @@ Temos como objetivo a criação de um sistema que **integre os estudantes** de u
 
 * Alex Berton
 * Bruno Feza
-* Erick Reis
+* Erick Machado Reis
 * Gervasio Felipe Ferreira Duarte
 
 ## Orientador
