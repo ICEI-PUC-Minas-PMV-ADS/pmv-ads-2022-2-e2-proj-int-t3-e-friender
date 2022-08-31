@@ -1,12 +1,12 @@
 # SISTEMA DE INTEGRAÇÃO DE ESTUDANTES
 
-`CURSO`
+`Análise e Desenvolvimento de Sistemas`
 
-`DISCIPLINA`
+`Projeto: Desenvolvimento de uma Aplicação Interativa`
 
-`SEMESTRE`
+`2° SEMESTRE`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Temos como objetivo a criação de um sistema que integre os estudantes de um mesmo curso na modalidade EAD e que permita uma interação entre eles a partir de gostos em comum para jogos online; e que esta interação estabeleça relações entre eles, suprindo a falta de convívio proporcionada por cursos a distância. Melhorando, também, suas experiências com os jogos.
 
 ## Integrantes
 
