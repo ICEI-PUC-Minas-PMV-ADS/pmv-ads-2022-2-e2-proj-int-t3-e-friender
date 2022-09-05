@@ -52,11 +52,6 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 
 
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-
-
 ## Requisitos
 
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
@@ -84,27 +79,16 @@ Os requisitos não funcionais do projeto estão listados a seguir com suas respe
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-01| O sistema deve estar acessível publicamente na internet. | ALTA | 
-|RNF-02| O sistema deve ser responsivo em operações através de dispositivos mobiles.  | MÉDIA | 
-|RNF-03| O sistema deve ser compatível com os principais navegadores do mercado (Google Chrome, Firefox, Microsoft Edge)  | ALTA | 
-|RNF-04| O sistema deve funcionar 24h por dia, todos os dias da semana. | ALTA |
-|RNF-05| Dados cadastrais serão privados e disponíveis apenas para a equipe de desenvolvimento e o próprio usuário.  | ALTA | 
-|RNF-06| O projeto será desenvolvido na linguagem C# | ALTA |
+|RNF-01  | O sistema deve estar acessível publicamente na internet. | ALTA | 
+|RNF-02  | O sistema deve ser responsivo em operações através de dispositivos mobiles.  | MÉDIA | 
+|RNF-03  | O sistema deve ser compatível com os principais navegadores do mercado (Google Chrome, Firefox, Microsoft Edge)  | ALTA | 
+|RNF-04  | O sistema deve funcionar 24h por dia, todos os dias da semana. | ALTA |
+|RNF-05  | Dados cadastrais serão privados e disponíveis apenas para a equipe de desenvolvimento e o próprio usuário.  | ALTA | 
+|RNF-06  | O projeto será desenvolvido na linguagem C# | ALTA |
 
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+
+
 
 ## Restrições
 
