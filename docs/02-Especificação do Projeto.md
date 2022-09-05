@@ -22,6 +22,9 @@ As ***personas*** que ilustram nosso público-alvo são mostradas nas tabelas a 
   |||||
 | ![SemMensagensDeErros](https://user-images.githubusercontent.com/100388026/188518773-c7167451-3d91-4a68-85f1-5cbcc767a5b7.png)
  **Joana Alencar** **28** Auxiliar de produção, busca mudar de área após nova formação acadêmica.|Ingressar no mercado de programação,	Ampliar renda salarial,	Independência financeira, Conhecer novos jogos|Instabilidade financeira, Pouco poder de compra, Dificuldade de socialização|Jogar videogame, Navegar pelas redes sociais, Leitura Geek, Stardew Valley, The Sims, Fall Guys.
+|||||
+| ![SemMensagensDeErros](https://user-images.githubusercontent.com/100388026/188519162-c06372d1-7ba8-4d0d-8b32-15f046ba8895.png)
+ **Gabriela Cândido** **35** anos Recepcionista, busca migrar para programação e frequenta cursos online sobre o assunto.|Ampliar renda salarial, Independência financeira, Morar em outro país, Mudar de profissão|Problemas familiares, Insegurança pessoal|Ler livros, Ir à academia, Praticar yoga, Jogar no celular, Candy Crush, Summoners War, Clash Royalle
 
 
 
