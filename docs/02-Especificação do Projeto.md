@@ -80,11 +80,16 @@ A seguir estão listados todos os requisitos funcionais do projeto e as priorida
 
 
 ### Requisitos não Funcionais
+Os requisitos não funcionais do projeto estão listados a seguir com suas respectivas prioridades:
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-01| O sistema deve estar acessível publicamente na internet. | ALTA | 
+|RNF-02| O sistema deve ser responsivo em operações através de dispositivos mobiles.  | MÉDIA | 
+|RNF-03| O sistema deve ser compatível com os principais navegadores do mercado (Google Chrome, Firefox, Microsoft Edge)  | ALTA | 
+|RNF-04| O sistema deve funcionar 24h por dia, todos os dias da semana. | ALTA |
+|RNF-05| Dados cadastrais serão privados e disponíveis apenas para a equipe de desenvolvimento e o próprio usuário.  | ALTA | 
+|RNF-06| O projeto será desenvolvido na linguagem C# | ALTA |
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
