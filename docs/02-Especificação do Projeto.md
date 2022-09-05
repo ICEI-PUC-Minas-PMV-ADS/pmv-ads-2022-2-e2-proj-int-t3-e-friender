@@ -12,13 +12,16 @@ As ***personas*** que ilustram nosso público-alvo são mostradas nas tabelas a 
 | `USUÁRIO` |`MOTIVAÇÕES`| `FRUSTRAÇÕES` | `HOBBIES / JOGOS / APLICATIVOS` |
 |----------------------|--------------------|--------------------|------------------------|
 |![SemMensagensDeErros](https://user-images.githubusercontent.com/100388026/188516668-8a3b2ab4-a799-4d6d-8d8a-7b1edd0332db.png)
-**Gabriel Toledo** **30** anos, **Ocupação:** Estudante, busca se tornar um engenheiro e seguir a carreira do pai. | Ler livros, Assistir seriados/filmes,Jogar no computador|Não poder comprar o que quer, Pouco tempo livre, Falta de crescimento profissional|Ler livros, Assistir seriados/filmes, Jogar no computador,Counter Strike, Valorant, Call of Duty|
+**Gabriel Toledo** **30** anos, Estudante, busca se tornar um engenheiro e seguir a carreira do pai. | Ler livros, Assistir seriados/filmes,Jogar no computador|Não poder comprar o que quer, Pouco tempo livre, Falta de crescimento profissional|Ler livros, Assistir seriados/filmes, Jogar no computador,Counter Strike, Valorant, Call of Duty|
 |||||
 | ![SemMensagensDeErros](https://user-images.githubusercontent.com/100388026/188517763-8b38fbd8-b895-40b6-9445-8b502df909a7.png)
  **Rafael Lange** **23** anos, Cadeirante e com dificuldade de fala, ocupa um cargo PCD em uma grande empresa, mas almeja ir para área de Design e por isso faz cursos online.|Mudar de área, Ajudar a família, Sair com os amigos, Ser aceito|Sofre preconceito por conta da sua condição, Ter poucos amigos, Vida amorosa instável| Jogar jogos no computador, Assistir streams de jogos,Assistir séries/filmes.
  |||||
 | ![SemMensagensDeErros](https://user-images.githubusercontent.com/100388026/188518367-be31ef98-9519-4e53-ae34-a3d3971a4a7b.png)
- **Aline Fukushima** **19** **Ocupação:** Estudante, busca ser uma desenvolvedora de software.|Ingressar no mercado de desenvolvimento, Comprar um novo computador, Sair com os amigos|Não ter estabilidade financeira, Não ter experiência de trabalho, Pouco poder de compra|Jogar jogos online, Assistir streams de jogos, Ler notícias de e-sports, Pokémon TCG, Fortnite, Minecraft, League of Legends
+ **Aline Fukushima** **19** Estudante, busca ser uma desenvolvedora de software.|Ingressar no mercado de desenvolvimento, Comprar um novo computador, Sair com os amigos|Não ter estabilidade financeira, Não ter experiência de trabalho, Pouco poder de compra|Jogar jogos online, Assistir streams de jogos, Ler notícias de e-sports, Pokémon TCG, Fortnite, Minecraft, League of Legends.
+  |||||
+| ![SemMensagensDeErros](https://user-images.githubusercontent.com/100388026/188518773-c7167451-3d91-4a68-85f1-5cbcc767a5b7.png)
+ **Joana Alencar** **28** Auxiliar de produção, busca mudar de área após nova formação acadêmica.|Ingressar no mercado de programação,	Ampliar renda salarial,	Independência financeira, Conhecer novos jogos|Instabilidade financeira, Pouco poder de compra, Dificuldade de socialização|Jogar videogame, Navegar pelas redes sociais, Leitura Geek, Stardew Valley, The Sims, Fall Guys.
 
 
 
