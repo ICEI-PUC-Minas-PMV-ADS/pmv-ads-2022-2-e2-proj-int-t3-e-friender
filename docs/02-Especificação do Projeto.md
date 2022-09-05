@@ -8,7 +8,29 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+As ***personas*** que ilustram nosso público-alvo são mostradas nas tabelas a seguir: 
+| `USUÁRIO` |`MOTIVAÇÕES`| `FRUSTRAÇÕES` | `HOBBIES / JOGOS` |
+|----------------------|--------------------|--------------------|------------------------|
+|![SemMensagensDeErros](https://user-images.githubusercontent.com/100388026/188516668-8a3b2ab4-a799-4d6d-8d8a-7b1edd0332db.png)
+**Gabriel Toledo** **30** anos, **Ocupação:** Estudante, busca se tornar um engenheiro e seguir a carreira do pai. | Ler livros, Assistir seriados/filmes,Jogar no computador|Não poder comprar o que quer, Pouco tempo livre, Falta de crescimento profissional|Ler livros, Assistir seriados/filmes, Jogar no computador,Counter Strike, Valorant, Call of Duty|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
 
