@@ -109,6 +109,7 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 ## Diagrama de Casos de Uso
 
 A fim de detalhar os requisitos funcionais do sistema, elaborou-se um diagrama de caso de uso, elucidando os relacionamentos que os atores podem ter com produto desenvolvido: 
+
 ![Diagrama de caso de uso](https://user-images.githubusercontent.com/63081926/189237586-e881762f-b348-4e7c-81ed-325606dc49cd.PNG)
 
 
