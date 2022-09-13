@@ -45,10 +45,10 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 
 **Equipe de Desenvolvimento e Design:**
 
-● Alex Vinicius Dutra Berton
-● Bruno Cesar Feza Rodrigues
-● Erick Machado Reis
-● Gervasio Felipe Ferreira Duarte
+- Alex Vinicius Dutra Berton
+- Bruno Cesar Feza Rodrigues
+- Erick Machado Reis
+- Gervasio Felipe Ferreira Duarte
 
 
 > **Links Úteis**:
