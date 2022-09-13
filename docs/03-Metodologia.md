@@ -37,9 +37,19 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 
 ## Gerenciamento de Projeto
 
+
+
 ### Divisão de Papéis
 
-Apresente a divisão de papéis entre os membros do grupo.
+
+
+**Equipe de Desenvolvimento e Design:**
+
+● Alex Vinicius Dutra Berton
+● Bruno Cesar Feza Rodrigues
+● Erick Machado Reis
+● Gervasio Felipe Ferreira Duarte
+
 
 > **Links Úteis**:
 > - [11 Passos Essenciais para Implantar Scrum no seu 
@@ -48,7 +58,36 @@ Apresente a divisão de papéis entre os membros do grupo.
 
 ### Processo
 
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
+Para organização e distribuição das tarefas do projeto, a equipe está utilizando o Trello, estruturado com as seguintes listas:
+
+● **Propriedades das Tarefas:** É a etiqueta das tarefas, ou a prioridade em que serão apresentadas sendo alta cor vermelha, média cor amarela ou baixa cor verde.
+
+● **Backlog:** Lista ordenada de todos os requisitos que se tem conhecimento de que precisam estar no produto. Cada tarefa está associada a um 'milestone', que pressupõe uma entrega final.
+
+● **A Fazer:** Tarefas que estão disponíveis para os desenvolvedores fazer e ninguém assumiu ainda, ou seja está separada para entrega e aguardadndo o desenvolvedor assumir a resposabilidade por ela;
+
+● **Em Andamento:** Quando uma tarefa do Sprint Backlog tiver sido iniciada, ela é movida para cá;
+
+● **Teste:** Aqui são movidos as tarefas prontas para teste.
+
+● **Conclído:** Nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário.
+
+O quadro KANBAN do grupo no Trello está disponível através da URL: https://trello.com/b/MJCpx153/quadro-kanban-sistema-de-integra%C3%A7%C3%A3o-de-estudantes-ead e é apresentado, no estado atual, na Figura abaixo.
+
+![ArquiteturaCorreto - Copia (2)](https://user-images.githubusercontent.com/100388026/189783848-4aa5274e-550c-4819-8ed6-1c4473e2f951.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
  
 > **Links Úteis**:
 > - [Project management, made simple](https://github.com/features/project-management/)
@@ -56,7 +95,27 @@ Coloque  informações sobre detalhes da implementação do Scrum seguido pelo g
 > - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
 > - [Tutorial Slack](https://slack.com/intl/en-br/)
 
+
+
 ### Ferramentas
+Estão sendo importantes no processo de desenvolvimento deste projeto o github como versionador de código onde é armazenada as partes prontas do projeto, o trello onde é organizado e separado as tarefas temos também os aplicativos e sites de comunicação com whattsap e discord, pois assim como em algumas 
+empresas que atuam no chamado "homeoffice" o curso é totalmente a distância nos forçando cada vez mais atuar com clareza em dadas ideias para o projeto.
+
+
+As ferramentas empregadas no projeto estão descritas na tabela abaixo:
+
+|**FUNÇÃO**| **PLATAFORMA** |**LINK DE ACESSO**|
+|--------------------|------------------------------------|----------------------------------------|
+|**Repositório de Código Fonte**|**GitHub**|https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-2-e2-proj-int-t3-e-friender|
+|**Projeto de Interface - Wireframe**|**Figma**|https://www.figma.com/|
+|**Editor de Código**|**VS Code**|https://code.visualstudio.com/|
+|**Ferramentas de Comunição**|**Teams e WhatsApp**|https://teams.microsoft.com/ , https://web.whatsapp.com/ , https://discord.com/ , https://trello.com/|
+
+
+
+
+
+
 
 As ferramentas empregadas no projeto são:
 
