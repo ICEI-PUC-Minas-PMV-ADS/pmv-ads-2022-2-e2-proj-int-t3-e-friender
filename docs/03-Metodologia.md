@@ -1,8 +1,6 @@
 
 # Metodologia
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
-
 Para atingirmos nosso objetivo da maneira esperada, precisamos utilizar ferramentas e processos que facilitem nossas tarefas. Para isso, escolhemos plataformas que auxiliam na organização e gerenciamento dos artefatos produzidos a cada sprint. 
 
 ## Controle de Versão
@@ -27,7 +25,7 @@ etiquetas:
 - `feature`: uma nova funcionalidade precisa ser introduzida
 
 Discuta como a configuração do projeto foi feita na ferramenta de versionamento escolhida. Exponha como a gerência de tags, merges, commits e branchs é realizada. Discuta como a gerência de issues foi realizada.
-
+**Ficou definido que a cada commit feita o titulo seria endereçado a alteração**
 > **Links Úteis**:
 > - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
 > - [Git e Github](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
