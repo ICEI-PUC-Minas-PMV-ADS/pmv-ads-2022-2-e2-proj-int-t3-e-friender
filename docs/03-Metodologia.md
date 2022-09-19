@@ -3,7 +3,7 @@
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
 
-Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Definições sobre os ambiente de trabalho utilizados pela  equipe para desenvolver o projeto. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).
+Para atingirmos nosso objetivo da maneira esperada, precisamos utilizar ferramentas e processos que facilitem nossas tarefas. Para isso, escolhemos plataformas que auxiliam na organização e gerenciamento dos artefatos produzidos a cada sprint. 
 
 ## Controle de Versão
 
@@ -36,12 +36,13 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 > - [The gitflow workflow - in less than 5 mins](https://www.youtube.com/watch?v=1SXpE08hvGs)
 
 ## Gerenciamento de Projeto
-
+A equipe escolheu o ***SCRUM***, uma ***metodologia ágil***, como base para o ***planejamento e gereciamento do projeto***. Esta é uma metodologia efetiva, simples e flexível para **pequenas equipes**, deixando o projeto passível de sofrer ***incrementos*** a cada nova ***Sprint***.
 
 
 ### Divisão de Papéis
 
-
+- **Product Owner:** Profª. José Wilson da Costa 
+- **Scrum Master:** A Definir
 
 **Equipe de Desenvolvimento e Design:**
 
@@ -51,26 +52,28 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 - Gervasio Felipe Ferreira Duarte
 
 
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu 
-> Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
+
+
+
+
 
 ### Processo
 
 Para organização e distribuição das tarefas do projeto, a equipe está utilizando o Trello, estruturado com as seguintes listas:
 
-● **Propriedades das Tarefas:** É a etiqueta das tarefas, ou a prioridade em que serão apresentadas sendo alta cor vermelha, média cor amarela ou baixa cor verde.
+- **Propriedades das Tarefas:** É a etiqueta das tarefas, ou a prioridade em que serão apresentadas sendo alta cor vermelha, média cor amarela ou baixa cor verde.
 
-● **Backlog:** Lista ordenada de todos os requisitos que se tem conhecimento de que precisam estar no produto. Cada tarefa está associada a um 'milestone', que pressupõe uma entrega final.
+- **Backlog:** Lista ordenada de todos os requisitos que se tem conhecimento de que precisam estar no produto. Cada tarefa está associada a um 'milestone', que pressupõe uma entrega final.
 
-● **A Fazer:** Tarefas que estão disponíveis para os desenvolvedores fazer e ninguém assumiu ainda, ou seja está separada para entrega e aguardadndo o desenvolvedor assumir a resposabilidade por ela;
+- **A Fazer:** Tarefas que estão disponíveis para os desenvolvedores fazer e ninguém assumiu ainda, ou seja está separada para entrega e aguardadndo o desenvolvedor assumir a resposabilidade por ela;
 
-● **Em Andamento:** Quando uma tarefa do Sprint Backlog tiver sido iniciada, ela é movida para cá;
+- **Em Andamento:** Quando uma tarefa do Sprint Backlog tiver sido iniciada, ela é movida para cá;
 
-● **Teste:** Aqui são movidos as tarefas prontas para teste.
+- **Teste:** Aqui são movidos as tarefas prontas para teste.
 
-● **Conclído:** Nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário.
+- **Conclído:** todas as tarefas do sprint que já foram concluídas pela equipe de desenvolvimento.
+
+- **Lembrete:** uma aba com as datas das próximas entregas e a referência delas. 
 
 O quadro KANBAN do grupo no Trello está disponível através da URL: https://trello.com/b/MJCpx153/quadro-kanban-sistema-de-integra%C3%A7%C3%A3o-de-estudantes-ead e é apresentado, no estado atual, na Figura abaixo.
 
@@ -84,22 +87,8 @@ O quadro KANBAN do grupo no Trello está disponível através da URL: https://tr
 
 
 
-
-
-
-
- 
-> **Links Úteis**:
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
-> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
-
-
-
 ### Ferramentas
-Estão sendo importantes no processo de desenvolvimento deste projeto o github como versionador de código onde é armazenada as partes prontas do projeto, o trello onde é organizado e separado as tarefas temos também os aplicativos e sites de comunicação com whattsap e discord, pois assim como em algumas 
-empresas que atuam no chamado "homeoffice" o curso é totalmente a distância nos forçando cada vez mais atuar com clareza em dadas ideias para o projeto.
+Estão sendo importantes no processo de desenvolvimento deste projeto o github como versionador de código onde é armazenada as partes prontas do projeto e por pssuir compatibilidade com o VS.Code foram escolhidos, o trello onde é organizado e separado as tarefas temos também os aplicativos e sites de comunicação com whattsap e discord, pois assim como em algumas empresas que atuam no chamado "home office" o curso é totalmente a distância nos forçando cada vez mais atuar com clareza em dadas ideias para o projeto.
 
 
 As ferramentas empregadas no projeto estão descritas na tabela abaixo:
@@ -112,25 +101,3 @@ As ferramentas empregadas no projeto estão descritas na tabela abaixo:
 |**Ferramentas de Comunição**|**Teams e WhatsApp**|https://teams.microsoft.com/ , https://web.whatsapp.com/ , https://discord.com/ , https://trello.com/|
 
 
-
-
-
-
-
-As ferramentas empregadas no projeto são:
-
-- Editor de código.
-- Ferramentas de comunicação
-- Ferramentas de desenho de tela (_wireframing_)
-
-O editor de código foi escolhido porque ele possui uma integração com o
-sistema de versão. As ferramentas de comunicação utilizadas possuem
-integração semelhante e por isso foram selecionadas. Por fim, para criar
-diagramas utilizamos essa ferramenta por melhor captar as
-necessidades da nossa solução.
-
-Liste quais ferramentas foram empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível.
- 
-> **Possíveis Ferramentas que auxiliarão no gerenciamento**: 
-> - [Slack](https://slack.com/)
-> - [Github](https://github.com/)
