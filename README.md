@@ -7,8 +7,8 @@
 ### `Projeto: Desenvolvimento de uma Aplicação Interativa`
 
 ## `EIXO 2`
+![Icon - efriender](https://user-images.githubusercontent.com/103212087/192883983-9cd0379b-f88d-4941-b656-e2538c7ac599.png)
 
-(https://user-images.githubusercontent.com/103212087/192883856-2f45c5af-e5a7-4dde-ad5c-f19524f33d0f.png)
 
 Temos como objetivo a criação de um sistema que **integre os estudantes** de um mesmo curso na modalidade EAD e que **permita uma interação** entre eles a partir de gostos em comum para jogos online; e que esta **interação estabeleça relações entre eles, suprindo a falta de convívio** proporcionada por cursos a distância. Melhorando, também, suas experiências com os jogos.
 
