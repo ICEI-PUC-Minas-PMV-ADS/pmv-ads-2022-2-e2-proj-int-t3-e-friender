@@ -13,7 +13,7 @@
 Temos como objetivo a criação de um sistema que **integre os estudantes** de um mesmo curso na modalidade EAD e que **permita uma interação** entre eles a partir de gostos em comum para jogos online; e que esta **interação estabeleça relações entre eles, suprindo a falta de convívio** proporcionada por cursos a distância. Melhorando, também, suas experiências com os jogos.
 
 
-## Pitch de Apresentação
+## Pitch de Apresentação da Proposta
 https://user-images.githubusercontent.com/103212087/192888633-3c756d24-a467-4f4a-8410-29da73c9f8d6.mp4
 
 
