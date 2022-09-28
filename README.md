@@ -8,7 +8,7 @@
 
 ## `EIXO 2`
 
-![WhatsApp I![Icon - efriender](https://user-images.githubusercontent.com/103212087/192883856-2f45c5af-e5a7-4dde-ad5c-f19524f33d0f.png)
+(https://user-images.githubusercontent.com/103212087/192883856-2f45c5af-e5a7-4dde-ad5c-f19524f33d0f.png)
 
 Temos como objetivo a criação de um sistema que **integre os estudantes** de um mesmo curso na modalidade EAD e que **permita uma interação** entre eles a partir de gostos em comum para jogos online; e que esta **interação estabeleça relações entre eles, suprindo a falta de convívio** proporcionada por cursos a distância. Melhorando, também, suas experiências com os jogos.
 
