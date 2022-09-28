@@ -7,7 +7,7 @@
 ### `Projeto: Desenvolvimento de uma Aplicação Interativa`
 
 ## Logo da Aplicação
-![Icon - efriender](https://user-images.githubusercontent.com/103212087/192883983-9cd0379b-f88d-4941-b656-e2538c7ac599.png)
+![Icon - efriender2](https://user-images.githubusercontent.com/103212087/192889701-02a00a31-45a2-482a-9830-55dc72720288.png)
 
 
 Temos como objetivo a criação de um sistema que **integre os estudantes** de um mesmo curso na modalidade EAD e que **permita uma interação** entre eles a partir de gostos em comum para jogos online; e que esta **interação estabeleça relações entre eles, suprindo a falta de convívio** proporcionada por cursos a distância. Melhorando, também, suas experiências com os jogos.
