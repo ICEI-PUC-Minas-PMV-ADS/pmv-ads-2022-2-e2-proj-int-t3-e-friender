@@ -46,7 +46,7 @@ A equipe escolheu o ***SCRUM***, uma ***metodologia ágil***, como base para o *
 - Alex Vinicius Dutra Berton
 - Erick Machado Reis
 
-**Equipe de Design:*
+**Equipe de Design:**
 - Bruno Cesar Feza Rodrigues
 
 
@@ -94,7 +94,7 @@ As ferramentas empregadas no projeto estão descritas na tabela abaixo:
 |**FUNÇÃO**| **PLATAFORMA** |**LINK DE ACESSO**|
 |--------------------|------------------------------------|----------------------------------------|
 |**Repositório de Código Fonte**|**GitHub**|https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-2-e2-proj-int-t3-e-friender|
-|**Projeto de Interface - Wireframe**|**Figma**|https://www.figma.com/file/SlSHLutajUrMSm3ULGrj5G/E-Friender-Wireframe?node-id=0%3A1
+|**Projeto de Interface - Wireframe**|**Figma**|[https://www.figma.com/file/SlSHLutajUrMSm3ULGrj5G/E-Friender-Wireframe?node-id=0%3A1]
 |**Editor de Código**|**VS Code**|https://code.visualstudio.com/|
 |**Ferramentas de Comunição**|**Teams e WhatsApp**|https://teams.microsoft.com/ , https://web.whatsapp.com/ , https://discord.com/ , https://trello.com/|
 
