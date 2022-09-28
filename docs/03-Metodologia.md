@@ -40,15 +40,14 @@ A equipe escolheu o ***SCRUM***, uma ***metodologia ágil***, como base para o *
 ### Divisão de Papéis
 
 - **Product Owner:** Profª. José Wilson da Costa 
-- **Scrum Master:** A Definir
+- **Scrum Master:** Gervasio Felipe Ferreira Duarte
 
-**Equipe de Desenvolvimento e Design:**
-
+**Equipe de Desenvolvimento:**
 - Alex Vinicius Dutra Berton
-- Bruno Cesar Feza Rodrigues
 - Erick Machado Reis
-- Gervasio Felipe Ferreira Duarte
 
+**Equipe de Design:*
+- Bruno Cesar Feza Rodrigues
 
 
 
@@ -86,7 +85,8 @@ O quadro KANBAN do grupo no Trello está disponível através da URL: https://tr
 
 
 ### Ferramentas
-Estão sendo importantes no processo de desenvolvimento deste projeto o github como versionador de código onde é armazenada as partes prontas do projeto e por pssuir compatibilidade com o VS.Code foram escolhidos, o trello onde é organizado e separado as tarefas temos também os aplicativos e sites de comunicação com whattsap e discord, pois assim como em algumas empresas que atuam no chamado "home office" o curso é totalmente a distância nos forçando cada vez mais atuar com clareza em dadas ideias para o projeto.
+  Estão sendo importantes no processo de desenvolvimento desta aplicação: o github como versionador de código onde é armazenada as partes prontas do projeto e por pssuir compatibilidade com o VS.Code. Foi escolhido o Trello, onde é organizado e separado as tarefas. O Figma como ferramenta de edição dos wireframes. 
+  Temos também os aplicativos e sites de comunicação com whattsap e discord, pois assim como em algumas empresas que atuam no chamado "home office" o curso é totalmente à distância nos forçando cada vez mais atuar com clareza em dadas ideias para o projeto.
 
 
 As ferramentas empregadas no projeto estão descritas na tabela abaixo:
@@ -94,7 +94,7 @@ As ferramentas empregadas no projeto estão descritas na tabela abaixo:
 |**FUNÇÃO**| **PLATAFORMA** |**LINK DE ACESSO**|
 |--------------------|------------------------------------|----------------------------------------|
 |**Repositório de Código Fonte**|**GitHub**|https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-2-e2-proj-int-t3-e-friender|
-|**Projeto de Interface - Wireframe**|**Figma**|https://www.figma.com/|
+|**Projeto de Interface - Wireframe**|**Figma**|https://www.figma.com/file/SlSHLutajUrMSm3ULGrj5G/E-Friender-Wireframe?node-id=0%3A1
 |**Editor de Código**|**VS Code**|https://code.visualstudio.com/|
 |**Ferramentas de Comunição**|**Teams e WhatsApp**|https://teams.microsoft.com/ , https://web.whatsapp.com/ , https://discord.com/ , https://trello.com/|
 
