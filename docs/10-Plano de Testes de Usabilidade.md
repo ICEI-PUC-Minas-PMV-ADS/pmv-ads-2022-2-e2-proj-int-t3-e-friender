@@ -1,15 +1,58 @@
 # Plano de Testes de Usabilidade
 
-Os testes de usabilidade permitem avaliar a qualidade da interface com o usuário da aplicação interativa.
+Apresenta-se a seguir o Plano de Teste de Usabilidade da aplicação E-FRIENDER.
 
-Um plano de teste de usabilidade deverá conter: o detalhamento dos objetivos (em função dos requisitos levantados/implementados), dos critérios que serão utilizados para a seleção dos participantes, dos procedimentos a serem adotados pelos condutores de teste (por exemplo: os testes serão presenciais ou remotos? o método será observação direta, medição ou avaliação?), das tarefas a serem executadas, dos dados a serem coletados (quantidade de cliques, número de erros, tempo etc.), a ordem de execução das tarefas e das etapas da sessão de teste, recursos demandados, métricas coletadas etc.
+### OBJETIVOS
 
-Para cada voluntário do teste, é fundamental coletar e apresentar todos os dados/métricas previamente definidos, mas não se esqueça: atendendo à LGPD (Lei Geral de Proteção de Dados), nenhum dado sensível, que permita identificar o voluntário, deverá ser apresentado).
+- Validar o fluxo de navegação e encontrabilidade das informações na interface;
+- Validar o funcionamento das funcionalidades implementadas;
+- Validar o fluxo da nevegação na aplicação;
+- Colher a percepção do usuário da aplicação.
 
-As referências abaixo irão auxiliá-lo na geração do artefato "Plano de Testes de Usabilidade".
+### TAREFAS
 
-> **Links Úteis**:
-> - [Teste De Usabilidade: O Que É e Como Fazer Passo a Passo (neilpatel.com)](https://neilpatel.com/br/blog/teste-de-usabilidade/)
-> - [Teste de usabilidade: tudo o que você precisa saber! | by Jon Vieira | Aela.io | Medium](https://medium.com/aela/teste-de-usabilidade-o-que-voc%C3%AA-precisa-saber-39a36343d9a6/)
-> - [Planejando testes de usabilidade: o que (e o que não) fazer | iMasters](https://imasters.com.br/design-ux/planejando-testes-de-usabilidade-o-que-e-o-que-nao-fazer/)
-> - [Ferramentas de Testes de Usabilidade](https://www.usability.gov/how-to-and-tools/resources/templates.html)
+- Entre no website da aplicação e precisa se cadastrar. Descreva e apresente na tela como seria esse processo. 
+- Realize autenticação no sistema com suas credências de acesso obtidas no cadastro. 
+- Acesse a área de Perfil e atualize seus dados.
+- Acesse a área de Perfil e utilize o filtro de preferência por usuários. Descreva os passos necessários. 
+- Na tela principal, pule um usuário. 
+- Na tela principal, dê like em um usaário. 
+- Abra uma conversa com um match e envie uma mensagem. 
+- Entre no Perfil de um usuário com quem tenha dado match e realize avaliação do Perfil.
+- Visualize o Perfil de usuarios com quem não tenha dado match.
+
+### PERFIL PARA TESTE
+
+Para a execução das tarefas desse ciclo será priorizada o perfil de Usuário.
+
+### USUÁRIOS
+
+Serão necessários 03 usuários para a realização dos testes.
+
+### RECURSOS NECESSÁRIOS
+
+Notebook e dispositivo movél. Google Meet ou outro aplicação de videoconferência. Software para gravação de tela do usuário (recurso nativo em muitos notebooks e dispositivos movéis.
+
+### RECRUTAMENTO 
+
+O recrutamento será feito por meio de divulgação nas redes sociais da aplicação ou convidando usuários em grupos de aplicativos de conversa em que os desenvolvedores estejam participando.
+
+### LOCAL, DATA E HORA
+
+Formato: Remoto
+Data: 05/11/2022 as 14:00
+
+### PESSOAS DO TIME ENVOLVIDAS
+
+Desenvolvedores responsaveis pelo Frontend.
+
+### DURAÇÃO
+
+O teste terá duração maxima de 60 minutos.
+
+### TEMPO DO TIME
+
+Estima-se cerca de 40 horas para planejamento, execução, análise e apresentação dos resultados.
+
+
+
