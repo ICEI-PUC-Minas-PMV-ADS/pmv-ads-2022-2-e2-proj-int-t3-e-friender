@@ -32,21 +32,13 @@ O projeto da base de dados corresponde à representação das entidades e relaci
  ![lógico](https://user-images.githubusercontent.com/63081926/192116561-6ca8198c-36e3-43fa-ae18-eadc20120c6c.PNG)
 
  
-Para mais informações, consulte o microfundamento "Modelagem de Dados".
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+Estão sendo importantes no processo de desenvolvimento desta aplicação: o github como versionador de código onde é armazenada as partes prontas do projeto e por pssuir compatibilidade com o VS.Code. Foi escolhido o Trello, onde é organizado e separado as tarefas. O Figma como ferramenta de edição dos wireframes. Temos também os aplicativos e sites de comunicação com whattsap e discord.
+A junção destas tecnologias vai permitir a interação de todos os integrantes do grupo se comunicar e fazer as devidas tarefas.
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
 
 ## Hospedagem
+A hospedagem será feita através do GitHub Pages, esta hospedagem é feita executando os arquivos feitos pela publicação no site, esta ferramenta permite hospedar seu site no domínio github.io, a publicação é feita através do comando git para o repositório encontrado em o endereço: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-2-e2-proj-int-t3-e-friender
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
-
-> **Links Úteis**:
->
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
