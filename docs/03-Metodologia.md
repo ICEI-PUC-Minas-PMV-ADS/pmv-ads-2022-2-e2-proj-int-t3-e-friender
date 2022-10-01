@@ -1,7 +1,7 @@
 
 # Metodologia
 
-Para atingirmos nosso objetivo da maneira esperada, precisamos utilizar ferramentas e processos que facilitem nossas tarefas. Para isso, escolhemos plataformas que auxiliam na organização e gerenciamento dos artefatos produzidos a cada sprint. 
+Para atingirmos nosso objetivo da maneira esperada, precisamos utilizar ferramentas e processos que facilitem nossas tarefas. Para isso, escolhemos plataformas que auxiliam na organização e gerenciamento dos artefatos produzidos a cada sprint o Trello, onde cada integrante tendo pego determinada tarefa para fazer irá move-lá para a aba **A Fazer** deixando claro que aquela tarefa está em processo e após o término mover para a aba **Concluído**. 
 
 ## Controle de Versão
 
@@ -24,14 +24,11 @@ etiquetas:
 - `enhancement`: uma funcionalidade precisa ser melhorada
 - `feature`: uma nova funcionalidade precisa ser introduzida
 
-Discuta como a configuração do projeto foi feita na ferramenta de versionamento escolhida. Exponha como a gerência de tags, merges, commits e branchs é realizada. Discuta como a gerência de issues foi realizada.
-**Ficou definido que a cada commit feita o titulo seria endereçado a alteração**
-> **Links Úteis**:
-> - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
-> - [Git e Github](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
->  - [Comparando fluxos de trabalho](https://www.atlassian.com/br/git/tutorials/comparing-workflows)
-> - [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
-> - [The gitflow workflow - in less than 5 mins](https://www.youtube.com/watch?v=1SXpE08hvGs)
+Optamos por fazer o clone do repositório e cada um dos integrantes do grupo a medida que pegar uma tarefa no Backlog, assim ficou definido que a cada commit feita o título seria endereçado a alteração e se necessário passível de descrição conhecidas também como Tags
+
+
+
+
 
 ## Gerenciamento de Projeto
 A equipe escolheu o ***SCRUM***, uma ***metodologia ágil***, como base para o ***planejamento e gereciamento do projeto***. Esta é uma metodologia efetiva, simples e flexível para **pequenas equipes**, deixando o projeto passível de sofrer ***incrementos*** a cada nova ***Sprint***.
