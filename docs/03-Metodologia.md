@@ -42,7 +42,7 @@ A equipe escolheu o ***SCRUM***, uma ***metodologia ágil***, como base para o *
 **Equipe de Desenvolvimento:**
 - Alex Vinicius Dutra Berton
 - Erick Machado Reis
-
+- Fred Vasquez
 **Equipe de Design:**
 - Bruno Cesar Feza Rodrigues
 
