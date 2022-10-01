@@ -23,6 +23,7 @@ https://user-images.githubusercontent.com/103212087/192888633-3c756d24-a467-4f4a
 * Alex Vinicius Dutra Berton
 * Bruno Cesar Feza Rodrigues
 * Erick Machado Reis
+* Fred Vasquez
 * Gervasio Felipe Ferreira Duarte
 
 ## Orientador
