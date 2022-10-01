@@ -2,7 +2,7 @@
 
 Os testes de usabilidade permitem avaliar a qualidade da interface com o usuário da aplicação interativa.
 
-![Plano de usabilidade](https://user-images.githubusercontent.com/63081926/193429935-bde3c54a-2398-4c76-a4db-f1a5167c493e.png)
+![Plano de usabilidade (1)](https://user-images.githubusercontent.com/63081926/193429999-b490b108-c2c3-4edc-9d36-61b137680449.png)
 
 As referências abaixo irão auxiliá-lo na geração do artefato "Plano de Testes de Usabilidade".
 
