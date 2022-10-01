@@ -5,13 +5,12 @@ As telas foram criadas de modo interativo e visando o fácil acesso do usuário 
 
 ## Diagrama de Fluxo
 
-O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema interativo e muitas vezes sem a necessidade do desenho do design das telas da interface. Isso permite que o design das interações seja bem planejado e gere impacto na qualidade no design do wireframe interativo que será desenvolvido logo em seguida.
 
 ![Fluxo do Usuário](https://user-images.githubusercontent.com/103212087/192886195-eb7753b6-9fbe-4c29-bdcf-e9b783b86cf6.png)
 
 
 ## Wireframes
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
+Protótipos que serão usados em nosso design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas.
 
 ## Home Page:
 ![1 - Home Page](https://user-images.githubusercontent.com/103212087/192886739-47e0ba65-99b9-46b2-bf1d-03530c616733.png)
