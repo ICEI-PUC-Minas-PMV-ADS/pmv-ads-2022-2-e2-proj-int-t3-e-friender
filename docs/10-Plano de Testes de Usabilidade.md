@@ -54,6 +54,5 @@ O teste terá duração maxima de 60 minutos.
 
 Estima-se cerca de 40 horas para planejamento, execução, análise e apresentação dos resultados.
 
-![Plano de usabilidade (1)](https://user-images.githubusercontent.com/63081926/193429999-b490b108-c2c3-4edc-9d36-61b137680449.png)
 
 
