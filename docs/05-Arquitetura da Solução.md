@@ -26,7 +26,7 @@ A referência abaixo irá auxiliá-lo na geração do artefato “Modelo ER”.
 
 O projeto da base de dados corresponde à representação das entidades e relacionamentos identificadas no Modelo ER, no formato de tabelas, com colunas e chaves primárias/estrangeiras necessárias para representar corretamente as restrições de integridade.
  
- ![lógico](https://user-images.githubusercontent.com/63081926/192116561-6ca8198c-36e3-43fa-ae18-eadc20120c6c.PNG)
+![image](https://user-images.githubusercontent.com/63081926/193693685-39c914c9-5363-4d6f-8767-a55c66cb6740.png)
 
  
 
