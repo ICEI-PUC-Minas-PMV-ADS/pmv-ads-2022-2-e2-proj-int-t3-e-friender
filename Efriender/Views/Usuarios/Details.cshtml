@@ -1,0 +1,63 @@
+﻿@model EFriender.Models.Usuario
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Usuario</h4>
+    <hr />
+
+    <div class="text-center">
+        <img class="mb-4 rounded" src="~/imagens/@Model.UrlImagem" width="40%" />
+    </div>
+
+    <hr />
+
+    <div class="text-center d-flex justify-content-around">
+
+        <div class="w-25">
+            <h2>Nome:</h2>
+            <h4 class="opacity-50">@Model.Nome</h4>
+
+            <h2>Idade:</h2>
+            <h4 class="opacity-50">@Model.Idade</h4>
+
+            <h2>Gênero:</h2>
+            <h4 class="opacity-50">@Model.Genero</h4>
+        </div>
+
+        <div class="w-25">
+            <h2>Jogo Favorito:</h2>
+            <h4 class="opacity-50">@Model.Jogos.Nome</h4>
+            <img src="~/imagens/@Model.Jogos.UrlImagem" width="75px" height="75px" />
+
+            <h2>Nick:</h2>
+            <h4 class="opacity-50">@Model.Nick</h4>
+
+            <h2>Discord:</h2>
+            <h4 class="opacity-50">@Model.Discord</h4>
+        </div>
+
+        <div>
+            <h2>Curso:</h2>
+            <h4 class="opacity-50">@Model.Curso</h4>
+
+            <h2>Faculdade:</h2>
+            <h4 class="opacity-50">@Model.Faculdade</h4>
+
+            <h2>Descrição:</h2>
+            <h4 class="opacity-50">@Model.Descricao</h4>
+
+            <h2>Preferências:</h2>
+            <h4 class="opacity-50">@Model.Preferencias</h4>
+        </div>
+        <hr />
+    </div>
+
+</div>
+<div>
+    <a asp-action="Usuarios">Back to List</a>
+</div>

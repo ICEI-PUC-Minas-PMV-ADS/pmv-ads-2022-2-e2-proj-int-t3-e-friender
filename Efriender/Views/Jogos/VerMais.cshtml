@@ -1,0 +1,24 @@
+﻿@model EFriender.Models.Jogos
+
+@{
+    ViewData["Title"] = "VerMais";
+}
+
+<h2> Usuários cadastrados em @Model.Nome</h2>
+
+<div>
+    <hr />
+
+            @foreach (var item in Model.Usuarios)
+            {
+            <div class="rounded m-5 text-dark cardusuarious d-flex flex-column align-items-center justify-content-center">
+            @Html.DisplayFor(modelItem => item.Nome)
+            <img class="border-2 border-white m-1" src="~/imagens/@item.UrlImagem" width="130px" height="130px" />
+            @Html.DisplayFor(modelItem => item.Idade) anos
+            <img src="~/imagens/@Html.DisplayFor(modelItem => item.Jogos.UrlImagem)" width="40px" height="40px" />
+            <a class="btn btn-danger btn-sm mt-2" asp-action="Details" asp-route-id="@item.Id">Ver Mais</a>
+        </div>
+            }
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Jogos">Back to List</a>
+</div>

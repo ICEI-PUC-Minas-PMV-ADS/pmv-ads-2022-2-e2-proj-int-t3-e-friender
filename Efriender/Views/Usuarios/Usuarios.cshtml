@@ -1,0 +1,22 @@
+﻿@model IEnumerable<EFriender.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Usuários Cadastrados</h1>
+
+<div class="d-flex">
+    @foreach (var item in Model)
+    {
+
+        <div class="rounded m-5 text-dark cardusuarious d-flex flex-column align-items-center justify-content-center">
+            @Html.DisplayFor(modelItem => item.Nome)
+            <img class="border-2 border-white m-1" src="~/imagens/@item.UrlImagem" width="130px" height="130px" />
+            @Html.DisplayFor(modelItem => item.Idade) anos
+            <img src="~/imagens/@Html.DisplayFor(modelItem => item.Jogos.UrlImagem)" width="40px" height="40px"/>
+            <a class="btn btn-danger btn-sm mt-2" asp-action="Details" asp-route-id="@item.Id">Ver Mais</a>
+        </div>
+    }
+</div>
+

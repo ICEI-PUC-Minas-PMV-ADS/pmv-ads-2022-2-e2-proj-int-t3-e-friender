@@ -1,0 +1,58 @@
+﻿@model EFriender.Models.Jogos
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Jogos</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <img id="PreviewPhoto" src="~/imagens/FotoPadrao.png" alt="Imagem Padrão" width="125px" height="125px" margin="20px"/>
+            </div>
+
+            <div class="form-group">
+                <div class="custom-file">
+                    <input asp-for="Imagem" class="custom-file-input" id="UploadedImage"
+                    onchange="document.getElementById('PreviewPhoto').src = window.URL.createObjectURL(this.files[0])"/>
+                    <!--<label class="custom-file-label" for="Imagem" id="UploadedImageCaption">Escolha o arquivo</label>-->
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Descricao" class="control-label"></label>
+                <input asp-for="Descricao" class="form-control" />
+                <span asp-validation-for="Descricao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script type="text/javascript">
+        $(".custom-file-input").on("change", function(){
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName)
+        });
+    </script>
+}
