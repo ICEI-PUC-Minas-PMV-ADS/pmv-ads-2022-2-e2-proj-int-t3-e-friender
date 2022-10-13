@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/dcoKB0nOjlRiPpB70lt66/vvjlB5ZVvo3IQd9lZqyYYN7fSLu/UCrIiHhQcwl4pRJviQZl8moLCB3cu9nrA2g==",
+  "dgSpecHash": "kNt8cBNrLI3MTVlL7zk4t3IzIKiYssa4wUmVbEU6i+qUL30WvzhYOvX/bplx3XqwME5ZQfOhe1QIgWBT2IczCA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\erick\\source\\repos\\Efriender\\Efriender.csproj",
+  "projectFilePath": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\Efriender.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\erick\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\erick\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
