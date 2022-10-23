@@ -22,7 +22,7 @@ namespace EFriender.Models
 
         public int Idade { get; set; }
 
-        [Display(Name ="Gênero")]
+        [Display(Name = "Gênero")]
         public Generos Genero { get; set; }
 
         public enum Generos
@@ -39,17 +39,18 @@ namespace EFriender.Models
 
         public string Faculdade { get; set; }
 
-        [Display(Name ="Descrição")]
+        [Display(Name = "Descrição")]
         public string Descricao { get; set; }
 
         [Display(Name = "Preferências")]
         public string Preferencias { get; set; }
 
-        [Display(Name ="Jogos")]
+        [Display(Name = "Jogos")]
         [ForeignKey("Jogos")]
         public int JogosId { get; set; }
 
-       public Jogos Jogos { get; set; }
+        public Jogos Jogos { get; set; }
+
 
     }
 }

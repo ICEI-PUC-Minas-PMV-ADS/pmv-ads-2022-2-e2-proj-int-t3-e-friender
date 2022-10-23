@@ -52,6 +52,9 @@
             </tr>
         </thead>
         <tbody>
+            @{
+                var ids = 0;
+            }
             @foreach (var item in Model)
             {
                 <tr>
@@ -94,9 +97,11 @@
                         <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                     </td>
                 </tr>
+                ids++;
             }
         </tbody>
     </table>
+    <h1>Contagem: @ids</h1>
 </div>
 
 

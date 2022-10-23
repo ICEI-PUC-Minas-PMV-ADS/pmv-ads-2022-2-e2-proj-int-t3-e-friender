@@ -8,6 +8,9 @@ using Microsoft.EntityFrameworkCore;
 using EFriender.Models;
 using Efriender.Data;
 using Microsoft.AspNetCore.Authorization;
+using System.Diagnostics.Metrics;
+using Newtonsoft.Json.Linq;
+using NuGet.Packaging.Signing;
 
 namespace EFriender.Controllers
 {
@@ -32,15 +35,12 @@ namespace EFriender.Controllers
 
         }
 
-        // GET: Usuarios
-        public async Task<IActionResult> Usuarios()
-        {
-            var ApplicationDbContext = _context.Usuario.Include(u => u.Jogos);
-            return View(await ApplicationDbContext.ToListAsync());
+        public int[] ids;
 
-        }
+        public int items;
 
-        // GET: Usuarios/Details/5
+
+        // GET: DetailsID
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Usuario == null)
@@ -56,8 +56,32 @@ namespace EFriender.Controllers
                 return NotFound();
             }
 
+            //var idCount = _context.Usuario;
+            //ViewBag.Id = idCount.Count();
+
+            List<int> ListaIds = new List<int>();
+
+            var Usuario = _context.Usuario;
+
+
+            foreach (var item in Usuario)
+            {
+                ListaIds.Add(item.Id);
+            }
+
+            ViewBag.Id = ListaIds;
+
+            ViewBag.IdUltimo = ListaIds.Count();
             return View(usuario);
         }
+
+        // GET: Usuarios
+        public async Task<IActionResult> Usuarios()
+        {
+            var ApplicationDbContext = _context.Usuario.Include(u => u.Jogos);
+            return View(await ApplicationDbContext.ToListAsync());
+        }
+
 
         // GET: Usuarios/Create
         public IActionResult Create()
@@ -187,7 +211,8 @@ namespace EFriender.Controllers
             {
                 _context.Usuario.Remove(usuario);
             }
-            
+
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

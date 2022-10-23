@@ -1,12 +1,15 @@
-﻿@model EFriender.Models.Usuario
+﻿@using EFriender.Models
+@model EFriender.Models.Usuario
+
 
 @{
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+
 
 <div>
+
     <h4>Usuario</h4>
     <hr />
 
@@ -16,7 +19,7 @@
 
     <hr />
 
-    <div class="text-center d-flex justify-content-around">
+    <div class="text-center d-flex justify-content-between">
 
         <div class="w-25">
             <h2>Nome:</h2>
@@ -57,7 +60,58 @@
         <hr />
     </div>
 
+    @{
+        int Index = ViewBag.Id.IndexOf(Model.Id);
+        int Atual = Index + 1;
+        int UltimoIndex = ViewBag.IdUltimo;
+        int UltimoId = UltimoIndex + 1;
+        int IdProximo = Atual + 1;
+        int IdAnterior = Atual - 1;
+
+        if(IdProximo == UltimoId)
+        {
+            IdProximo = 1;
+        }
+
+        if (IdAnterior == 0)
+        {
+            IdAnterior = UltimoIndex;
+        }
+
+    //Atual: @Atual
+
+    //<br />
+
+    //Index: @ViewBag.Id.IndexOf(Model.Id);
+
+    //<br />
+
+    //Ids List: @foreach (var item in ViewBag.Id)
+    //{
+    //    <span> @item </span>
+    //}
+
+    //<br />
+
+    //Ultimo Index: @UltimoIndex;
+
+    //<br />
+
+    //Ultimo Id: @UltimoId
+
+
+
+    <div class="text-center m-3">
+        <a class="btn btn-primary m-2" asp-route-id="@IdAnterior">Anterior</a>
+        <a class="btn btn-primary m-2" asp-route-id="@IdProximo">Próximo</a>
+    </div>
+
+
+
+
 </div>
 <div>
+
+
     <a asp-action="Usuarios">Back to List</a>
 </div>
