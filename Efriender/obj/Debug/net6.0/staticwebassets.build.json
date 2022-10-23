@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JMfzlKylpIel+s9Ga3Pq6MfGT5ADwEPzXgxL049RVvQ=",
+  "Hash": "J8QLY3vbDFzAxVIGkaug0OcAGnMAx11rw6NexILnzpQ=",
   "Source": "Efriender",
   "BasePath": "_content/Efriender",
   "Mode": "Default",
@@ -1258,6 +1258,23 @@
       "OriginalItemSpec": "wwwroot\\imagens\\7350a834-ee13-4e49-b852-07481e9a222d_178382.png"
     },
     {
+      "Identity": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\wwwroot\\imagens\\748981f6-6a14-473f-9c70-8d5b4ad2771f_11044887.jpg",
+      "SourceId": "Efriender",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\wwwroot\\",
+      "BasePath": "_content/Efriender",
+      "RelativePath": "imagens/748981f6-6a14-473f-9c70-8d5b4ad2771f_11044887.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\748981f6-6a14-473f-9c70-8d5b4ad2771f_11044887.jpg"
+    },
+    {
       "Identity": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\wwwroot\\imagens\\8b69c082-1414-4b81-afff-322d194d4040_11044887.jpg",
       "SourceId": "Efriender",
       "SourceType": "Discovered",
@@ -1392,6 +1409,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imagens\\c79cce4c-8b0b-4f7f-b0b6-8c08bbaf0f57_063de26090d1e8975846b5ce4853fb76.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\wwwroot\\imagens\\dd8fc767-1f74-457a-b9e9-ae48fca5e91c_Qual-é-o-Perfil-do-Empreendedor.jpg",
+      "SourceId": "Efriender",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\wwwroot\\",
+      "BasePath": "_content/Efriender",
+      "RelativePath": "imagens/dd8fc767-1f74-457a-b9e9-ae48fca5e91c_Qual-é-o-Perfil-do-Empreendedor.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\dd8fc767-1f74-457a-b9e9-ae48fca5e91c_Qual-é-o-Perfil-do-Empreendedor.jpg"
     },
     {
       "Identity": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\wwwroot\\imagens\\e1ec185a-75e9-4171-9c44-62fafb714c2d_juninho.jpg",

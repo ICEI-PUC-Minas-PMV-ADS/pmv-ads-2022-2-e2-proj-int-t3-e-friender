@@ -61,27 +61,47 @@
     </div>
 
     @{
-        int Index = ViewBag.Id.IndexOf(Model.Id);
-        int Atual = Index + 1;
+        int IndexAtual = ViewBag.Id.IndexOf(Model.Id);
         int UltimoIndex = ViewBag.IdUltimo;
-        int UltimoId = UltimoIndex + 1;
-        int IdProximo = Atual + 1;
-        int IdAnterior = Atual - 1;
-
-        if(IdProximo == UltimoId)
+        int UltimoId = ViewBag.Id[UltimoIndex];
+        int IndexProximo = IndexAtual + 1;
+        int IndexAnterior = IndexAtual - 1;
+        if (IndexAnterior <= 0)
         {
-            IdProximo = 1;
+            IndexAnterior = UltimoIndex;
         }
 
-        if (IdAnterior == 0)
+        if(IndexAtual == UltimoIndex)
         {
-            IdAnterior = UltimoIndex;
+            IndexProximo = 0;
         }
+        int Proximo = ViewBag.Id[IndexProximo];
+        int Anterior = ViewBag.Id[IndexAnterior];
+
         }
+
+        
+        
+       @* IndexAtual : @IndexAtual
+    <br />
+        Index Proximo: @IndexProximo
+    <br />
+        Index Anterior: @IndexAnterior
+    <br />
+        Ultimo Index: @UltimoIndex <br />
+        Id Atual : @Model.Id <br />
+        Id Proximo: @ViewBag.Id[IndexProximo] <br />
+    Id Anterior: @ViewBag.Id[IndexAnterior] <br /> <br />
+    Ultimo Id: @UltimoId <br />
+
+    Lista 0: @ViewBag.Id[0]<br />
+    Lista 1:@ViewBag.Id[1]<br />
+    Lista 2:@ViewBag.Id[2]<br />
+    Lista 3:@ViewBag.Id[3]*@
 
     <div class="text-center m-3">
-        <a class="btn btn-primary m-2" asp-route-id="@IdAnterior">Anterior</a>
-        <a class="btn btn-primary m-2" asp-route-id="@IdProximo">Próximo</a>
+        <a class="btn btn-primary m-2" asp-route-id="@Anterior">Anterior</a>
+        <a class="btn btn-primary m-2" asp-route-id="@Proximo">Próximo</a>
     </div>
 
 

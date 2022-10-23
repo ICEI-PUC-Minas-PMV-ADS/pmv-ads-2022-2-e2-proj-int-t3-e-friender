@@ -71,7 +71,7 @@ namespace EFriender.Controllers
 
             ViewBag.Id = ListaIds;
 
-            ViewBag.IdUltimo = ListaIds.Count();
+            ViewBag.IdUltimo = ListaIds.Count() -1;
             return View(usuario);
         }
 
