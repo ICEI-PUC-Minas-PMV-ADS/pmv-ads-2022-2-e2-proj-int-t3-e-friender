@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\Efriender.csproj": {}
+    "C:\\dev\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\Efriender.csproj": {}
   },
   "projects": {
-    "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\Efriender.csproj": {
+    "C:\\dev\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\Efriender.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\Efriender.csproj",
+        "projectUniqueName": "C:\\dev\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\Efriender.csproj",
         "projectName": "Efriender",
-        "projectPath": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\Efriender.csproj",
-        "packagesPath": "C:\\Users\\erick\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\obj\\",
+        "projectPath": "C:\\dev\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\Efriender.csproj",
+        "packagesPath": "C:\\Users\\Feu's m15 R6\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\erick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Feu's m15 R6\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
