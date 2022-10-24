@@ -6,11 +6,17 @@
 
 <h1>Usuários Cadastrados</h1>
 
-<div class="d-flex">
+<hr />
+
+<div class="text-center">
+    <a class="btn btn-primary p-2" asp-action="Create"> Se cadastrar</a>
+</div>
+
+<div class="d-flex col-12 flex-wrap justify-content-center">
     @foreach (var item in Model)
     {
 
-        <div class="rounded m-5 text-dark cardusuarious d-flex flex-column align-items-center justify-content-center">
+        <div class="rounded m-5 text-dark cardusuarious d-flex flex-column align-items-center justify-content-center col-4">
             @Html.DisplayFor(modelItem => item.Nome)
             <img class="border-2 border-white m-1 rounded" src="~/imagens/@item.UrlImagem" width="130px" height="130px" />
             @Html.DisplayFor(modelItem => item.Idade) anos
@@ -19,4 +25,9 @@
         </div>
     }
 </div>
+
+@if (User.IsInRole("Admin"))
+{
+    <a> asp-action = "Index" > Admin </a>
+}
 

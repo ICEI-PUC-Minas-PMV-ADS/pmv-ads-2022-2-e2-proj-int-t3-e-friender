@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 using System.Diagnostics.Metrics;
 using Newtonsoft.Json.Linq;
 using NuGet.Packaging.Signing;
+using Efriender.Areas.Identity;
 
 namespace EFriender.Controllers
 {
@@ -28,16 +29,13 @@ namespace EFriender.Controllers
         }
 
         // GET: Index
+        [Authorize(Roles = Roles.Admin)]
         public async Task<IActionResult> Index()
         {
             var ApplicationDbContext = _context.Usuario.Include(u => u.Jogos);
             return View(await ApplicationDbContext.ToListAsync());
 
         }
-
-        public int[] ids;
-
-        public int items;
 
 
         // GET: DetailsID
@@ -72,6 +70,7 @@ namespace EFriender.Controllers
             ViewBag.Id = ListaIds;
 
             ViewBag.IdUltimo = ListaIds.Count() -1;
+
             return View(usuario);
         }
 
@@ -104,7 +103,7 @@ namespace EFriender.Controllers
             _context.Attach(usuarios);
             _context.Entry(usuarios).State = EntityState.Added;
             _context.SaveChanges();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Usuarios));
 
         }
 

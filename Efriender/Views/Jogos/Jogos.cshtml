@@ -6,6 +6,8 @@
 
 <h1>Jogos Cadastrados</h1>
 
+<hr />
+
 <div class="d-flex">
     @foreach (var item in Model)
     {
@@ -16,4 +18,10 @@
         </div>
     }
 </div>
+
+@if (User.IsInRole("Admin"))
+{
+    <a> asp-action = "Index" > Admin </a>
+}
+
 

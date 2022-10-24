@@ -66,7 +66,7 @@
         int UltimoId = ViewBag.Id[UltimoIndex];
         int IndexProximo = IndexAtual + 1;
         int IndexAnterior = IndexAtual - 1;
-        if (IndexAnterior <= 0)
+        if (IndexAtual == 0)
         {
             IndexAnterior = UltimoIndex;
         }
@@ -82,7 +82,7 @@
 
         
         
-       @* IndexAtual : @IndexAtual
+        IndexAtual : @IndexAtual
     <br />
         Index Proximo: @IndexProximo
     <br />
@@ -94,10 +94,16 @@
     Id Anterior: @ViewBag.Id[IndexAnterior] <br /> <br />
     Ultimo Id: @UltimoId <br />
 
+    <br />
+
     Lista 0: @ViewBag.Id[0]<br />
     Lista 1:@ViewBag.Id[1]<br />
     Lista 2:@ViewBag.Id[2]<br />
-    Lista 3:@ViewBag.Id[3]*@
+    Lista 3: @ViewBag.Id[3]<br />
+    Lista 4:@ViewBag.Id[4]<br />
+    Lista 5:@ViewBag.Id[5]<br />
+    Lista 6: @ViewBag.Id[6]<br />
+    Lista 7:@ViewBag.Id[7]<br />
 
     <div class="text-center m-3">
         <a class="btn btn-primary m-2" asp-route-id="@Anterior">Anterior</a>
@@ -111,5 +117,5 @@
 <div>
 
 
-    <a asp-action="Usuarios">Back to List</a>
+    <a asp-action="Usuarios">Voltar</a>
 </div>

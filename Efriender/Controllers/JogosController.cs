@@ -9,6 +9,8 @@ using EFriender.Models;
 using Efriender.Data;
 using Microsoft.AspNetCore;
 using System.Drawing;
+using Microsoft.AspNetCore.Authorization;
+using Efriender.Areas.Identity;
 
 namespace EFriender.Controllers
 {
@@ -24,6 +26,7 @@ namespace EFriender.Controllers
         }
 
         // GET: Index
+        [Authorize(Roles = Roles.Admin)]
         public async Task<IActionResult> Index()
         {
               return View(await _context.Jogos.ToListAsync());
@@ -82,6 +85,7 @@ namespace EFriender.Controllers
         // POST: Jogos/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = Roles.Admin)]
         [HttpPost]
         [ValidateAntiForgeryToken]
         /*public async Task<IActionResult> Create([Bind("Id,Nome,Imagem,Descricao")] Jogos jogos)
@@ -124,6 +128,7 @@ namespace EFriender.Controllers
         }
 
         // GET: Jogos/Edit/5
+        [Authorize(Roles = Roles.Admin)]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Jogos == null)

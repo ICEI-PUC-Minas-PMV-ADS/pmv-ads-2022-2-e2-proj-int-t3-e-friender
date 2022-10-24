@@ -12,8 +12,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseMySql(
     "server=efriender.cxo9osbnsuir.sa-east-1.rds.amazonaws.com; Port=3306;initial catalog=EFriender_V2;uid=admin;pwd=admin123", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.30-mysql")));
 
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false).AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
+
 
 builder.Services.AddControllersWithViews();
 

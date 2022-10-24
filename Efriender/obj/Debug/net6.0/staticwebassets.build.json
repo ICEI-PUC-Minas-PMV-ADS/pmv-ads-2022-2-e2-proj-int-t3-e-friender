@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "J8QLY3vbDFzAxVIGkaug0OcAGnMAx11rw6NexILnzpQ=",
+  "Hash": "Gxbew5vdwDvHAhE8WaWbcjIuk5zg2iDVxkAInHVhsyY=",
   "Source": "Efriender",
   "BasePath": "_content/Efriender",
   "Mode": "Default",
@@ -1207,6 +1207,23 @@
       "OriginalItemSpec": "wwwroot\\imagens\\3438db56-6d35-4bf2-a0ad-ffd23128f263_Novo Projeto (1).png"
     },
     {
+      "Identity": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\wwwroot\\imagens\\382e498e-f125-43a1-9e7f-5bd60d6a4956_11044887.jpg",
+      "SourceId": "Efriender",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\wwwroot\\",
+      "BasePath": "_content/Efriender",
+      "RelativePath": "imagens/382e498e-f125-43a1-9e7f-5bd60d6a4956_11044887.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\382e498e-f125-43a1-9e7f-5bd60d6a4956_11044887.jpg"
+    },
+    {
       "Identity": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\wwwroot\\imagens\\3c67c946-df08-4d4c-9c1c-b1c4c74c9e72_8968jkusg6281.jpg",
       "SourceId": "Efriender",
       "SourceType": "Discovered",
@@ -1239,6 +1256,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imagens\\496e2c73-632e-4d8c-8b38-47c2fed34eea_juninho.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\wwwroot\\imagens\\5f46b12a-2122-4e08-9197-5fd5f156494b_178382.png",
+      "SourceId": "Efriender",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\wwwroot\\",
+      "BasePath": "_content/Efriender",
+      "RelativePath": "imagens/5f46b12a-2122-4e08-9197-5fd5f156494b_178382.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\5f46b12a-2122-4e08-9197-5fd5f156494b_178382.png"
     },
     {
       "Identity": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\wwwroot\\imagens\\7350a834-ee13-4e49-b852-07481e9a222d_178382.png",
@@ -1343,6 +1377,23 @@
       "OriginalItemSpec": "wwwroot\\imagens\\9fb85071-1fb0-4142-a79c-59d7ff974d4e_valorant.jpg"
     },
     {
+      "Identity": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\wwwroot\\imagens\\a6a59c07-5d89-4df9-94e2-f270043250dc_88fa0eeb30e867932c600d6c8a6c88c7.jpg",
+      "SourceId": "Efriender",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\wwwroot\\",
+      "BasePath": "_content/Efriender",
+      "RelativePath": "imagens/a6a59c07-5d89-4df9-94e2-f270043250dc_88fa0eeb30e867932c600d6c8a6c88c7.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\a6a59c07-5d89-4df9-94e2-f270043250dc_88fa0eeb30e867932c600d6c8a6c88c7.jpg"
+    },
+    {
       "Identity": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\wwwroot\\imagens\\ac6a841f-ffad-4fc2-b63c-b17715bd6d9a_88fa0eeb30e867932c600d6c8a6c88c7.jpg",
       "SourceId": "Efriender",
       "SourceType": "Discovered",
@@ -1375,6 +1426,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imagens\\be7c2363-f5c0-4df7-8916-492a3f70938d_csgo.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\wwwroot\\imagens\\c16b2905-0cb8-4485-b408-1e3d02f453c2_Overwatch2_Primary_LTBKGD.png",
+      "SourceId": "Efriender",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\wwwroot\\",
+      "BasePath": "_content/Efriender",
+      "RelativePath": "imagens/c16b2905-0cb8-4485-b408-1e3d02f453c2_Overwatch2_Primary_LTBKGD.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\c16b2905-0cb8-4485-b408-1e3d02f453c2_Overwatch2_Primary_LTBKGD.png"
     },
     {
       "Identity": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\wwwroot\\imagens\\c5f108e4-8060-4589-a28c-0b8d97c8df57_Qual-é-o-Perfil-do-Empreendedor.jpg",
@@ -1411,6 +1479,23 @@
       "OriginalItemSpec": "wwwroot\\imagens\\c79cce4c-8b0b-4f7f-b0b6-8c08bbaf0f57_063de26090d1e8975846b5ce4853fb76.jpg"
     },
     {
+      "Identity": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\wwwroot\\imagens\\d053132c-9d1c-4f7e-83d4-62fc6da42eaf_063de26090d1e8975846b5ce4853fb76.jpg",
+      "SourceId": "Efriender",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\wwwroot\\",
+      "BasePath": "_content/Efriender",
+      "RelativePath": "imagens/d053132c-9d1c-4f7e-83d4-62fc6da42eaf_063de26090d1e8975846b5ce4853fb76.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\d053132c-9d1c-4f7e-83d4-62fc6da42eaf_063de26090d1e8975846b5ce4853fb76.jpg"
+    },
+    {
       "Identity": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\wwwroot\\imagens\\dd8fc767-1f74-457a-b9e9-ae48fca5e91c_Qual-é-o-Perfil-do-Empreendedor.jpg",
       "SourceId": "Efriender",
       "SourceType": "Discovered",
@@ -1443,6 +1528,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imagens\\e1ec185a-75e9-4171-9c44-62fafb714c2d_juninho.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\wwwroot\\imagens\\ee532109-87e9-4d0d-b0a4-de70797ab06c_Overwatch2_Primary_LTBKGD.png",
+      "SourceId": "Efriender",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\wwwroot\\",
+      "BasePath": "_content/Efriender",
+      "RelativePath": "imagens/ee532109-87e9-4d0d-b0a4-de70797ab06c_Overwatch2_Primary_LTBKGD.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\ee532109-87e9-4d0d-b0a4-de70797ab06c_Overwatch2_Primary_LTBKGD.png"
     },
     {
       "Identity": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\wwwroot\\imagens\\FotoPadrao.png",
