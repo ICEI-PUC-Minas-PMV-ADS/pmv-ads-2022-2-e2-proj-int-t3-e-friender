@@ -57,7 +57,6 @@ namespace Efriender.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("Discord")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Faculdade")
@@ -70,19 +69,16 @@ namespace Efriender.Migrations
                     b.Property<int>("Idade")
                         .HasColumnType("int");
 
+                    b.Property<int?>("JogoSecond")
+                        .HasColumnType("int");
+
                     b.Property<int>("JogosId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Nick")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
                     b.Property<string>("Nome")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Preferencias")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("UrlImagem")

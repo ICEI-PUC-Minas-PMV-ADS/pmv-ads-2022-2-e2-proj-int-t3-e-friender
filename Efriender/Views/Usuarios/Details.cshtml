@@ -37,9 +37,6 @@
             <h4 class="opacity-50">@Model.Jogos.Nome</h4>
             <img src="~/imagens/@Model.Jogos.UrlImagem" width="75px" height="75px" />
 
-            <h2>Nick:</h2>
-            <h4 class="opacity-50">@Model.Nick</h4>
-
             <h2>Discord:</h2>
             <h4 class="opacity-50">@Model.Discord</h4>
         </div>
@@ -56,6 +53,14 @@
 
             <h2>Preferências:</h2>
             <h4 class="opacity-50">@Model.Preferencias</h4>
+
+            @if(Model.JogoSecond != null)
+            {
+                <h2>Jogo 2:</h2>
+                <h4 class="opacity-50">@Model.JogoSecond</h4>
+            }
+
+            
         </div>
         <hr />
     </div>

@@ -15,7 +15,6 @@ using Efriender.Areas.Identity;
 
 namespace EFriender.Controllers
 {
-    [Authorize]
     public class UsuariosController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -31,6 +30,13 @@ namespace EFriender.Controllers
         // GET: Index
         [Authorize(Roles = Roles.Admin)]
         public async Task<IActionResult> Index()
+        {
+            var ApplicationDbContext = _context.Usuario.Include(u => u.Jogos);
+            return View(await ApplicationDbContext.ToListAsync());
+
+        }
+
+        public async Task<IActionResult> Perfil()
         {
             var ApplicationDbContext = _context.Usuario.Include(u => u.Jogos);
             return View(await ApplicationDbContext.ToListAsync());
@@ -83,6 +89,7 @@ namespace EFriender.Controllers
 
 
         // GET: Usuarios/Create
+        [Authorize]
         public IActionResult Create()
         {
             ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Nome");
@@ -99,6 +106,13 @@ namespace EFriender.Controllers
             string uniqueFileName = Imagem(usuarios);
 
             usuarios.UrlImagem = uniqueFileName;
+
+            usuarios.Nome = User.Identity.Name;
+
+            if(usuarios.JogoSecond == 0)
+            {
+                usuarios.JogoSecond = null;
+            }
 
             _context.Attach(usuarios);
             _context.Entry(usuarios).State = EntityState.Added;
@@ -133,12 +147,20 @@ namespace EFriender.Controllers
             }
 
             var usuario = await _context.Usuario.FindAsync(id);
+
             if (usuario == null)
             {
                 return NotFound();
             }
-            ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Id", usuario.JogosId);
-            return View(usuario);
+
+            if (usuario.Nome == User.Identity.Name)
+            {
+                ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Id", usuario.JogosId);
+                return View(usuario);
+            }
+
+            return Unauthorized();
+
         }
 
         // POST: Usuarios/Edit/5
