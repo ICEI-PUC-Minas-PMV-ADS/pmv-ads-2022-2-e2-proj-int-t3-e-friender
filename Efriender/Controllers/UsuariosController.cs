@@ -37,6 +37,13 @@ namespace EFriender.Controllers
 
         }
 
+        public async Task<IActionResult> Perfil()
+        {
+            var ApplicationDbContext = _context.Usuario.Include(u => u.Jogos);
+            return View(await ApplicationDbContext.ToListAsync());
+
+        }
+
 
         // GET: DetailsID
         public async Task<IActionResult> Details(int? id)
@@ -100,6 +107,13 @@ namespace EFriender.Controllers
 
             usuarios.UrlImagem = uniqueFileName;
 
+            usuarios.Nome = User.Identity.Name;
+
+            if(usuarios.JogoSecond == 0)
+            {
+                usuarios.JogoSecond = null;
+            }
+
             _context.Attach(usuarios);
             _context.Entry(usuarios).State = EntityState.Added;
             _context.SaveChanges();
@@ -133,12 +147,20 @@ namespace EFriender.Controllers
             }
 
             var usuario = await _context.Usuario.FindAsync(id);
+
             if (usuario == null)
             {
                 return NotFound();
             }
-            ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Id", usuario.JogosId);
-            return View(usuario);
+
+            if (usuario.Nome == User.Identity.Name)
+            {
+                ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Id", usuario.JogosId);
+                return View(usuario);
+            }
+
+            return Unauthorized();
+
         }
 
         // POST: Usuarios/Edit/5
