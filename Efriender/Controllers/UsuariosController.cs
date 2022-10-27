@@ -15,7 +15,6 @@ using Efriender.Areas.Identity;
 
 namespace EFriender.Controllers
 {
-    [Authorize]
     public class UsuariosController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -90,6 +89,7 @@ namespace EFriender.Controllers
 
 
         // GET: Usuarios/Create
+        [Authorize]
         public IActionResult Create()
         {
             ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Nome");

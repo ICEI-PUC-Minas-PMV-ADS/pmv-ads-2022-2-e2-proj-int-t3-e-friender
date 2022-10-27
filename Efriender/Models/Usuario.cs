@@ -20,9 +20,11 @@ namespace EFriender.Models
 
         public string? Nome { get; set; }
 
+        [Required(ErrorMessage = "Obrigatório inserir a Idade")]
         public int Idade { get; set; }
 
         [Display(Name = "Gênero")]
+        [Required(ErrorMessage = "Obrigatório inserir o Gênero")]
         public Generos Genero { get; set; }
 
         public enum Generos
@@ -46,11 +48,14 @@ namespace EFriender.Models
 
         public string? Discord { get; set; }
 
+        [Required(ErrorMessage = "Obrigatório inserir o curso")]
         public string Curso { get; set; }
 
+        [Required(ErrorMessage = "Obrigatório inserir a Faculdade")]
         public string Faculdade { get; set; }
 
         [Display(Name = "Descrição")]
+        [Required(ErrorMessage = "Obrigatório inserir a descrição")]
         public string Descricao { get; set; }
 
         [Display(Name = "Preferências")]
@@ -58,6 +63,7 @@ namespace EFriender.Models
 
         [Display(Name = "Jogo Favorito")]
         [ForeignKey("Jogos")]
+        [Required(ErrorMessage = "Obrigatório inserir o jogo")]
         public int JogosId { get; set; }
 
         public Jogos Jogos { get; set; }
