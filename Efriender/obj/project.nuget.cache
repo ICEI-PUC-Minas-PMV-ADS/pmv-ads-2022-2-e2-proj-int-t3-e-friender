@@ -1,20 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "dgSpecHash": "xJFZSovAwTa9xE4N+Z4B5KThoCy4BT1yqhaim4xjrLmj4WoDeQSaXpsxmFE9VZslDRzlm6cFuSyG8re/yTudMA==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\erick\\Documents\\GitHub\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\Efriender.csproj",
-=======
   "dgSpecHash": "kNt8cBNrLI3MTVlL7zk4t3IzIKiYssa4wUmVbEU6i+qUL30WvzhYOvX/bplx3XqwME5ZQfOhe1QIgWBT2IczCA==",
   "success": true,
   "projectFilePath": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\Efriender.csproj",
->>>>>>> parent of 2ab79d2 (initial commit)
-=======
-  "dgSpecHash": "kNt8cBNrLI3MTVlL7zk4t3IzIKiYssa4wUmVbEU6i+qUL30WvzhYOvX/bplx3XqwME5ZQfOhe1QIgWBT2IczCA==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\Efriender.csproj",
->>>>>>> parent of 2ab79d2 (initial commit)
   "expectedPackageFiles": [
     "C:\\Users\\erick\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\erick\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
@@ -207,5 +195,12 @@
     "C:\\Users\\erick\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\erick\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

@@ -10784,27 +10784,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\erick\\Documents\\GitHub\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\Efriender.csproj",
-      "projectName": "Efriender",
-      "projectPath": "C:\\Users\\erick\\Documents\\GitHub\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\Efriender.csproj",
-      "packagesPath": "C:\\Users\\erick\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\erick\\Documents\\GitHub\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\obj\\",
-=======
       "projectUniqueName": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\Efriender.csproj",
       "projectName": "Efriender",
       "projectPath": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\Efriender.csproj",
       "packagesPath": "C:\\Users\\erick\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\obj\\",
->>>>>>> parent of 2ab79d2 (initial commit)
-=======
-      "projectUniqueName": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\Efriender.csproj",
-      "projectName": "Efriender",
-      "projectPath": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\Efriender.csproj",
-      "packagesPath": "C:\\Users\\erick\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\obj\\",
->>>>>>> parent of 2ab79d2 (initial commit)
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\erick\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -10888,5 +10872,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\erick\\Source\\Repos\\ICEI-PUC-Minas-PMV-ADS\\pmv-ads-2022-2-e2-proj-int-t3-e-friender\\Efriender\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
