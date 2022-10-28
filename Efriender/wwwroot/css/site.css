@@ -1,0 +1,35 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.cardjogo {
+    width: 200px;
+    height: 200px;
+    border: 3px solid #e52f48;
+}
+
+.cardusuarious {
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    border: 3px solid #e52f48;
+}
+
+.barranavegacao {
+    margin-bottom: 0px !important;
+}
