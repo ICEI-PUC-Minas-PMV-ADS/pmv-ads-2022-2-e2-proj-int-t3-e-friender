@@ -33,3 +33,8 @@ body {
 .barranavegacao {
     margin-bottom: 0px !important;
 }
+
+.opcional{
+    font-size:0.7rem;
+    opacity:0.5;
+}
