@@ -78,3 +78,112 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
+
+
+
+
+@*    <body>
+        <div class="main-login">
+            <div class="right-login">
+                <div class="card-login">
+                    <img class="logo" src="img/Logo.png" alt="logo">
+                    <div class="textfield">
+                        <input type="text" name="usuario" placeholder="Usuario">
+                    </div>
+                    <div class="textfield">
+                        <input type="password" name="senha" placeholder="Senha">
+                    </div>
+                    <button class="btn-login">Login</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    
+    
+    body{
+    margin: 0;
+}
+
+.main-login{
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.right-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.card-login{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0px 10px 40px #00000056;
+
+}
+
+.logo{
+    width: 15%;
+    height: 15%;
+    margin-bottom: 20px;
+}
+
+.textfield{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield  input{
+    width: 95%;
+    border: 0.5px solid rgba(0, 0, 0, 0.123);
+    border-radius: 8px;
+    padding: 15px;
+    color: #000000de;
+    font-size: 12pt;
+    outline: none;
+}
+
+.textfield  label{
+    color: #000000de;
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder{
+    color: #00000094;
+}
+
+.textfield input:focus{
+    border: 0.5px solid red;
+
+}
+
+.btn-login{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 9px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #ffffff;
+    background: #ff0000ab;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #ff0000ab;
+}*@
