@@ -38,3 +38,16 @@ body {
     font-size:0.7rem;
     opacity:0.5;
 }
+
+
+/* CAROUSEL*/
+.carousel-caption {
+    transform: translateY(-50%);
+    bottom: 0;
+    top: 64%;
+}
+
+.carousel-item{
+    max-height: 86vh;
+}
+/*--FIM CAROUSEL--*/

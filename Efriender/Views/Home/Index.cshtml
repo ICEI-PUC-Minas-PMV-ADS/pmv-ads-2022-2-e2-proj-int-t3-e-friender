@@ -1,9 +1,43 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<div class="container-slide">
-    <div class="teste">
-    </div>
-</div>
 
+<div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000">
+            <img src="~/imagens/img-layout/Valorant.png" class="d-block w-100 " alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="display-6">Bem vindo ao E-Friender.</h5>
+                <p>A plataforma de interação Gamer.</p>
+            </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="6000">
+            <img src="~/imagens/img-layout/Fifinha.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="display-6">Junte-se a nossa equipe.</h5>
+                <p>Busque por novas amizades.</p>
+            </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="9000">
+            <img src="~/imagens/img-layout/counter.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="display-6 m-3">It's a DUO!</h5>
+                <a class="btn btn-primary" asp-area="Identity" asp-page="/Account/Register">Cadastre-se ja!</a>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
 
