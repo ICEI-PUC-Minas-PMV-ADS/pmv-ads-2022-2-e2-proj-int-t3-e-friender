@@ -16,8 +16,15 @@ Esta seção contem os casos de teste referentes aos casos de uso e não funcion
 | Passos 	| - Acessar o endereço da aplicação <br> - Clicar em "Criar conta" <br> - Preencher os campos obrigatórios (e-mail, nome, sobrenome, celular, CPF, senha, confirmação de senha) <br> - Aceitar os termos de uso <br> - Clicar em "Registrar" |
 |Critério de Êxito | - Realizar o Cadastro com Sucesso. |
 |Resultado| - Teste executado com êxito. |
-|Registro| - https://user-images.githubusercontent.com/103212087/198860980-f20e6026-fee6-4e6b-8370-b735a8138211.mp4|
+|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/103212087/198860980-f20e6026-fee6-4e6b-8370-b735a8138211.mp4|
 |  	|  	|
+
+https://user-images.githubusercontent.com/100388026/198881852-3576642b-b905-42ce-9d28-a001d23c962a.mp4
+
+<br />
+<br />
+<br />
+<br />
 
 | **Caso de Teste** 	| **CT-02 – Validar informações de Login** 	|
 |:---:	|:---:	|
@@ -26,8 +33,15 @@ Esta seção contem os casos de teste referentes aos casos de uso e não funcion
 | Passos 	| - Acessar o endereço da aplicação <br> - Clicar em "Entrar" <br> - Preencher os campos obrigatórios (e-mail, senha) <br> - Clicar em "Entrar" |
 |Critério de Êxito | - Autenticação realizado com sucesso. Usuario redirecionado para a página inicial de usuário. |
 |Resultado| - Teste executado com êxito. |
-|Registro| - https://user-images.githubusercontent.com/103212087/198860980-f20e6026-fee6-4e6b-8370-b735a8138211.mp4|
+|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/103212087/198860980-f20e6026-fee6-4e6b-8370-b735a8138211.mp4|
 |  	|  	|
+
+https://user-images.githubusercontent.com/100388026/198881852-3576642b-b905-42ce-9d28-a001d23c962a.mp4
+
+<br />
+<br />
+<br />
+<br />
 
 | **Caso de Teste** 	| **CT-03 – Alterar informações de Perfil** 	|
 |:---:	|:---:	|
@@ -36,8 +50,15 @@ Esta seção contem os casos de teste referentes aos casos de uso e não funcion
 | Passos 	| - Realizar a autenticação na aplicação <br> - Clicar em "Perfil" <br> - Alterar informações de Perfil (nome, nickname, curso, discord, idade, genero) |
 |Critério de Êxito | - Dados atualizados no sistema com sucesso. |
 |Resultado| - Teste executado com êxito. |
-|Registro| - https://user-images.githubusercontent.com/103212087/198861095-2099674e-5663-4a61-9c67-f8a30319e6ad.mp4|
+|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/103212087/198861095-2099674e-5663-4a61-9c67-f8a30319e6ad.mp4|
 |  	|  	|
+
+https://user-images.githubusercontent.com/100388026/198884033-5bf84920-5c3a-455e-ae48-7280b3e6f814.mp4
+
+<br />
+<br />
+<br />
+<br />
 
 | **Caso de Teste** 	| **CT-04 – Dar like em um usuario** 	|
 |:---:	|:---:	|
@@ -56,8 +77,15 @@ Esta seção contem os casos de teste referentes aos casos de uso e não funcion
 | Passos 	| - Realizar a autenticação na aplicação <br> - Pular um usuario que apareça na tela, clicando no icone de "x", localizado a esquerda da imagem do usuario que será curtido. |
 |Critério de Êxito | - Não será registrado nenhum like no sistema e a imagem de outro usúario irá substituir a imagem do usuário que não recebeu like. |
 |Resultado| - Teste executado com êxito. |
-|Registro| - https://user-images.githubusercontent.com/103212087/198861467-5c2b89c9-bc7d-4ae3-b95a-e665e2ed2a64.mp4|
+|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/103212087/198861467-5c2b89c9-bc7d-4ae3-b95a-e665e2ed2a64.mp4|
 |  	|  	|
+
+https://user-images.githubusercontent.com/100388026/198884050-1f668623-1479-47ed-89ab-0e300484347d.mp4
+
+<br />
+<br />
+<br />
+<br />
 
 | **Caso de Teste** 	| **CT-05 – Conectar com outro usuario que trocou like** 	|
 |:---:	|:---:	|
@@ -106,8 +134,15 @@ Esta seção contem os casos de teste referentes aos casos de uso e não funcion
 | Passos 	| - Realizar a autenticação na aplicação. <br> - Clicar em um usuário com quem tenha ocorrido match, na lista de matches localizada na lateral esquerda da aplicação. <br> |
 |Critério de Êxito | - Será exibida o Perfil do Match. |
 |Resultado| - Teste executado com êxito. |
-|Registro| -https://user-images.githubusercontent.com/103212087/198861549-b732e1eb-ca95-44d5-856e-b19a9833500b.mp4|
+|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/103212087/198861549-b732e1eb-ca95-44d5-856e-b19a9833500b.mp4|
 |  	|  	|
+
+https://user-images.githubusercontent.com/100388026/198884050-1f668623-1479-47ed-89ab-0e300484347d.mp4
+
+<br />
+<br />
+<br />
+<br />
 
 ### Requisitos não-funcionais:
 
@@ -138,8 +173,15 @@ Esta seção contem os casos de teste referentes aos casos de uso e não funcion
 | Passos 	| - Abri um browser (Chrome, Edge, Firefox, Brave, Opera) em um sistema conectado a internet  <br> em um dispositivo movel - Digitar o endereço da aplicação na barra de endereços. <br> - Repetir a operação para os outros browsers listados. |
 |Critério de Êxito | - Em cada acesso de cada browser a página inicial da aplicação será exibida. |
 |Resultado| - O teste foi executado no navegador Chrome, o qual está funcionando perfeitamente. Testes com os demais navegadores ainda não foram executados.|
-|Registro| - https://user-images.githubusercontent.com/103212087/198860980-f20e6026-fee6-4e6b-8370-b735a8138211.mp4||
+|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/103212087/198860980-f20e6026-fee6-4e6b-8370-b735a8138211.mp4||
 |  	|  	|
+
+https://user-images.githubusercontent.com/100388026/198881852-3576642b-b905-42ce-9d28-a001d23c962a.mp4 
+
+<br />
+<br />
+<br />
+<br />
 
 | **Caso de Teste** 	| **CT-13 – Compatibilidade do sistema com os principais navegadores do mercado** 	|
 |:---:	|:---:	|
