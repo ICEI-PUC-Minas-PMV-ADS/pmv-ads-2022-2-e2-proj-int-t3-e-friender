@@ -16,7 +16,7 @@ Esta seção contem os casos de teste referentes aos casos de uso e não funcion
 | Passos 	| - Acessar o endereço da aplicação <br> - Clicar em "Criar conta" <br> - Preencher os campos obrigatórios (e-mail, nome, sobrenome, celular, CPF, senha, confirmação de senha) <br> - Aceitar os termos de uso <br> - Clicar em "Registrar" |
 |Critério de Êxito | - O cadastro foi realizado com sucesso. |
 |  	|  	|
-|Resultado| -  |
+|Resultado| - https://user-images.githubusercontent.com/103212087/198860980-f20e6026-fee6-4e6b-8370-b735a8138211.mp4|
 |  	|  	|
 
 | **Caso de Teste** 	| **CT-02 – Validar informações de Login** 	|
