@@ -14,7 +14,7 @@ Esta seção contem os casos de teste referentes aos casos de uso e não funcion
 |	Requisito Associado 	| RF-01 - A aplicação deve apresentar, na página principal, a funcionalidade de cadastro de usuários para que esses consigam criar e gerenciar seu perfil. |
 | Objetivo do Teste 	| Verificar se o usuário consegue se cadastrar na aplicação. |
 | Passos 	| - Acessar o endereço da aplicação <br> - Clicar em "Criar conta" <br> - Preencher os campos obrigatórios (e-mail, nome, sobrenome, celular, CPF, senha, confirmação de senha) <br> - Aceitar os termos de uso <br> - Clicar em "Registrar" |
-|Critério de Êxito | - O cadastro foi realizado com sucesso. |
+|Critério de Êxito | - Realizar o Cadastro com Sucesso. |
 |  	|  	|
 |Resultado| - https://user-images.githubusercontent.com/103212087/198860980-f20e6026-fee6-4e6b-8370-b735a8138211.mp4|
 |  	|  	|
@@ -26,6 +26,8 @@ Esta seção contem os casos de teste referentes aos casos de uso e não funcion
 | Passos 	| - Acessar o endereço da aplicação <br> - Clicar em "Entrar" <br> - Preencher os campos obrigatórios (e-mail, senha) <br> - Clicar em "Entrar" |
 |Critério de Êxito | - Autenticação realizado com sucesso. Usuario redirecionado para a página inicial de usuário. |
 |  	|  	|
+|Resultado| - https://user-images.githubusercontent.com/103212087/198860980-f20e6026-fee6-4e6b-8370-b735a8138211.mp4|
+|  	|  	|
 
 | **Caso de Teste** 	| **CT-03 – Alterar informações de Perfil** 	|
 |:---:	|:---:	|
@@ -33,6 +35,8 @@ Esta seção contem os casos de teste referentes aos casos de uso e não funcion
 | Objetivo do Teste 	| Verificar se o usuário consegue alterar informações de perfil. |
 | Passos 	| - Realizar a autenticação na aplicação <br> - Clicar em "Perfil" <br> - Alterar informações de Perfil (nome, nickname, curso, discord, idade, genero) |
 |Critério de Êxito | - Dados atualizados no sistema com sucesso. |
+|  	|  	|
+|Resultado| - https://user-images.githubusercontent.com/103212087/198861095-2099674e-5663-4a61-9c67-f8a30319e6ad.mp4|
 |  	|  	|
 
 | **Caso de Teste** 	| **CT-04 – Dar like em um usuario** 	|
