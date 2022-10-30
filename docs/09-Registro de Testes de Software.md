@@ -76,6 +76,8 @@ Esta seção contem os casos de teste referentes aos casos de uso e não funcion
 | Passos 	| - Realizar a autenticação na aplicação com uma conta de usuário "a" <br> - Clicar em "Perfil" na barra de navegação superior. <br> - Utilizar o form de filtro para configurar as preferências quanto ao aparecimento de outros usuários (games preferidos, idade, genêro). <br> - Clocar em 'Aplicar'." |
 |Critério de Êxito | - Novos usuários serão mostrados na tela de acordo com as preferências configuaradas pelo usuário. |
 |  	|  	|
+|Resultado| - Teste não pôde ser realizado, pois a funcionalidade ainda não foi implementada.|
+|  	|  	|
 
 | **Caso de Teste** 	| **CT-07 – Comunicar por chat com outro usuario que tenha dado Match** 	|
 |:---:	|:---:	|
@@ -103,6 +105,8 @@ Esta seção contem os casos de teste referentes aos casos de uso e não funcion
 | Objetivo do Teste 	| Verificar se é possível visualizar perfis de outros usuários que apareçam na tela. |
 | Passos 	| - Realizar a autenticação na aplicação. <br> - Clicar em um usuário com quem tenha ocorrido match, na lista de matches localizada na lateral esquerda da aplicação. <br> |
 |Critério de Êxito | - Será exibida o Perfil do Match. |
+|  	|  	|
+|Resultado| -https://user-images.githubusercontent.com/103212087/198861549-b732e1eb-ca95-44d5-856e-b19a9833500b.mp4|
 |  	|  	|
 
 ### Requisitos não-funcionais:
