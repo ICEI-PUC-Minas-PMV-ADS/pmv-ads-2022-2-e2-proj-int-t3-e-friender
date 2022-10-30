@@ -16,7 +16,7 @@ Esta seção contem os casos de teste referentes aos casos de uso e não funcion
 | Passos 	| - Acessar o endereço da aplicação <br> - Clicar em "Criar conta" <br> - Preencher os campos obrigatórios (e-mail, nome, sobrenome, celular, CPF, senha, confirmação de senha) <br> - Aceitar os termos de uso <br> - Clicar em "Registrar" |
 |Critério de Êxito | - O cadastro foi realizado com sucesso. |
 |  	|  	|
-|Resultado| - O cadastro foi realizado com sucesso. |
+|Resultado| -  |
 |  	|  	|
 
 | **Caso de Teste** 	| **CT-02 – Validar informações de Login** 	|
