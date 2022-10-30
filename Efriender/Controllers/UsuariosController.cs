@@ -45,16 +45,16 @@ namespace EFriender.Controllers
 
 
         // GET: DetailsID
-        public async Task<IActionResult> Details(int id)
+        public async Task<IActionResult> Details(int? id)
         {
-            if ( id == null || _context.Usuario == null)
+            if (id == null || _context.Usuario == null)
             {
                 return NotFound();
             }
 
             var usuario = await _context.Usuario
                 .Include(u => u.Jogos)
-                .FirstOrDefaultAsync(m => m.Id != id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (usuario == null)
             {
                 return NotFound();
@@ -79,47 +79,6 @@ namespace EFriender.Controllers
 
             return View(usuario);
         }
-
-
-
-        // -- GET: SWIPE BY USERS
-        public async Task<IActionResult> Swipe()
-        {
-            if (_context.Usuario == null)
-            {
-                return NotFound();
-            }
-
-            var usuario = await _context.Usuario
-                .Include(u => u.Jogos)
-                .FirstOrDefaultAsync(m => m.Id != null);
-            if (usuario == null)
-            {
-                return NotFound();
-            }
-
-            //var idCount = _context.Usuario;
-            //ViewBag.Id = idCount.Count();
-
-            List<int> ListaIds = new List<int>();
-
-            var Usuario = _context.Usuario;
-
-
-            foreach (var item in Usuario)
-            {
-                ListaIds.Add(item.Id);
-            }
-
-            ViewBag.Id = ListaIds;
-
-            ViewBag.IdUltimo = ListaIds.Count() - 1;
-
-            return View(usuario);
-        }
-
-
-
 
         // GET: Usuarios
         public async Task<IActionResult> Usuarios()
