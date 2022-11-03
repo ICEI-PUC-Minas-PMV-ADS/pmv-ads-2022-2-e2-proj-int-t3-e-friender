@@ -75,6 +75,23 @@ namespace EFriender.Controllers
             return View(jogos);
         }
 
+        private string Imagem(Jogos jogos)
+        {
+            string uniqueFileName = null;
+
+            if(jogos.Imagem != null)
+            {
+                string uploadsFolder = Path.Combine(webHostEnvironment.WebRootPath, "imagens");
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + jogos.Imagem.FileName;
+                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                using (var filestream = new FileStream(filePath, FileMode.Create))
+                {
+                    jogos.Imagem.CopyTo(filestream);
+                }
+            }
+            return uniqueFileName;
+        }
+
         // GET: Jogos/Create
         public IActionResult Create()
         {
@@ -110,23 +127,6 @@ namespace EFriender.Controllers
 
         }
 
-        private string Imagem(Jogos jogos)
-        {
-            string uniqueFileName = null;
-
-            if(jogos.Imagem != null)
-            {
-                string uploadsFolder = Path.Combine(webHostEnvironment.WebRootPath, "imagens");
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + jogos.Imagem.FileName;
-                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
-                using (var filestream = new FileStream(filePath, FileMode.Create))
-                {
-                    jogos.Imagem.CopyTo(filestream);
-                }
-            }
-            return uniqueFileName;
-        }
-
         // GET: Jogos/Edit/5
         [Authorize(Roles = Roles.Admin)]
         public async Task<IActionResult> Edit(int? id)
@@ -149,35 +149,40 @@ namespace EFriender.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Imagem,Descricao")] Jogos jogos)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Imagem,UrlImagem,Descricao")] Jogos jogos)
         {
+
             if (id != jogos.Id)
             {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            try
             {
-                try
-                {
-                    _context.Update(jogos);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!JogosExists(jogos.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                _context.Update(jogos);
+                await _context.SaveChangesAsync();
             }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!JogosExists(jogos.Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            return RedirectToAction(nameof(Index));
+
+
+
             return View(jogos);
         }
+
+
+
+        
 
         // GET: Jogos/Delete/5
         public async Task<IActionResult> Delete(int? id)
