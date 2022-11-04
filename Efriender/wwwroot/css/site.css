@@ -71,8 +71,8 @@ body {
 
 .box {
     position: relative;
-    width: 50%;
-    height: 50vh;
+    width: 40%;
+    height: 65vh;
     display: flex;
     justify-content: center;
     -ms-aling-items: center;
@@ -85,7 +85,7 @@ body {
 .caixa {
     z-index: 2;
     font-size: 20px;
-    width: 80vw;
+    width: 90vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -96,7 +96,7 @@ body {
 .logo {
     width: 80px;
     height: 80px;
-    margin-bottom: 20px;
+    margin-bottom: 70px;
 }
 
 .text {
@@ -106,14 +106,14 @@ body {
     align-items: center;
     justify-content: center;
     width: 60%;
-    height: 5%;
+    height: 4%;
 }
 
 .text {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 10px 0px;
+    margin: 15px 0px;
 }
 
     .text input {
@@ -130,16 +130,19 @@ body {
     font-size: 12px;
     z-index: 2;
     cursor: pointer;
-    margin-top: 5px;
+    margin-top: 10px;
+}
+
+.checkbox{
+    font-size: 15px;
+    margin-bottom: 10px;
 }
 
 
-
-
 .btn-login {
-    width: 20vw;
+    width: 15vw;
     padding: 16px 0px;
-    margin: 5px;
+    margin: 20px;
     border: none;
     border-radius: 9px;
     outline: none;
