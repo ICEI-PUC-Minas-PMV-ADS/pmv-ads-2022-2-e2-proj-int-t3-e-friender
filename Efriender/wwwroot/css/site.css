@@ -1,5 +1,10 @@
+
+* {
+    font-family: 'Questrial', sans-serif;
+}
+
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
@@ -39,7 +44,9 @@ body {
     opacity:0.5;
 }
 
-
+.link-navbar:hover{
+    color: #ea3546 !important;
+}
 /* CAROUSEL*/
 .carousel-caption {
     transform: translateY(-50%);

@@ -12,4 +12,6 @@ public class ApplicationDbContext : IdentityDbContext
         public DbSet<Usuario> Usuario { get; set; }
 
         public DbSet<Jogos> Jogos { get; set; }
+
+    // implementar referencias para as tabelas de like e match
 }

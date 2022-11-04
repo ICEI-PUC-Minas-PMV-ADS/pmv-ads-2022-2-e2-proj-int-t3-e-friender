@@ -1,30 +1,101 @@
-﻿@model IEnumerable<EFriender.Models.Usuario>
+﻿@using static EFriender.Models.Usuario
+@model EFriender.Models.Usuario
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Edit";
 }
 
 <div class="container">
 
+    <h1>Edit</h1>
 
-<h1>Anúncios Cadastrados</h1>
+    <h4>Usuario</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
 
-<hr />
+                <div class="form-group  w-100 text-center imagemUsuario">
+                    <img class="rounded-circle" id="Photo"  src="~/imagens/@Model.UrlImagem" alt="Imagem Padrão" width="200px" height="200px" margin="20px" />
+                    </div>
 
-<div class="d-flex col-12 flex-wrap justify-content-center">
-    @foreach (var item in Model)
-    {
-        @if(item.Nome == User.Identity.Name)
-        {
-            <div class="rounded m-5 text-dark cardusuarious d-flex flex-column align-items-center justify-content-center col-4">
-                @Html.DisplayFor(modelItem => item.Nome)
-                <img class="border-2 border-white m-1 rounded" src="~/imagens/@item.UrlImagem" width="130px" height="130px" />
-                @Html.DisplayFor(modelItem => item.Idade) anos
-                <img src="~/imagens/@Html.DisplayFor(modelItem => item.Jogos.UrlImagem)" width="40px" height="40px" />
-                <a class="btn btn-primary btn-sm mt-2" asp-action="Details" asp-route-id="@item.Id">Ver Mais</a>
-                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-danger btn-sm m-1">Editar</a>
+                <div class="form-group">
+                <label asp-for="Imagem" class="control-label"></label>
+                <input asp-for="Imagem" class="form-control" />
+                <span asp-validation-for="Imagem" class="text-danger"></span>
             </div>
-        }
+
+                <div class="form-group">
+                    <label asp-for="Idade" class="control-label"></label>
+                    <input asp-for="Idade" class="form-control" />
+                    <span asp-validation-for="Idade" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Genero" class="control-label"></label>
+                    <select asp-for="Genero" class="form-control" asp-items="Html.GetEnumSelectList<Generos>()"></select>
+                    <span asp-validation-for="Genero" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Discord" class="control-label"></label>
+                    <input asp-for="Discord" class="form-control" />
+                    <span asp-validation-for="Discord" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Curso" class="control-label"></label>
+                    <input asp-for="Curso" class="form-control" />
+                    <span asp-validation-for="Curso" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Faculdade" class="control-label"></label>
+                    <input asp-for="Faculdade" class="form-control" />
+                    <span asp-validation-for="Faculdade" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Descricao" class="control-label"></label>
+                    <input asp-for="Descricao" class="form-control" />
+                    <span asp-validation-for="Descricao" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Preferencias" class="control-label"></label>
+                    <input asp-for="Preferencias" class="form-control" />
+                    <span asp-validation-for="Preferencias" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="JogosId" class="control-label"></label>
+                    <select asp-for="JogosId" class="form-control" asp-items="ViewBag.JogosId"></select>
+                    <span asp-validation-for="JogosId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="JogoSecond" class="control-label"></label>
+                    <select asp-for="JogoSecond" class="form-control" asp-items="Html.GetEnumSelectList<JogoSecundario>()"></select>
+                    <span asp-validation-for="JogoSecond" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mt-2 mb-2">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+                <div class="form-group">
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@ViewBag.Id">Deletar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Usuarios">Back to List</a>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script type="text/javascript">
+        $(".custom-file-input").on("change", function () {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName)
+        });
+    </script>
     }
-</div>
-</div>
+    }

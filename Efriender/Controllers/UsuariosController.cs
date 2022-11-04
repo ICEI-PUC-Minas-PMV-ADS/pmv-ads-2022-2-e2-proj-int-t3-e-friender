@@ -36,25 +36,17 @@ namespace EFriender.Controllers
 
         }
 
-        public async Task<IActionResult> Perfil()
-        {
-            var ApplicationDbContext = _context.Usuario.Include(u => u.Jogos);
-            return View(await ApplicationDbContext.ToListAsync());
-
-        }
-
-
         // GET: DetailsID
-        public async Task<IActionResult> Details(int id)
+        public async Task<IActionResult> Details(int? id)
         {
-            if ( id == null || _context.Usuario == null)
+            if (id == null || _context.Usuario == null)
             {
                 return NotFound();
             }
 
             var usuario = await _context.Usuario
                 .Include(u => u.Jogos)
-                .FirstOrDefaultAsync(m => m.Id != id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (usuario == null)
             {
                 return NotFound();
@@ -79,47 +71,6 @@ namespace EFriender.Controllers
 
             return View(usuario);
         }
-
-
-
-        // -- GET: SWIPE BY USERS
-        public async Task<IActionResult> Swipe()
-        {
-            if (_context.Usuario == null)
-            {
-                return NotFound();
-            }
-
-            var usuario = await _context.Usuario
-                .Include(u => u.Jogos)
-                .FirstOrDefaultAsync(m => m.Id != null);
-            if (usuario == null)
-            {
-                return NotFound();
-            }
-
-            //var idCount = _context.Usuario;
-            //ViewBag.Id = idCount.Count();
-
-            List<int> ListaIds = new List<int>();
-
-            var Usuario = _context.Usuario;
-
-
-            foreach (var item in Usuario)
-            {
-                ListaIds.Add(item.Id);
-            }
-
-            ViewBag.Id = ListaIds;
-
-            ViewBag.IdUltimo = ListaIds.Count() - 1;
-
-            return View(usuario);
-        }
-
-
-
 
         // GET: Usuarios
         public async Task<IActionResult> Usuarios()
@@ -196,6 +147,7 @@ namespace EFriender.Controllers
 
             if (usuario.Nome == User.Identity.Name)
             {
+
                 ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Id", usuario.JogosId);
                 return View(usuario);
             }
@@ -209,18 +161,22 @@ namespace EFriender.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Idade,Genero,Nick,Discord,Curso,Faculdade,Descricao,Preferencias,JogosId")] Usuario usuario)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Idade,Genero,Nick,Discord,Curso,Faculdade,Descricao,Preferencias,JogosId,Imagem")] Usuario usuario)
         {
+            usuario.Nome = User.Identity.Name;
             if (id != usuario.Id)
             {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
+
                 try
                 {
-                    _context.Update(usuario);
+                string uniqueFileName = Imagem(usuario);
+
+                usuario.UrlImagem = uniqueFileName;
+
+                _context.Update(usuario);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -235,7 +191,79 @@ namespace EFriender.Controllers
                     }
                 }
                 return RedirectToAction(nameof(Index));
+
+            ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Id", usuario.JogosId);
+            return View(usuario);
+        }
+
+        [Authorize]
+ 
+        public async Task<IActionResult> Perfil(int? id)
+        {
+
+            ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Nome");
+
+            var usuarioId = _context.Usuario;
+
+            foreach (var item in usuarioId)
+            {
+                if(item.Nome == User.Identity.Name)
+                {
+                    id = item.Id;
+                }
             }
+
+            ViewBag.Id = id;
+
+            if (id == null || _context.Usuario == null)
+            {
+                return View("Create");
+            }
+
+            var usuario = await _context.Usuario.FindAsync(id);
+
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+
+            if (usuario.Nome == User.Identity.Name)
+            {
+                ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Id", usuario.JogosId);
+                return View(usuario);
+            }
+
+            return Unauthorized();
+
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Perfil(int id, [Bind("Id,Idade,Genero,Nick,Discord,Curso,Faculdade,Descricao,Preferencias,JogosId,Imagem")] Usuario usuario)
+        {
+            if (id != usuario.Id)
+            {
+                return NotFound();
+            }
+
+            try
+            {
+
+                _context.Update(usuario);
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!UsuarioExists(usuario.Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            return RedirectToAction(nameof(Index));
+
             ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Id", usuario.JogosId);
             return View(usuario);
         }

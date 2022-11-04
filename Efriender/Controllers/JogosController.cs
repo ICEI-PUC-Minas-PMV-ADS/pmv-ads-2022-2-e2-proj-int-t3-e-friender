@@ -28,7 +28,9 @@ namespace EFriender.Controllers
         // GET: Index
         [Authorize(Roles = Roles.Admin)]
         public async Task<IActionResult> Index()
+
         {
+              var teste = "string";
               return View(await _context.Jogos.ToListAsync());
         }
 

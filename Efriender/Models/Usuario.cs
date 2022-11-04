@@ -8,6 +8,7 @@ namespace EFriender.Models
     public class Usuario
 
     {
+        [Key]
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Obrigatório inserir a Imagem de Perfil")]
