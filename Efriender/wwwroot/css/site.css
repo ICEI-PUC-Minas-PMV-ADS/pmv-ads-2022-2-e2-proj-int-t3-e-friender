@@ -55,6 +55,130 @@ body {
 }
 
 .carousel-item{
-    max-height: 86vh;
+    max-height: 55vh;
 }
 /*--FIM CAROUSEL--*/
+
+/*LOGIN*/
+.corpo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -ms-align-items: center;
+    min-height: 80vh;
+    font-size: 20px !important
+}
+
+.box {
+    position: relative;
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    -ms-aling-items: center;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.caixa {
+    z-index: 2;
+    font-size: 20px;
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.text {
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 5%;
+}
+
+.text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+    .text input {
+        width: 70%;
+        border: 0.5px solid rgba(0, 0, 0, 0.123);
+        border-radius: 8px;
+        padding: 15px;
+        color: #000000de;
+        font-size: 12pt;
+        outline: none;
+    }
+
+.forgot {
+    font-size: 12px;
+    z-index: 2;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+
+
+
+.btn-login {
+    width: 20vw;
+    padding: 16px 0px;
+    margin: 5px;
+    border: none;
+    border-radius: 9px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #ffffff;
+    background: #ff0000ab;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #ff0000ab;
+}
+
+
+
+.box::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 1200%;
+    background: linear-gradient(#ff0000, #ff0101);
+    animation: rotate 4s linear infinite;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    background: #ffffff;
+    inset: 3px;
+    border-radius: 16px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/*FIM LOGIN*/
