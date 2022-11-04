@@ -8,8 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 //var connectionString = builder.Configuration.GetConnectionString("ApplicationDbContextConnection") ?? throw new InvalidOperationException("Connection string 'ApplicationDbContextConnection' not found.");
 
 
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseMySql(
-    "server=efriender.cxo9osbnsuir.sa-east-1.rds.amazonaws.com; Port=3306;initial catalog=EFriender_V2;uid=admin;pwd=admin123", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.30-mysql")));
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
+    "Server=(localdb)\\mssqllocaldb;Database=efriender_db;Trusted_Connection=True;MultipleActiveResultSets=true"));
+
 
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false).AddRoles<IdentityRole>()
