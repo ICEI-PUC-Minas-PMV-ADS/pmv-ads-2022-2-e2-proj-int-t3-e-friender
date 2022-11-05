@@ -6,48 +6,50 @@
     ViewData["Title"] = "Swipe";
 }
 
-<div class="flex-column">
+@{
+    int IndexAtual = ViewBag.Id.IndexOf(Model.Id);
+    int UltimoIndex = ViewBag.IdUltimo;
+    int UltimoId = ViewBag.Id[UltimoIndex];
+    int IndexProximo = IndexAtual + 1;
+    int IndexAnterior = IndexAtual - 1;
+    if (IndexAtual == 0)
+    {
+        IndexAnterior = UltimoIndex;
+    }
 
-    <div >
+    if (IndexAtual == UltimoIndex)
+    {
+        IndexProximo = 0;
+    }
+    int Proximo = ViewBag.Id[IndexProximo];
+    int Anterior = ViewBag.Id[IndexAnterior];
 
-        <h4 class="text-center">Usuario</h4>
-        <hr />
+}
 
+<div class="flex-column h-100">
 
-        <div class="w-25 mx-auto col-sm text-center align-content-center justify-content-center center-block border border-warning rounded">
+    <div class="row h-100">
+        <div class="col my-auto mx-auto align-items-center d-flex justify-content-end"><a class="btn btn-primary m-2" asp-route-id="@Anterior">Anterior</a></div>
+        
+        <div class="background-gray mt-4 w-25 mx-auto col-sm text-center align-content-center justify-content-center center-block border rounded">
             <div class="m-4 rounded-circle overflow-hidden">
                 <img class="overflow-hidden" src="~/imagens/@Model.UrlImagem" width="300px" height="300px" />
             </div>
             
-              <h4 class="opacity-50">@Model.Nome</h4>
+              <h4 class="text-dark">@Model.Nome</h4>
 
-                <h4 class="opacity-50">@Model.Curso</h4>
+            <h4 class="text-dark">@Model.Curso</h4>
 
-                <h4 class="opacity-50">@Model.Jogos.Nome</h4>
+            <h4 class="text-dark">@Model.Jogos.Nome</h4>
+            <div class="d-grid gap-2"><a class="btn btn-primary mt-2 mb-2" asp-action="Details" asp-route-id="@Model.Id">Ver Perfil Completo</a></div>
+            
 
         </div>
 
-        <hr />
+        <div class="col col my-auto mx-auto align-items-center d-flex justify-content-start"><a class="btn btn-primary m-2" asp-route-id="@Proximo">Próximo</a></div>
+        
 
-        @{
-            int IndexAtual = ViewBag.Id.IndexOf(Model.Id);
-            int UltimoIndex = ViewBag.IdUltimo;
-            int UltimoId = ViewBag.Id[UltimoIndex];
-            int IndexProximo = IndexAtual + 1;
-            int IndexAnterior = IndexAtual - 1;
-            if (IndexAtual == 0)
-            {
-                IndexAnterior = UltimoIndex;
-            }
-
-            if (IndexAtual == UltimoIndex)
-            {
-                IndexProximo = 0;
-            }
-            int Proximo = ViewBag.Id[IndexProximo];
-            int Anterior = ViewBag.Id[IndexAnterior];
-
-        }
+       
 
 
 
@@ -75,10 +77,12 @@
         Lista 7:@ViewBag.Id[7]<br />*@
 
         <div class="text-center m-3">
-            <a class="btn btn-primary m-2" asp-route-id="@Anterior">Anterior</a>
+
             <a class="btn btn-primary btn-lg"><i class="fa-solid fa-gamepad"></i></a>
-            <a class="btn btn-primary m-2" asp-route-id="@Proximo">Próximo</a>
+
         </div>
+
+        <hr />
 
 
 
@@ -86,7 +90,8 @@
     </div>
     <div>
 
-
+        
         <a asp-action="Usuarios">Voltar</a>
+        
     </div>
 </div>
