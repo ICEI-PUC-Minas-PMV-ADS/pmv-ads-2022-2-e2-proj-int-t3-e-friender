@@ -36,6 +36,7 @@ namespace EFriender.Controllers
 
         }
 
+        [Authorize]
         // GET: DetailsID
         public async Task<IActionResult> Details(int? id)
         {
@@ -68,6 +69,39 @@ namespace EFriender.Controllers
             ViewBag.Id = ListaIds;
 
             ViewBag.IdUltimo = ListaIds.Count() -1;
+
+            return View(usuario);
+        }
+
+        [Authorize]
+        public async Task<IActionResult> Swipe(int? id)
+        {
+
+            var random = new Random();
+            var usuario = await _context.Usuario
+                .Include(u => u.Jogos)
+                .FirstOrDefaultAsync(m => m.Id == 1); // alterar aqui
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+
+            //var idCount = _context.Usuario;
+            //ViewBag.Id = idCount.Count();
+
+            List<int> ListaIds = new List<int>();
+
+            var Usuario = _context.Usuario;
+
+
+            foreach (var item in Usuario)
+            {
+                ListaIds.Add(item.Id);
+            }
+
+            ViewBag.Id = ListaIds;
+
+            ViewBag.IdUltimo = ListaIds.Count() - 1;
 
             return View(usuario);
         }

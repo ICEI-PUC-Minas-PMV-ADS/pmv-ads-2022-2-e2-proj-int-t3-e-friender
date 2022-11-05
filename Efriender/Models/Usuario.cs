@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Efriender.Models;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.Metrics;
 
@@ -14,7 +15,7 @@ namespace EFriender.Models
         [Required(ErrorMessage = "Obrigatório inserir a Imagem de Perfil")]
         [Display(Name = "Imagem")]
         [NotMapped]
-        public IFormFile Imagem { get; set; }
+        public IFormFile? Imagem { get; set; }
 
         [Required(ErrorMessage = "Obrigatório inserir a Imagem de Perfil")]
         public string UrlImagem { get; set; } = "FotoPadrao.png";
@@ -68,6 +69,12 @@ namespace EFriender.Models
         public int JogosId { get; set; }
 
         public Jogos Jogos { get; set; }
+
+        public ICollection<Visualizacao>? VisualizacoesRealizadas { get; set; }
+        public ICollection<Visualizacao>? VisualizacoesRecebidas { get; set; }
+
+        public ICollection<Combinacao>? UsuarioPrimario { get; set; }
+        public ICollection<Combinacao>? UsuarioSecundario { get; set; }
 
 
     }

@@ -3,6 +3,7 @@ using System;
 using Efriender.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,35 +11,15 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Efriender.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221104135517_M03")]
+    partial class M03
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "6.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
-
-            modelBuilder.Entity("Efriender.Models.Combinacao", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<int>("Id_Usuario1")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Id_Usuario2")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("Id_Usuario1");
-
-                    b.HasIndex("Id_Usuario2");
-
-                    b.ToTable("Combinaçoes");
-                });
 
             modelBuilder.Entity("EFriender.Models.Jogos", b =>
                 {
@@ -333,25 +314,6 @@ namespace Efriender.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("Efriender.Models.Combinacao", b =>
-                {
-                    b.HasOne("EFriender.Models.Usuario", "usuarioCurtido1")
-                        .WithMany("UsuarioPrimario")
-                        .HasForeignKey("Id_Usuario1")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("EFriender.Models.Usuario", "usuarioCurtido2")
-                        .WithMany("UsuarioSecundario")
-                        .HasForeignKey("Id_Usuario2")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("usuarioCurtido1");
-
-                    b.Navigation("usuarioCurtido2");
-                });
-
             modelBuilder.Entity("EFriender.Models.Usuario", b =>
                 {
                     b.HasOne("EFriender.Models.Jogos", "Jogos")
@@ -440,10 +402,6 @@ namespace Efriender.Migrations
 
             modelBuilder.Entity("EFriender.Models.Usuario", b =>
                 {
-                    b.Navigation("UsuarioPrimario");
-
-                    b.Navigation("UsuarioSecundario");
-
                     b.Navigation("VisualizacoesRealizadas");
 
                     b.Navigation("VisualizacoesRecebidas");
