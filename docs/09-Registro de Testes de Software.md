@@ -193,3 +193,9 @@ https://user-images.githubusercontent.com/100388026/198881852-3576642b-b905-42ce
 |Registro| - Sem Registro|
 |  	|  	|
 
+### Auditoria
+
+Usando o *lighthouse* conseguimos obter feedback externo em como atuar nas melhorias da aplicação recebendo pontuação de 0 a 100 em partes testadas áreas como
+atuação, acessibilidade, melhores praticas, SEO  e PWA, para assim continuarmos melhor atendendo as necessidades dos usuários segue a baixo o vídeo.
+
+https://user-images.githubusercontent.com/100388026/200437874-0ffce784-4919-45fa-98cc-fba5506ebe7f.mp4
