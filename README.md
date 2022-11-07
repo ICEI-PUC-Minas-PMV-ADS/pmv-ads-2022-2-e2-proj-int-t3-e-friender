@@ -32,9 +32,9 @@ https://user-images.githubusercontent.com/103212087/192888633-3c756d24-a467-4f4a
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+Abra seu navegador, copie e cole o link a baixo e dê ENTER para acessar a Home Page da aplicação, após acessar a página inicial do **EFriender** no canto superior direto clique para se registrar ou logar para navegar e se conectar com os demais usuários.
 
-Não deixe de informar o link onde a aplicação estiver disponível para acesso (por exemplo: https://adota-pet.herokuapp.com/src/index.html).
+**EFriender** disponível para acesso no link ( http://efriender-001-site1.atempurl.com/ ).
 
 Se houver usuário de teste, o login e a senha também deverão ser informados aqui (por exemplo: usuário - admin / senha - admin).
 
