@@ -80,7 +80,7 @@ namespace EFriender.Controllers
             var random = new Random();
             var usuario = await _context.Usuario
                 .Include(u => u.Jogos)
-                .FirstOrDefaultAsync(m => m.Id == 1); // alterar aqui
+                .FirstOrDefaultAsync(m => m.Id == 6); // alterar aqui
             if (usuario == null)
             {
                 return NotFound();
