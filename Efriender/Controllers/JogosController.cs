@@ -158,11 +158,13 @@ namespace EFriender.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
                 try
                 {
-                    _context.Update(jogos);
+                string uniqueFileName = Imagem(jogos);
+
+                jogos.UrlImagem = uniqueFileName;
+
+                _context.Update(jogos);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -177,7 +179,7 @@ namespace EFriender.Controllers
                     }
                 }
                 return RedirectToAction(nameof(Index));
-            }
+
             return View(jogos);
         }
 

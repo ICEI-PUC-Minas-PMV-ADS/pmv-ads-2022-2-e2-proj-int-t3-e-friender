@@ -35,17 +35,8 @@ namespace EFriender.Models
             Feminino,
         }
 
-        [Display(Name = "Jogo 2")]
-        public JogoSecundario? JogoSecond { get; set; }
-
-        public enum JogoSecundario
-        {
-            Nenhum,
-            Outlast,
-            Pokemon,
-            [Display(Name="Monster Hunter")]
-            MonsterHunter,
-        }
+        [Display(Name = "Jogo Adicional")]
+        public string? JogoSecundario { get; set; }
 
 
         public string? Discord { get; set; }

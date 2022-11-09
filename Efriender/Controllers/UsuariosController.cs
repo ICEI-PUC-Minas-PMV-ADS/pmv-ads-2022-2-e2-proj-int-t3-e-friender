@@ -135,10 +135,10 @@ namespace EFriender.Controllers
 
             usuarios.Nome = User.Identity.Name;
 
-            if(usuarios.JogoSecond == 0)
-            {
-                usuarios.JogoSecond = null;
-            }
+            //if(usuarios.JogoSecond == 0)
+            //{
+            //    usuarios.JogoSecond = null;
+            //}
 
             _context.Attach(usuarios);
             _context.Entry(usuarios).State = EntityState.Added;
