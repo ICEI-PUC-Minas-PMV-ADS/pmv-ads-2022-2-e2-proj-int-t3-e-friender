@@ -36,6 +36,13 @@ namespace EFriender.Controllers
 
         }
 
+        public async  Task<IActionResult> Home(int? id)
+        {
+            var ApplicationDbContext = _context.Usuario.Include(u => u.Jogos);
+            return View(await ApplicationDbContext.ToListAsync());
+        }
+
+
         [Authorize]
         // GET: DetailsID
         public async Task<IActionResult> Details(int? id)
@@ -70,6 +77,8 @@ namespace EFriender.Controllers
 
             ViewBag.IdUltimo = ListaIds.Count() -1;
 
+            ViewBag.IdInit = ListaIds[0];
+
             return View(usuario);
         }
 
@@ -78,9 +87,30 @@ namespace EFriender.Controllers
         {
 
             var random = new Random();
+            var Usuario = _context.Usuario;
+            List<int> ListaIds = new List<int>();
+
+            foreach (var item in Usuario)
+            {
+                ListaIds.Add(item.Id);
+            }
+
+            var rand = ListaIds[random.Next(ListaIds.Count)];
+
+            while(rand == id)
+            {
+                rand = ListaIds[random.Next(ListaIds.Count)];
+            }
+
+            ViewBag.Random = rand;
+
+            ViewBag.Id = ListaIds;
+
+            ViewBag.IdUltimo = ListaIds.Count() - 1;
+
             var usuario = await _context.Usuario
                 .Include(u => u.Jogos)
-                .FirstOrDefaultAsync(m => m.Id == 6); // alterar aqui
+                .FirstOrDefaultAsync(m => m.Id == id); // alterar aqui
             if (usuario == null)
             {
                 return NotFound();
@@ -88,20 +118,6 @@ namespace EFriender.Controllers
 
             //var idCount = _context.Usuario;
             //ViewBag.Id = idCount.Count();
-
-            List<int> ListaIds = new List<int>();
-
-            var Usuario = _context.Usuario;
-
-
-            foreach (var item in Usuario)
-            {
-                ListaIds.Add(item.Id);
-            }
-
-            ViewBag.Id = ListaIds;
-
-            ViewBag.IdUltimo = ListaIds.Count() - 1;
 
             return View(usuario);
         }
@@ -234,6 +250,8 @@ namespace EFriender.Controllers
 
             var usuarioId = _context.Usuario;
 
+            
+
             foreach (var item in usuarioId)
             {
                 if(item.Nome == User.Identity.Name)
@@ -258,7 +276,7 @@ namespace EFriender.Controllers
 
             if (usuario.Nome == User.Identity.Name)
             {
-                ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Id", usuario.JogosId);
+                ViewData["JogosId"] = new SelectList(_context.Jogos, "Nome", "Nome", usuario.JogosId);
                 return View(usuario);
             }
 

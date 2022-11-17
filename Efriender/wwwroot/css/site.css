@@ -47,6 +47,18 @@ body {
 .link-navbar:hover{
     color: #ea3546 !important;
 }
+
+/* BOTÃO NAVBAR */
+
+.swipeButton {
+    text-align: center;
+    width: 100px;
+    background-color: #ea3c3e;
+    border-radius:50px;
+}
+
+/*FIM BOTÃO NAVBAR*/
+
 /* CAROUSEL*/
 .carousel-caption {
     transform: translateY(-50%);
@@ -185,3 +197,46 @@ body {
 }
 
 /*FIM LOGIN*/
+
+/* HOME USUARIOS */
+
+.homeUsuario{
+    margin:auto;
+    width:80%;
+    height:75vh;
+}
+
+.cardHome {
+    height: 40vh;
+    background-color: #ea3c3e;
+    border-radius:50px;
+    color:white;
+    font-size:50px;
+    text-align:center;
+    vertical-align:bottom;
+    line-height:70vh;
+    text-decoration:none;
+    font-weight:800;
+}
+
+    .cardHome:hover {
+        color: white;
+    }
+
+.cardHome1 {
+    background: url(../imagens/img-layout/SettingsIcon.png);
+    background-color: #ea3c3e; 
+    background-size: 50%;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.cardHome2 {
+    background: url(../imagens/img-layout/playIcon.png);
+    background-color: #ea3c3e;
+    background-size: 50%;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+/*FIM HOME USUARIOS*/

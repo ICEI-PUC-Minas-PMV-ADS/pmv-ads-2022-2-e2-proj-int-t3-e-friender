@@ -28,7 +28,7 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1  justify-content-center">
                         <li class="nav-item">
-                            <a class="nav-link text-dark fs-5 bg-warning fw-bolder" asp-area="" asp-controller="Usuarios" asp-action="Swipe">SWIPE</a>
+                            <a class="nav-link text-light swipeButton" asp-area="" asp-controller="Usuarios" asp-action="Home"><i class="fa-solid fa-gamepad fa-2xl"></i></a>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />
@@ -42,11 +42,11 @@
         </main>
     </div>
 
-    <footer class="footer text-muted bg-light">
+    @*<footer class="footer text-muted bg-light">
         <div class="container text-dark">
             &copy; 2022 - Efriender
         </div>
-    </footer>
+    </footer>*@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
