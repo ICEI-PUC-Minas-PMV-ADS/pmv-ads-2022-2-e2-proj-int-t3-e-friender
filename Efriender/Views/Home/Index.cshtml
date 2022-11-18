@@ -28,7 +28,10 @@
             <div class="carousel-caption d-none d-md-block">
                 <h5 style="font-family: Anton" class="display-6 m-3">IT'S A DUO!</h5>
                 <p style="font-family: Oswald">O seu colega de faculdade pode ser o duo que você procura!</p>
-                <a class="btn btn-primary" asp-area="Identity" asp-page="/Account/Register">Cadastre-se ja!</a>
+                @if (!User.Identity.IsAuthenticated)
+                {
+                    <a class="btn btn-primary" asp-area="Identity" asp-page="/Account/Register">Cadastre-se ja!</a>
+                }
             </div>
         </div>
     </div>
