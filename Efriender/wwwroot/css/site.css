@@ -56,6 +56,9 @@ body {
     background-color: #e42c4f;
     border-radius: 50px;
 }
+.swipeButton img{
+    width: 60px;
+}
 
 /*FIM BOTÃO NAVBAR*/
 
@@ -210,12 +213,12 @@ body {
     height: 75vh;
 }
 
-    .cardHome {
-    height: 40vh;
-    background-color: #ea3c3e;
+.cardHome {
+    height: 32vh;
+    background-color: #E42C4F;
     border-radius: 50px;
     color: white;
-    font-size: 50px;
+    font-size: 00px;
     text-align: center;
     vertical-align: bottom;
     line-height: 70vh;
@@ -228,16 +231,16 @@ body {
 }
 
 .cardHome1 {
-    background: url(../imagens/img-layout/SettingsIcon.png);
-    background-color: #ea3c3e;
+    background: url(../imagens/img-layout/EDITARPERFILICON.png);
+    background-color: #E42C4F;
     background-size: 50%;
     background-position: top;
     background-repeat: no-repeat;
 }
 
 .cardHome2 {
-    background: url(../imagens/img-layout/playIcon.png);
-    background-color: #ea3c3e;
+    background: url(../imagens/img-layout/FINDADUOICON.png);
+    background-color: #E42C4F;
     background-size: 50%;
     background-position: top;
     background-repeat: no-repeat;
@@ -307,7 +310,7 @@ body {
 
 .text-func {
     width: 30vw;
-    height: 8vh;
+    height: 5vh;
     justify-content: center;
     /*border: 2px solid blue;*/
     font-size: 140%;

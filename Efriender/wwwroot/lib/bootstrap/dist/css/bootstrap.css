@@ -28,7 +28,7 @@
     --bs-gray-700: #495057;
     --bs-gray-800: #343a40;
     --bs-gray-900: #212529;
-    --bs-primary: #0d6efd;
+    --bs-primary: #E42C4F;
     --bs-secondary: #6c757d;
     --bs-success: #198754;
     --bs-info: #0dcaf0;
@@ -2951,7 +2951,7 @@ textarea.form-control-lg {
   }
 }
 .btn:hover {
-  color: #212529;
+    color: #E42C4F;
 }
 .btn-check:focus + .btn, .btn:focus {
   outline: 0;
@@ -2963,24 +2963,37 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #E42C4F;
-  border-color: #0d6efd;
+    color: #fff;
+    background-color: #e42c4f !important;
+    border-color: #e42c4f;
 }
-.btn-primary:hover {
-  color: #fff;
-  background-color: #E42C4F;
-  border-color: #0a58ca;
-}
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #e42c4f !important;
+        border-color: #0a58ca;
+    }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
-  background-color: #E42C4F;
+  background-color: #E42C4F !important;
   border-color: #0a58ca;
   box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
+
+  .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #8064A2 !important;
+}
+$mynewcolor:#E42C4F;
+
+.btn-primary {
+    @include button-variant($mynewcolor, darken($mynewcolor, 7.5%), darken($mynewcolor, 10%), lighten($mynewcolor,5%), lighten($mynewcolor, 10%), darken($mynewcolor,30%));
+}
+
+.btn-outline-primary {
+    @include button-outline-variant($mynewcolor, #222222, lighten($mynewcolor,5%), $mynewcolor);
+}
 }
     .btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
         color: #fff;
-        background-color: #e42C4F;
+        background-color: #e42C4F; !important;
         border-color: #0a53be;
     }
 .btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
