@@ -25,14 +25,14 @@ body {
 .cardjogo {
     width: 200px;
     height: 200px;
-    border: 3px solid #e52f48;
+    border: 3px solid #e42c4f;
 }
 
 .cardusuarious {
     width: 300px;
     height: 300px;
     padding: 20px;
-    border: 3px solid #e52f48;
+    border: 3px solid #e42c4f;
 }
 
 .barranavegacao {
@@ -45,7 +45,7 @@ body {
 }
 
 .link-navbar:hover{
-    color: #ea3546 !important;
+    color: #e42c4f !important;
 }
 
 /* BOTÃO NAVBAR */
@@ -53,8 +53,8 @@ body {
 .swipeButton {
     text-align: center;
     width: 100px;
-    background-color: #ea3c3e;
-    border-radius:50px;
+    background-color: #e42c4f;
+    border-radius: 50px;
 }
 
 /*FIM BOTÃO NAVBAR*/
