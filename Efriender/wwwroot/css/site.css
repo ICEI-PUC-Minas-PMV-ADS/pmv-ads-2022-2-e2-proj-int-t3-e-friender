@@ -202,8 +202,48 @@ body {
     height: 9px;
 }
 
-/*-----------------OBJETIVO------------------*/
-.objetivo {
+/*---------------------*/
+
+.homeUsuario {
+    margin: auto;
+    width: 80%;
+    height: 75vh;
+}
+
+    .cardHome {
+    height: 40vh;
+    background-color: #ea3c3e;
+    border-radius: 50px;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    vertical-align: bottom;
+    line-height: 70vh;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.cardHome:hover {
+        color: white;
+}
+
+.cardHome1 {
+    background: url(../imagens/img-layout/SettingsIcon.png);
+    background-color: #ea3c3e;
+    background-size: 50%;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.cardHome2 {
+    background: url(../imagens/img-layout/playIcon.png);
+    background-color: #ea3c3e;
+    background-size: 50%;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+    /*-----------------OBJETIVO------------------*/
+    .objetivo {
     background: url('/imagens/img-layout/Objt Back.png');
     height: 600px;
     font-style: italic;
