@@ -34,6 +34,15 @@
                         <li class="nav-item">
                             <a class="nav-link text-light swipeButton" asp-area="" asp-controller="Usuarios" asp-action="Home"><img src="~/imagens/img-layout/icone efriender.png" /></a>
                         </li>
+                        @if(User.IsInRole("Admin"))
+                        {
+                            <li>
+                                <a class="nav-link text-light btn btn-primary botaoAdmin" asp-area="" asp-controller="Usuarios" asp-action="Index">Usuários</a>
+                            </li>
+                            <li>
+                                <a class="nav-link text-light btn btn-primary botaoAdmin" asp-area="" asp-controller="Jogos" asp-action="Index">Jogos</a>
+                            </li>
+                        }
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>

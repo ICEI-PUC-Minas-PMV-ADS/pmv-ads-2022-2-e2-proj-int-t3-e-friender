@@ -348,6 +348,10 @@ body {
     color: white;
 }
 
+.botaoAdmin{
+    margin-left:10px;
+}
+
 .descricao input {
     padding-bottom: 60px;
     word-wrap: break-word;
