@@ -6,9 +6,16 @@
 
     List<int> ListaIds = new List<int>();
 
-            foreach (var item in Model)
-            {
-                ListaIds.Add(item.Id);
+    var userId = 0;
+
+    foreach (var item in Model)
+    {
+        ListaIds.Add(item.Id);
+        if (item.Nome == User.Identity.Name)
+        {
+            userId = item.Id;
+        }
+
             }
 
     var random = new Random();
@@ -21,7 +28,7 @@
 <div class="homeUsuario d-flex align-items-center">
 
     
-    <a class="col-5 cardHome cardHome1" asp-area="" asp-controller="Usuarios" asp-action="Perfil">
+    <a class="col-5 cardHome cardHome1" asp-area="" asp-controller="Usuarios" asp-action="Perfil" asp-route-id="@userId">
 
         <div>Editar Perfil</div>
 

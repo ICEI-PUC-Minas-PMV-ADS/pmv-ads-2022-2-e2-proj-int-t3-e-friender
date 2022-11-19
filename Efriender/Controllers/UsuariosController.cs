@@ -235,7 +235,7 @@ namespace EFriender.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Home));
 
             ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Id", usuario.JogosId);
             return View(usuario);
@@ -276,7 +276,7 @@ namespace EFriender.Controllers
 
             if (usuario.Nome == User.Identity.Name)
             {
-                ViewData["JogosId"] = new SelectList(_context.Jogos, "Nome", "Nome", usuario.JogosId);
+                ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Nome", usuario.JogosId);
                 return View(usuario);
             }
 
@@ -309,7 +309,7 @@ namespace EFriender.Controllers
                     throw;
                 }
             }
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Home));
 
             ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Id", usuario.JogosId);
             return View(usuario);

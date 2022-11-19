@@ -348,6 +348,16 @@ body {
     color: white;
 }
 
+.descricao input {
+    padding-bottom: 60px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.preferencia input {
+    padding-bottom: 60px;
+}
+
 
 /*-----------------FIM-COMO-FUNCIONA------------------*/
 
