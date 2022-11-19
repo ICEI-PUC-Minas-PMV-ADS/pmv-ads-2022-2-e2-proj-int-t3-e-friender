@@ -13,6 +13,7 @@ using Newtonsoft.Json.Linq;
 using NuGet.Packaging.Signing;
 using Efriender.Areas.Identity;
 using System.Security.Principal;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace EFriender.Controllers
 {
@@ -20,16 +21,18 @@ namespace EFriender.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly IWebHostEnvironment webHostEnvironment;
+        private IMemoryCache cache;
 
 
-        public UsuariosController(ApplicationDbContext context, IWebHostEnvironment webHost)
+        public UsuariosController(ApplicationDbContext context, IWebHostEnvironment webHost, IMemoryCache memoryCache)
         {
             _context = context;
             webHostEnvironment = webHost;
+            cache = memoryCache;
         }
 
-        // GET: Index
-        [Authorize(Roles = Roles.Admin)]
+          // GET: Index
+          [Authorize(Roles = Roles.Admin)]
         public async Task<IActionResult> Index()
         {
             var ApplicationDbContext = _context.Usuario.Include(u => u.Jogos);
@@ -98,10 +101,13 @@ namespace EFriender.Controllers
 
             var rand = ListaIds[random.Next(ListaIds.Count)];
 
-            while(rand == id)
+            while (rand == id)
             {
                 rand = ListaIds[random.Next(ListaIds.Count)];
+
             }
+
+
 
             ViewBag.Random = rand;
 

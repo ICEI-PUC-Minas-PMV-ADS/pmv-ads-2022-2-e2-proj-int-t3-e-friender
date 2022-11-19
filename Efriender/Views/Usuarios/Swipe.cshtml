@@ -6,31 +6,6 @@
     ViewData["Title"] = "Swipe";
 }
 
-@{
-    int IndexAtual = ViewBag.Id.IndexOf(Model.Id);
-    int UltimoIndex = ViewBag.IdUltimo;
-    int UltimoId = ViewBag.Id[UltimoIndex];
-    int IndexProximo = IndexAtual + 1;
-    int IndexAnterior = IndexAtual - 1;
-    if (IndexAtual == 0)
-    {
-        IndexAnterior = UltimoIndex;
-    }
-
-    if (IndexAtual == UltimoIndex)
-    {
-        IndexProximo = 0;
-    }
-    int Proximo = ViewBag.Id[IndexProximo];
-    int Anterior = ViewBag.Id[IndexAnterior];
-
-    ///////////////////////////////////////////
-
-   
-
-
-}
-
 <div class="flex-column h-100">
 
     <div class="row h-100">
@@ -84,9 +59,9 @@
         <div class="text-center m-3">
 
             <a class="btn btn-primary btn-lg"><i class="fa-solid fa-gamepad"></i></a>
-
         </div>
 
+        Lista: @ViewBag.ListaRandom.Count
 
     </div>
     <div>
