@@ -360,11 +360,12 @@ body {
     font-family: 'Anton', sans-serif;
     /*border: 2px solid green;*/
     background-position:center;
+    display:flex;
+    align-items:center;
 }
 
 .quem-s {
     /*border: 2px solid green;*/
-    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
