@@ -3126,9 +3126,9 @@ $mynewcolor:#E42C4F;
 }
 
 .btn-danger {
-  color: #fff;
-  background-color: #dc3545;
-  border-color: #dc3545;
+    color: #fff;
+    background-color: #e42c4f !important;
+    border-color: #dc3545;
 }
 .btn-danger:hover {
   color: #fff;
