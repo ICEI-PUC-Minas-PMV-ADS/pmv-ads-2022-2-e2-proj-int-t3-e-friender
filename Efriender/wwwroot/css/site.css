@@ -547,8 +547,7 @@ body {
 /*------------------------------------USUARIO/SWIPE------------------------------------*/
 
 .usuario-swipe {
-    border: solid 2px red;
-    height: 90vh;
+    height: 92.9vh;
     background: url('/imagens/img-layout/Back Tets Usuario.png');
 }
 

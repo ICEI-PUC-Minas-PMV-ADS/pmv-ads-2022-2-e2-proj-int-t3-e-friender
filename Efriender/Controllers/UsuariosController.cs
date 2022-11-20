@@ -161,7 +161,7 @@ namespace EFriender.Controllers
             _context.Attach(usuarios);
             _context.Entry(usuarios).State = EntityState.Added;
             _context.SaveChanges();
-            return RedirectToAction(nameof(Usuarios));
+            return RedirectToAction(nameof(Home));
 
         }
 
@@ -358,7 +358,7 @@ namespace EFriender.Controllers
 
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Home));
         }
 
         private bool UsuarioExists(int id)
