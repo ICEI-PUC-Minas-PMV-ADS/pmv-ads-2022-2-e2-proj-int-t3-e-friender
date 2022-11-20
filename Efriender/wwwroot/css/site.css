@@ -410,7 +410,6 @@ body {
 
 /*------------------------------------USUARIO/DETAILS------------------------------------*/
 .det-usuario{
-    border: solid 2px red;
     align-content: center;
     background: url('/imagens/img-layout/Back Tets Usuario.png');
     height: 100vh;
