@@ -40,10 +40,8 @@ public class ApplicationDbContext : IdentityDbContext
 
 
     public DbSet<Usuario> Usuario { get; set; }
-
     public DbSet<Jogos> Jogos { get; set; }
-
-    public DbSet<Visualizacao> Visualizacoes { get; set; }
+    public DbSet<Visualizacao> Visualizacao { get; set; }
     public DbSet<Combinacao> Combinacoes { get; set; }
 
     // implementar referencias para as tabelas de like e match
