@@ -414,6 +414,7 @@ body {
     align-content: center;
     background: url('/imagens/img-layout/Back Tets Usuario.png');
     height: 100vh;
+    margin-top:-16px;
 }
 
 .botao-voltar{
