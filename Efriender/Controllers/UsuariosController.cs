@@ -12,6 +12,9 @@ using System.Diagnostics.Metrics;
 using Newtonsoft.Json.Linq;
 using NuGet.Packaging.Signing;
 using Efriender.Areas.Identity;
+using Efriender.Controllers;
+using Efriender.Models;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace EFriender.Controllers
 {
@@ -20,7 +23,7 @@ namespace EFriender.Controllers
         private readonly ApplicationDbContext _context;
         private readonly IWebHostEnvironment webHostEnvironment;
 
-
+        
         public UsuariosController(ApplicationDbContext context, IWebHostEnvironment webHost)
         {
             _context = context;
@@ -35,7 +38,7 @@ namespace EFriender.Controllers
             return View(await ApplicationDbContext.ToListAsync());
 
         }
-
+    
         [Authorize]
         // GET: DetailsID
         public async Task<IActionResult> Details(int? id)
@@ -73,6 +76,63 @@ namespace EFriender.Controllers
             return View(usuario);
         }
 
+        public bool Passar(int ID_Visualizador, int ID_Visto)
+        {
+            try
+            { 
+                VisualizacaoController visualizacaoController = new VisualizacaoController(new Visualizacao(ID_Visualizador, ID_Visto));
+                if (visualizacaoController.result) return true;
+                else return false;
+            } catch (Exception ex)
+            {
+                throw new Exception("Erro ao passar para outro gamer.", ex);
+            }
+
+        }
+
+        public bool Match(int ID_Visualizador, int ID_Visto, bool like)
+        {
+            // -- adicionar lista de visualizacao que usuario visualizou
+            VisualizacaoController visualizacaoController = new VisualizacaoController(new Visualizacao(ID_Visualizador, ID_Visto, like));
+            
+            // -- verificar na lista de visualizacao se usuario visualizado tambem curtiu
+            List<Visualizacao> visualizadorVisto = new List<Visualizacao>();
+        
+            visualizadorVisto = visualizacaoController.GetByVisualizador(ID_Visto);
+          
+       
+            var test = visualizadorVisto.Where(x => ID_Visualizador == x.Id_visualizador && x.like == true);
+
+            // -- se sim, adiciona na tabela de Match o match dos dois usuarios, com flags de nao visualizado para os dois
+            if (test.Any())
+            {
+                // adicionar na tabela de match
+                CombinacaoController combinacaoController = new CombinacaoController(new Combinacao(ID_Visualizador, ID_Visto));
+
+                // -- imprime um alerta na tela do usuario sobre o match
+                //View("Swipe");
+                //Ok();
+                return true;
+            }
+            return false;
+
+
+
+        }
+
+        // -- botão swipe
+        public async Task<IActionResult> btnSwipe()
+        {
+            // -- consulta a tabela de visualizacao, com todos usuarios visualizados pelo user
+            var visualizacoes = new VisualizacaoController();
+            // -- comsulta a lista de usuarios total, e excluir o proprio user dela
+
+            // -- subtrai a lista de usuarios visualizados da lista total
+
+            // -- gera a view
+            return View(visualizacoes);
+        }
+
         [Authorize]
         public async Task<IActionResult> Swipe(int? id)
         {
@@ -85,6 +145,12 @@ namespace EFriender.Controllers
             {
                 return NotFound();
             }
+
+            // -- pegar todos os usuarios que o usuario logado ja visualizou 
+            var usuariosVistos = _context.Visualizacao.Include(v => v.Id_visualizador == 1);
+
+            // -- pegar todos os usuarios que nao tenham id igual a usariosVistos.Id_visto
+
 
             //var idCount = _context.Usuario;
             //ViewBag.Id = idCount.Count();
