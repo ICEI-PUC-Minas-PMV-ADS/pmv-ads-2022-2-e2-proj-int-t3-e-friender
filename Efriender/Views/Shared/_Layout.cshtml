@@ -4,20 +4,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Efriender</title>
-    <link rel="stylesheet" href="https://bootswatch.com/5/simplex/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Efriender.styles.css" asp-append-version="true" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-    <link rel="stylesheet" href="https://bootswatch.com/5/simplex/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css"/>
     <link rel="icon" type="image/svg" href="~/Logo_Efriender_Sem_Texto.png"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald"/>
 
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light border-bottom box-shadow mb-3 barranavegacao">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light border-bottom box-shadow barranavegacao">
             <div class="container-fluid">
 
                 <a class="navbar-brand text-dark" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/imagens/img-layout/Logo_Efriender.png" width="150px"/></a>
@@ -28,8 +32,17 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1  justify-content-center">
                         <li class="nav-item">
-                            <a class="nav-link text-dark fs-5 bg-warning fw-bolder" asp-area="" asp-controller="Usuarios" asp-action="Swipe">SWIPE</a>
+                            <a class="nav-link text-light swipeButton" asp-area="" asp-controller="Usuarios" asp-action="Home"><img src="~/imagens/img-layout/icone efriender.png" /></a>
                         </li>
+                        @if(User.IsInRole("Admin"))
+                        {
+                            <li>
+                                <a class="nav-link text-light btn btn-primary botaoAdmin" asp-area="" asp-controller="Usuarios" asp-action="Index">Usuários</a>
+                            </li>
+                            <li>
+                                <a class="nav-link text-light btn btn-primary botaoAdmin" asp-area="" asp-controller="Jogos" asp-action="Index">Jogos</a>
+                            </li>
+                        }
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
@@ -42,11 +55,11 @@
         </main>
     </div>
 
-    <footer class="footer text-muted bg-light">
+    @*<footer class="footer text-muted bg-light">
         <div class="container text-dark">
             &copy; 2022 - Efriender
         </div>
-    </footer>
+    </footer>*@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

@@ -6,30 +6,10 @@
     ViewData["Title"] = "Swipe";
 }
 
-@{
-    int IndexAtual = ViewBag.Id.IndexOf(Model.Id);
-    int UltimoIndex = ViewBag.IdUltimo;
-    int UltimoId = ViewBag.Id[UltimoIndex];
-    int IndexProximo = IndexAtual + 1;
-    int IndexAnterior = IndexAtual - 1;
-    if (IndexAtual == 0)
-    {
-        IndexAnterior = UltimoIndex;
-    }
-
-    if (IndexAtual == UltimoIndex)
-    {
-        IndexProximo = 0;
-    }
-    int Proximo = ViewBag.Id[IndexProximo];
-    int Anterior = ViewBag.Id[IndexAnterior];
-
-}
-
 <div class="flex-column h-100">
 
     <div class="row h-100">
-        <div class="col my-auto mx-auto align-items-center d-flex justify-content-end"><a class="btn btn-primary m-2" asp-route-id="@Anterior">Anterior</a></div>
+        <div class="col my-auto mx-auto align-items-center d-flex justify-content-end"><a class="btn btn-primary m-2" asp-route-id="@ViewBag.Random">Anterior</a></div>
         
         <div class="background-gray mt-4 w-25 mx-auto col-sm text-center align-content-center justify-content-center center-block border rounded">
             <div class="m-4 rounded-circle overflow-hidden">
@@ -46,7 +26,7 @@
 
         </div>
 
-        <div class="col col my-auto mx-auto align-items-center d-flex justify-content-start"><a class="btn btn-primary m-2" asp-route-id="@Proximo">Próximo</a></div>
+        <div class="col col my-auto mx-auto align-items-center d-flex justify-content-start"><a class="btn btn-primary m-2" asp-route-id="@ViewBag.Random">Próximo</a></div>
         
 
        
@@ -79,19 +59,13 @@
         <div class="text-center m-3">
 
             <a class="btn btn-primary btn-lg"><i class="fa-solid fa-gamepad"></i></a>
-
         </div>
-
-        <hr />
-
-
-
 
     </div>
     <div>
 
         
-        <a asp-action="Usuarios">Voltar</a>
+        @*<a class="btn btn-primary btn-lg" asp-action="Home">Voltar</a>*@
         
     </div>
 </div>

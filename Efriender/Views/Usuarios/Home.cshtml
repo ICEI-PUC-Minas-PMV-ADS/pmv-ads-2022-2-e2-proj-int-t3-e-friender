@@ -1,0 +1,44 @@
+﻿@using EFriender.Models
+@model IEnumerable<EFriender.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Index";
+
+    List<int> ListaIds = new List<int>();
+
+    var userId = 0;
+
+    foreach (var item in Model)
+    {
+        ListaIds.Add(item.Id);
+        if (item.Nome == User.Identity.Name)
+        {
+            userId = item.Id;
+        }
+
+            }
+
+    var random = new Random();
+
+    var rand = ListaIds[random.Next(ListaIds.Count)];
+    
+}
+
+
+<div class="homeUsuario d-flex align-items-center">
+
+    
+    <a class="col-5 cardHome cardHome1" asp-area="" asp-controller="Usuarios" asp-action="Perfil" asp-route-id="@userId">
+
+        <div>Editar Perfil</div>
+
+    </a>
+
+    <a class="col-5 offset-2 cardHome cardHome2" asp-area="" asp-controller="Usuarios" asp-action="Swipe" asp-route-id="@rand">
+
+        <div> Find a Duo! </div>
+
+    </a>
+
+
+</div>
