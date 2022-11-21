@@ -36,9 +36,6 @@ Abra seu navegador, copie e cole o link a baixo e dê ENTER para acessar a Home 
 
 **EFriender** disponível para acesso no link ( http://efriender-001-site1.atempurl.com/ ).
 
-Se houver usuário de teste, o login e a senha também deverão ser informados aqui (por exemplo: usuário - admin / senha - admin).
-
-O link e o usuário/senha descritos acima são apenas exemplos de como tais informações deverão ser apresentadas.
 
 # Documentação
 
