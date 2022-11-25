@@ -19,6 +19,110 @@ namespace Efriender.Migrations
                 .HasAnnotation("ProductVersion", "6.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            modelBuilder.Entity("Efriender.Models.ApplicationUser", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Curso")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Descricao")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Discord")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(256)
+                        .HasColumnType("varchar(256)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("Faculdade")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("Genero")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Idade")
+                        .HasColumnType("int");
+
+                    b.Property<string>("JogoSecundario")
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("JogosId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256)
+                        .HasColumnType("varchar(256)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("varchar(256)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("longtext");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("Preferencias")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("longtext");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("UrlImagem")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("varchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("JogosId");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex");
+
+                    b.ToTable("AspNetUsers", (string)null);
+                });
+
             modelBuilder.Entity("Efriender.Models.Combinacao", b =>
                 {
                     b.Property<int>("Id")
@@ -33,16 +137,12 @@ namespace Efriender.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Id_Usuario1");
-
-                    b.HasIndex("Id_Usuario2");
-
                     b.ToTable("Combinaçoes");
                 });
 
             modelBuilder.Entity("EFriender.Models.Jogos", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("JogosId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
@@ -58,7 +158,7 @@ namespace Efriender.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.HasKey("Id");
+                    b.HasKey("JogosId");
 
                     b.ToTable("Jogos");
                 });
@@ -131,10 +231,6 @@ namespace Efriender.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Id_visto");
-
-                    b.HasIndex("Id_visualizador");
-
                     b.ToTable("Visualizações");
                 });
 
@@ -185,70 +281,6 @@ namespace Efriender.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetRoleClaims", (string)null);
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUser", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<int>("AccessFailedCount")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Email")
-                        .HasMaxLength(256)
-                        .HasColumnType("varchar(256)");
-
-                    b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("tinyint(1)");
-
-                    b.Property<bool>("LockoutEnabled")
-                        .HasColumnType("tinyint(1)");
-
-                    b.Property<DateTimeOffset?>("LockoutEnd")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<string>("NormalizedEmail")
-                        .HasMaxLength(256)
-                        .HasColumnType("varchar(256)");
-
-                    b.Property<string>("NormalizedUserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("varchar(256)");
-
-                    b.Property<string>("PasswordHash")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("longtext");
-
-                    b.Property<bool>("PhoneNumberConfirmed")
-                        .HasColumnType("tinyint(1)");
-
-                    b.Property<string>("SecurityStamp")
-                        .HasColumnType("longtext");
-
-                    b.Property<bool>("TwoFactorEnabled")
-                        .HasColumnType("tinyint(1)");
-
-                    b.Property<string>("UserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("varchar(256)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NormalizedEmail")
-                        .HasDatabaseName("EmailIndex");
-
-                    b.HasIndex("NormalizedUserName")
-                        .IsUnique()
-                        .HasDatabaseName("UserNameIndex");
-
-                    b.ToTable("AspNetUsers", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -334,23 +366,15 @@ namespace Efriender.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("Efriender.Models.Combinacao", b =>
+            modelBuilder.Entity("Efriender.Models.ApplicationUser", b =>
                 {
-                    b.HasOne("EFriender.Models.Usuario", "usuarioCurtido1")
-                        .WithMany("UsuarioPrimario")
-                        .HasForeignKey("Id_Usuario1")
+                    b.HasOne("EFriender.Models.Jogos", "Jogos")
+                        .WithMany()
+                        .HasForeignKey("JogosId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("EFriender.Models.Usuario", "usuarioCurtido2")
-                        .WithMany("UsuarioSecundario")
-                        .HasForeignKey("Id_Usuario2")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("usuarioCurtido1");
-
-                    b.Navigation("usuarioCurtido2");
+                    b.Navigation("Jogos");
                 });
 
             modelBuilder.Entity("EFriender.Models.Usuario", b =>
@@ -364,25 +388,6 @@ namespace Efriender.Migrations
                     b.Navigation("Jogos");
                 });
 
-            modelBuilder.Entity("Efriender.Models.Visualizacao", b =>
-                {
-                    b.HasOne("EFriender.Models.Usuario", "usuarioVisto")
-                        .WithMany("VisualizacoesRecebidas")
-                        .HasForeignKey("Id_visto")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("EFriender.Models.Usuario", "usuarioVisualizador")
-                        .WithMany("VisualizacoesRealizadas")
-                        .HasForeignKey("Id_visualizador")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("usuarioVisto");
-
-                    b.Navigation("usuarioVisualizador");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -394,7 +399,7 @@ namespace Efriender.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("Efriender.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -403,7 +408,7 @@ namespace Efriender.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("Efriender.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -418,7 +423,7 @@ namespace Efriender.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("Efriender.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -427,7 +432,7 @@ namespace Efriender.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("Efriender.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -437,17 +442,6 @@ namespace Efriender.Migrations
             modelBuilder.Entity("EFriender.Models.Jogos", b =>
                 {
                     b.Navigation("Usuarios");
-                });
-
-            modelBuilder.Entity("EFriender.Models.Usuario", b =>
-                {
-                    b.Navigation("UsuarioPrimario");
-
-                    b.Navigation("UsuarioSecundario");
-
-                    b.Navigation("VisualizacoesRealizadas");
-
-                    b.Navigation("VisualizacoesRecebidas");
                 });
 #pragma warning restore 612, 618
         }

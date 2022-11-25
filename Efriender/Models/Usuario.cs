@@ -86,11 +86,11 @@ namespace EFriender.Models
 
         public Jogos Jogos { get; set; }
 
-        public ICollection<Visualizacao>? VisualizacoesRealizadas { get; set; }
-        public ICollection<Visualizacao>? VisualizacoesRecebidas { get; set; }
 
-        public ICollection<Combinacao>? UsuarioPrimario { get; set; }
-        public ICollection<Combinacao>? UsuarioSecundario { get; set; }
+
+
+
+
 
 
     }

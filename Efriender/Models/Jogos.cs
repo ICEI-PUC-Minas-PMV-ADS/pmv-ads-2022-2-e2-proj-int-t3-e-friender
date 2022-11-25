@@ -11,7 +11,7 @@ namespace EFriender.Models
     {
         
         [Key]
-        public int Id { get; set; }
+        public int JogosId { get; set; } // mudar para Id
 
         [Required(ErrorMessage = "Obrigatório inserir a Imagem do Jogo")]
         [Display(Name ="Imagem do jogo")]

@@ -16,7 +16,7 @@
         <div class="rounded m-5 text-dark cardjogo d-flex flex-column align-items-center justify-content-center">
             @Html.DisplayFor(modelItem => item.Nome)
             <img class="border-2 border-white" src="~/imagens/@item.UrlImagem" width="100px" height="100px" />
-            <a class="btn btn-primary btn-sm m-2" asp-action="VerMais" asp-route-id="@item.Id">Ver Mais</a>
+            <a class="btn btn-primary btn-sm m-2" asp-action="VerMais" asp-route-id="@item.JogosId">Ver Mais</a>
         </div>
     }
 </div>

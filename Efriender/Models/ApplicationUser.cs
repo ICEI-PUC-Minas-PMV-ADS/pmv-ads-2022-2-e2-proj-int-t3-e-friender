@@ -18,10 +18,40 @@ namespace Efriender.Models
 
         #endregion
 
-        [Key]
-        //public new int Id { get; set; }
+        #region [ PROPRIEDADES ]
 
-        public string Email { get; set; }
+        [Required(ErrorMessage = "Obrigatório inserir nome")]
+        public string? Nome { get; set; }
+
+        [Required(ErrorMessage = "Obrigatório inserir a Idade")]
+        public int Idade { get; set; }
+
+        [Display(Name = "Gênero")]
+        [Required(ErrorMessage = "Obrigatório inserir o Gênero")]
+        public Generos Genero { get; set; }
+
+        [Required(ErrorMessage = "Obrigatório inserir a Faculdade")]
+        public string Faculdade { get; set; }
+
+        [Required(ErrorMessage = "Obrigatório inserir o curso")]
+        public string Curso { get; set; }
+
+        [Display(Name = "Descrição")]
+        [Required(ErrorMessage = "Obrigatório inserir a descrição")]
+        public string Descricao { get; set; }
+
+        [Display(Name = "Preferências")]
+        public string? Preferencias { get; set; }
+        public string? Discord { get; set; }
+
+        [Display(Name = "Jogo Adicional")]
+        public string? JogoSecundario { get; set; }
+
+        [Display(Name = "Jogo Favorito")]
+        [ForeignKey("Jogos")]
+        [Required(ErrorMessage = "Obrigatório inserir o jogo")]
+        public int JogosId { get; set; }
+        public Jogos Jogos { get; set; }
 
         [Required(ErrorMessage = "Obrigatório inserir a Imagem de Perfil")]
         [Display(Name = "Imagem")]
@@ -30,54 +60,17 @@ namespace Efriender.Models
 
         [Required(ErrorMessage = "Obrigatório inserir a Imagem de Perfil")]
         public string UrlImagem { get; set; } = "FotoPadrao.png";
-        public string? Nome { get; set; }
 
-        [Required(ErrorMessage = "Obrigatório inserir a Idade")]
+        #endregion
 
-        public int Idade { get; set; }
-
-        [Display(Name = "Gênero")]
-        [Required(ErrorMessage = "Obrigatório inserir o Gênero")]
-        public Generos Genero { get; set; }
-        
+        #region [ ENUMS ]
         public enum Generos
         {
             Masculino,
             Feminino,
         }
 
-        [Display(Name = "Jogo Adicional")]
-        public string? JogoSecundario { get; set; }
-
-
-        public string? Discord { get; set; }
-
-        [Required(ErrorMessage = "Obrigatório inserir o curso")]
-        public string Curso { get; set; }
-
-        [Required(ErrorMessage = "Obrigatório inserir a Faculdade")]
-        public string Faculdade { get; set; }
-
-        [Display(Name = "Descrição")]
-        [Required(ErrorMessage = "Obrigatório inserir a descrição")]
-        public string Descricao { get; set; }
-
-        [Display(Name = "Preferências")]
-        public string? Preferencias { get; set; }
-
-        [Display(Name = "Jogo Favorito")]
-        [ForeignKey("Jogos")]
-        [Required(ErrorMessage = "Obrigatório inserir o jogo")]
-        public int JogosId { get; set; }
-
-        public Jogos Jogos { get; set; }
-
-        public ICollection<Visualizacao>? VisualizacoesRealizadas { get; set; }
-        public ICollection<Visualizacao>? VisualizacoesRecebidas { get; set; }
-
-        public ICollection<Combinacao>? UsuarioPrimario { get; set; }
-        public ICollection<Combinacao>? UsuarioSecundario { get; set; }
-
+        #endregion
 
 
     }

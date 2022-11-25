@@ -30,20 +30,26 @@ namespace Efriender.Models
 
         #endregion
 
-
+        #region [ ATRIBUTOS ]
 
         [Key]
         public int Id { get; set; }
         public bool like { get; set; }
-        public int Id_visualizador { get; set; }
-        
-        [ForeignKey("Id_visualizador")]
-        public Usuario? usuarioVisualizador { get; set; }
+        public int Id_visualizador { get; set; } // FK DE USUARIO
+        public int Id_visto { get; set; } // FK DE USUARIO
 
-        public int Id_visto { get; set; }
-        
-        [ForeignKey("Id_visto")]
-        public Usuario? usuarioVisto { get; set; }
+        private int vaiplz { get; set; }
+
+        #endregion
 
     }
 }
+
+
+
+
+//[ForeignKey("Id_visto")]
+//public Usuario? usuarioVisto { get; set; }
+
+//[ForeignKey("Id_visualizador")]
+//public Usuario? usuarioVisualizador { get; set; }

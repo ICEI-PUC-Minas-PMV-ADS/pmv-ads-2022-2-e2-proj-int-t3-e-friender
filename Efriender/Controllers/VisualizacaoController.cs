@@ -59,7 +59,7 @@ namespace Efriender.Controllers
             List<Visualizacao> lVisualizacao = new List<Visualizacao>();
             try
             {
-                lVisualizacao = _context.Visualizacao.Where(x => x.usuarioVisualizador.Id == ID_Visualizador).ToList();
+                lVisualizacao = _context.Visualizacao.Where(x => x.Id_visualizador == ID_Visualizador).ToList();
                 return lVisualizacao;
             } catch(Exception ex)
             {

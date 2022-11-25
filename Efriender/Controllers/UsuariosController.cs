@@ -61,6 +61,7 @@ namespace EFriender.Controllers
         {
             if (id == null || _context.Usuario == null)
             {
+
                 return NotFound();
             }
 
@@ -92,62 +93,62 @@ namespace EFriender.Controllers
             return View(usuario);
         }
 
-        public bool Passar(int ID_Visualizador, int ID_Visto)
-        {
-            try
-            { 
-                VisualizacaoController visualizacaoController = new VisualizacaoController(new Visualizacao(ID_Visualizador, ID_Visto));
-                if (visualizacaoController.result) return true;
-                else return false;
-            } catch (Exception ex)
-            {
-                throw new Exception("Erro ao passar para outro gamer.", ex);
-            }
+        //public bool Passar(int ID_Visualizador, int ID_Visto)
+        //{
+        //    try
+        //    { 
+        //        VisualizacaoController visualizacaoController = new VisualizacaoController(new Visualizacao(ID_Visualizador, ID_Visto));
+        //        if (visualizacaoController.result) return true;
+        //        else return false;
+        //    } catch (Exception ex)
+        //    {
+        //        throw new Exception("Erro ao passar para outro gamer.", ex);
+        //    }
 
-        }
+        //}
 
-        public bool Match(int ID_Visualizador, int ID_Visto, bool like)
-        {
-            // -- adicionar lista de visualizacao que usuario visualizou
-            VisualizacaoController visualizacaoController = new VisualizacaoController(new Visualizacao(ID_Visualizador, ID_Visto, like));
+        //public bool Match(int ID_Visualizador, int ID_Visto, bool like)
+        //{
+        //    // -- adicionar lista de visualizacao que usuario visualizou
+        //    VisualizacaoController visualizacaoController = new VisualizacaoController(new Visualizacao(ID_Visualizador, ID_Visto, like));
             
-            // -- verificar na lista de visualizacao se usuario visualizado tambem curtiu
-            List<Visualizacao> visualizadorVisto = new List<Visualizacao>();
+        //    // -- verificar na lista de visualizacao se usuario visualizado tambem curtiu
+        //    List<Visualizacao> visualizadorVisto = new List<Visualizacao>();
         
-            visualizadorVisto = visualizacaoController.GetByVisualizador(ID_Visto);
+        //    visualizadorVisto = visualizacaoController.GetByVisualizador(ID_Visto);
           
        
-            var test = visualizadorVisto.Where(x => ID_Visualizador == x.Id_visualizador && x.like == true);
+        //    var test = visualizadorVisto.Where(x => ID_Visualizador == x.Id_visualizador && x.like == true);
 
-            // -- se sim, adiciona na tabela de Match o match dos dois usuarios, com flags de nao visualizado para os dois
-            if (test.Any())
-            {
-                // adicionar na tabela de match
-                CombinacaoController combinacaoController = new CombinacaoController(new Combinacao(ID_Visualizador, ID_Visto));
+        //    // -- se sim, adiciona na tabela de Match o match dos dois usuarios, com flags de nao visualizado para os dois
+        //    if (test.Any())
+        //    {
+        //        // adicionar na tabela de match
+        //        CombinacaoController combinacaoController = new CombinacaoController(new Combinacao(ID_Visualizador, ID_Visto));
 
-                // -- imprime um alerta na tela do usuario sobre o match
-                //View("Swipe");
-                //Ok();
-                return true;
-            }
-            return false;
+        //        // -- imprime um alerta na tela do usuario sobre o match
+        //        //View("Swipe");
+        //        //Ok();
+        //        return true;
+        //    }
+        //    return false;
 
 
 
-        }
+        //}
 
-        // -- botão swipe
-        public async Task<IActionResult> btnSwipe()
-        {
-            // -- consulta a tabela de visualizacao, com todos usuarios visualizados pelo user
-            var visualizacoes = new VisualizacaoController();
-            // -- comsulta a lista de usuarios total, e excluir o proprio user dela
+        //// -- botão swipe
+        //public async Task<IActionResult> btnSwipe()
+        //{
+        //    // -- consulta a tabela de visualizacao, com todos usuarios visualizados pelo user
+        //    var visualizacoes = new VisualizacaoController();
+        //    // -- comsulta a lista de usuarios total, e excluir o proprio user dela
 
-            // -- subtrai a lista de usuarios visualizados da lista total
+        //    // -- subtrai a lista de usuarios visualizados da lista total
 
-            // -- gera a view
-            return View(visualizacoes);
-        }
+        //    // -- gera a view
+        //    return View(visualizacoes);
+        //}
 
         [Authorize]
         public async Task<IActionResult> Swipe2()

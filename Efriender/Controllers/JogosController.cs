@@ -50,7 +50,7 @@ namespace EFriender.Controllers
 
             var jogos = await _context.Jogos
                 .Include(t => t.Usuarios)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.JogosId == id);
             if (jogos == null)
             {
                 return NotFound();
@@ -68,7 +68,7 @@ namespace EFriender.Controllers
             }
 
             var jogos = await _context.Jogos
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.JogosId == id);
             if (jogos == null)
             {
                 return NotFound();
@@ -153,7 +153,7 @@ namespace EFriender.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Imagem,Descricao")] Jogos jogos)
         {
-            if (id != jogos.Id)
+            if (id != jogos.JogosId)
             {
                 return NotFound();
             }
@@ -169,7 +169,7 @@ namespace EFriender.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!JogosExists(jogos.Id))
+                    if (!JogosExists(jogos.JogosId))
                     {
                         return NotFound();
                     }
@@ -192,7 +192,7 @@ namespace EFriender.Controllers
             }
 
             var jogos = await _context.Jogos
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.JogosId == id);
             if (jogos == null)
             {
                 return NotFound();
@@ -222,7 +222,7 @@ namespace EFriender.Controllers
 
         private bool JogosExists(int id)
         {
-          return _context.Jogos.Any(e => e.Id == id);
+          return _context.Jogos.Any(e => e.JogosId == id);
         }
     }
 }
