@@ -4,6 +4,7 @@ using Efriender.Data;
 using static Efriender.Data.ApplicationDbContext;
 using System.Configuration;
 using Microsoft.AspNetCore.Hosting;
+using EFriender.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 //var connectionString = builder.Configuration.GetConnectionString("ApplicationDbContextConnection") ?? throw new InvalidOperationException("Connection string 'ApplicationDbContextConnection' not found.");
@@ -12,7 +13,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseMySql(
         "Server=mysql5045.site4now.net;Database=db_a8f291_efrdb;Uid=a8f291_efrdb;Pwd=efriender123", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.30-mysql")));
 
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false).AddRoles<IdentityRole>()
+builder.Services.AddDefaultIdentity<Usuario>(options => options.SignIn.RequireConfirmedAccount = false).AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
 

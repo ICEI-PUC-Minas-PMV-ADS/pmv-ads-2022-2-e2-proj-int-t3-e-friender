@@ -13,7 +13,6 @@ namespace EFriender.Models
 
     {
         
-
         #region [ CONSTRUTORES ]
 
         public Usuario(string Id)
@@ -44,9 +43,6 @@ namespace EFriender.Models
 
         #endregion
 
-
-
-        //public string Email { get; set; }
 
         [Required(ErrorMessage = "Obrigatório inserir a Imagem de Perfil")]
         [Display(Name = "Imagem")]
@@ -95,12 +91,5 @@ namespace EFriender.Models
 
 
 
-
-
-
-        //[Key]
-        //public int Id { get; set; }
-
-        //private Task<Usuario?> loggedUser;
     }
 }
