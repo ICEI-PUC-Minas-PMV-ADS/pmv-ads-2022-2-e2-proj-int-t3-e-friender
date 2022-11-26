@@ -4,7 +4,7 @@ using Efriender.Data;
 using static Efriender.Data.ApplicationDbContext;
 using System.Configuration;
 using Microsoft.AspNetCore.Hosting;
-using EFriender.Models;
+using Efriender.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 //var connectionString = builder.Configuration.GetConnectionString("ApplicationDbContextConnection") ?? throw new InvalidOperationException("Connection string 'ApplicationDbContextConnection' not found.");

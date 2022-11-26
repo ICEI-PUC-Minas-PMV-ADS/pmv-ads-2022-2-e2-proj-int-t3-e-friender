@@ -1,12 +1,10 @@
-﻿using Efriender.Models;
+﻿using EFriender.Models;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration.UserSecrets;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Diagnostics.Metrics;
 
-namespace EFriender.Models
+
+namespace Efriender.Models
 {
     [Table("Usuário")]
     public class Usuario : IdentityUser
