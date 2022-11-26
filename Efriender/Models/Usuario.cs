@@ -12,6 +12,7 @@ namespace EFriender.Models
     public class Usuario : IdentityUser
 
     {
+       
         
         #region [ CONSTRUTORES ]
 
