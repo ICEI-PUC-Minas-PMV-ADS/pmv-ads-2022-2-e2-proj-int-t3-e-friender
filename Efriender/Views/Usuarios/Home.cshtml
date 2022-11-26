@@ -2,12 +2,13 @@
 @model IEnumerable<EFriender.Models.Usuario>
 
 @{
+
     ViewData["Title"] = "Index";
 
-    List<int> ListaIds = new List<int>();
+    List<string> ListaIds = new List<string>();
 
-    var userId = 0;
-
+    string userId = "";
+    //User.Identity.Name // 
     foreach (var item in Model)
     {
         ListaIds.Add(item.Id);
@@ -27,7 +28,7 @@
 
 <div class="homeUsuario d-flex align-items-center">
 
-    @if(userId <= 0)
+    @if(string.IsNullOrEmpty(userId))
     {
         <a class="col-5 cardHome cardHome1" asp-area="" asp-controller="Usuarios" asp-action="Perfil">
 

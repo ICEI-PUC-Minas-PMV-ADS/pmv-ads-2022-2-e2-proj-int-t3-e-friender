@@ -21,7 +21,7 @@
             @Html.DisplayFor(modelItem => item.Nome)
             <img class="border-2 border-white m-1 rounded" src="~/imagens/@item.UrlImagem" width="130px" height="130px" />
             @Html.DisplayFor(modelItem => item.Idade) anos
-            <img src="~/imagens/@Html.DisplayFor(modelItem => item.Jogos.UrlImagem)" width="40px" height="40px"/>
+            <img src="~/imagens/@Html.DisplayFor(modelItem => item.Jogo.UrlImagem)" width="40px" height="40px"/>
             <a class="btn btn-primary btn-sm mt-2" asp-action="Details" asp-route-id="@item.Id">Ver Mais</a>
         </div>
     }

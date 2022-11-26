@@ -48,18 +48,18 @@ namespace Efriender.Controllers
         // GET: VisualizacaoController
         public async Task<IActionResult> Curtido()
         {
-            var Visualizacoes = _context.Visualizacao;
+            var Visualizacoes = _context.Visualizacoes;
             return Ok(Visualizacoes);
 
         }
 
         // -- Obter todas as visualizacoes por ID do Visualizador
-        public List<Visualizacao> GetByVisualizador(int ID_Visualizador)
+        public List<Visualizacao> GetByVisualizador(string ID_Visualizador)
         {
             List<Visualizacao> lVisualizacao = new List<Visualizacao>();
             try
             {
-                lVisualizacao = _context.Visualizacao.Where(x => x.Id_visualizador == ID_Visualizador).ToList();
+                lVisualizacao = _context.Visualizacoes.Where(x => x.Usuario_Visualizador.Id == ID_Visualizador).ToList();
                 return lVisualizacao;
             } catch(Exception ex)
             {
@@ -119,7 +119,7 @@ namespace Efriender.Controllers
         {
             try
             {
-                _context.Visualizacao.Add(visualizacao);
+                _context.Visualizacoes.Add(visualizacao);
                 _context.SaveChanges();
                 return true;
                 //return RedirectToAction(nameof(Index)); //ActionREsult

@@ -1,4 +1,5 @@
 ﻿using Efriender.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration.UserSecrets;
 using System.ComponentModel.DataAnnotations;
@@ -8,32 +9,42 @@ using System.Diagnostics.Metrics;
 namespace EFriender.Models
 {
     [Table("Usuário")]
-    public class Usuario
+    public class Usuario : IdentityUser
 
     {
-        private Task<Usuario?> loggedUser;
+        
 
         #region [ CONSTRUTORES ]
 
-        public Usuario(int Id)
+        public Usuario(string Id)
         {
             this.Id = Id;
         }
 
-        public Usuario(string username)
+        public Usuario()
         {
-            this.Nome = username;
         }
 
-        public Usuario(Task<Usuario?> loggedUser)
+        public Usuario (Usuario usuario)
         {
-            this.Id = loggedUser.Id;
+            Id = usuario.Id;
+            Imagem = usuario.Imagem;
+            UrlImagem = usuario.UrlImagem;
+            Nome = usuario.Nome;
+            Idade = usuario.Idade;
+            Genero = usuario.Genero;
+            JogoSecundario = usuario.JogoSecundario;
+            Discord = usuario.Discord;
+            Curso = usuario.Curso;
+            Faculdade = usuario.Faculdade;
+            Descricao = usuario.Descricao;
+            Preferencias = usuario.Preferencias;
+            Jogo = usuario.Jogo;
         }
 
         #endregion
 
-        [Key]
-        public int Id { get; set; }
+
 
         //public string Email { get; set; }
 
@@ -53,7 +64,6 @@ namespace EFriender.Models
         [Display(Name = "Gênero")]
         [Required(ErrorMessage = "Obrigatório inserir o Gênero")]
         public Generos Genero { get; set; }
-
         public enum Generos
         {
             Masculino,
@@ -62,7 +72,6 @@ namespace EFriender.Models
 
         [Display(Name = "Jogo Adicional")]
         public string? JogoSecundario { get; set; }
-
 
         public string? Discord { get; set; }
 
@@ -82,16 +91,16 @@ namespace EFriender.Models
         [Display(Name = "Jogo Favorito")]
         [ForeignKey("Jogos")]
         [Required(ErrorMessage = "Obrigatório inserir o jogo")]
-        public int JogosId { get; set; }
-
-        public Jogos Jogos { get; set; }
+        public Jogo Jogo { get; set; }
 
 
 
 
 
 
+        //[Key]
+        //public int Id { get; set; }
 
-
+        //private Task<Usuario?> loggedUser;
     }
 }

@@ -33,21 +33,6 @@ namespace Efriender.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Combinaçoes",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Id_Usuario1 = table.Column<int>(type: "int", nullable: false),
-                    Id_Usuario2 = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Combinaçoes", x => x.Id);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
-
-            migrationBuilder.CreateTable(
                 name: "Jogos",
                 columns: table => new
                 {
@@ -63,22 +48,6 @@ namespace Efriender.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Jogos", x => x.JogosId);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
-
-            migrationBuilder.CreateTable(
-                name: "Visualizações",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    like = table.Column<bool>(type: "tinyint(1)", nullable: false),
-                    Id_visualizador = table.Column<int>(type: "int", nullable: false),
-                    Id_visto = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Visualizações", x => x.Id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -113,25 +82,25 @@ namespace Efriender.Migrations
                 {
                     Id = table.Column<string>(type: "varchar(255)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Nome = table.Column<string>(type: "longtext", nullable: false)
+                    UrlImagem = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Nome = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Idade = table.Column<int>(type: "int", nullable: false),
                     Genero = table.Column<int>(type: "int", nullable: false),
-                    Faculdade = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Curso = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Descricao = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Preferencias = table.Column<string>(type: "longtext", nullable: true)
+                    JogoSecundario = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Discord = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    JogoSecundario = table.Column<string>(type: "longtext", nullable: true)
+                    Curso = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    JogosId = table.Column<int>(type: "int", nullable: false),
-                    UrlImagem = table.Column<string>(type: "longtext", nullable: false)
+                    Faculdade = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
+                    Descricao = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Preferencias = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Jogos = table.Column<int>(type: "int", nullable: false),
                     UserName = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     NormalizedUserName = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: true)
@@ -159,46 +128,8 @@ namespace Efriender.Migrations
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_AspNetUsers_Jogos_JogosId",
-                        column: x => x.JogosId,
-                        principalTable: "Jogos",
-                        principalColumn: "JogosId",
-                        onDelete: ReferentialAction.Cascade);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
-
-            migrationBuilder.CreateTable(
-                name: "Usuário",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    UrlImagem = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Nome = table.Column<string>(type: "longtext", nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Idade = table.Column<int>(type: "int", nullable: false),
-                    Genero = table.Column<int>(type: "int", nullable: false),
-                    JogoSecundario = table.Column<string>(type: "longtext", nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Discord = table.Column<string>(type: "longtext", nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Curso = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Faculdade = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Descricao = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Preferencias = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    JogosId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Usuário", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Usuário_Jogos_JogosId",
-                        column: x => x.JogosId,
+                        name: "FK_AspNetUsers_Jogos_Jogos",
+                        column: x => x.Jogos,
                         principalTable: "Jogos",
                         principalColumn: "JogosId",
                         onDelete: ReferentialAction.Cascade);
@@ -307,6 +238,63 @@ namespace Efriender.Migrations
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
+            migrationBuilder.CreateTable(
+                name: "Combinaçoes",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    usuario1Id = table.Column<string>(type: "varchar(255)", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    usuario2Id = table.Column<string>(type: "varchar(255)", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Combinaçoes", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Combinaçoes_AspNetUsers_usuario1Id",
+                        column: x => x.usuario1Id,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Combinaçoes_AspNetUsers_usuario2Id",
+                        column: x => x.usuario2Id,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id");
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
+                name: "Visualizações",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    like = table.Column<bool>(type: "tinyint(1)", nullable: false),
+                    Usuario_VisualizadorId = table.Column<string>(type: "varchar(255)", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Usuario_VistoId = table.Column<string>(type: "varchar(255)", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Visualizações", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Visualizações_AspNetUsers_Usuario_VistoId",
+                        column: x => x.Usuario_VistoId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Visualizações_AspNetUsers_Usuario_VisualizadorId",
+                        column: x => x.Usuario_VisualizadorId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -339,9 +327,9 @@ namespace Efriender.Migrations
                 column: "NormalizedEmail");
 
             migrationBuilder.CreateIndex(
-                name: "IX_AspNetUsers_JogosId",
+                name: "IX_AspNetUsers_Jogos",
                 table: "AspNetUsers",
-                column: "JogosId");
+                column: "Jogos");
 
             migrationBuilder.CreateIndex(
                 name: "UserNameIndex",
@@ -350,9 +338,24 @@ namespace Efriender.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Usuário_JogosId",
-                table: "Usuário",
-                column: "JogosId");
+                name: "IX_Combinaçoes_usuario1Id",
+                table: "Combinaçoes",
+                column: "usuario1Id");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Combinaçoes_usuario2Id",
+                table: "Combinaçoes",
+                column: "usuario2Id");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Visualizações_Usuario_VistoId",
+                table: "Visualizações",
+                column: "Usuario_VistoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Visualizações_Usuario_VisualizadorId",
+                table: "Visualizações",
+                column: "Usuario_VisualizadorId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -374,9 +377,6 @@ namespace Efriender.Migrations
 
             migrationBuilder.DropTable(
                 name: "Combinaçoes");
-
-            migrationBuilder.DropTable(
-                name: "Usuário");
 
             migrationBuilder.DropTable(
                 name: "Visualizações");

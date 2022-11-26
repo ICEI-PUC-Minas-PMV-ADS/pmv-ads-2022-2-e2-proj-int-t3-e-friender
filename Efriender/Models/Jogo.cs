@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Http;
 namespace EFriender.Models
 {
     [Table("Jogos")]
-    public class Jogos
+    public class Jogo
     {
         
         [Key]

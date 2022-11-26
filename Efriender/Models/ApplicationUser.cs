@@ -16,6 +16,11 @@ namespace Efriender.Models
             this.Id = id;
         }
 
+        public ApplicationUser()
+        {
+
+        }
+
         #endregion
 
         #region [ PROPRIEDADES ]

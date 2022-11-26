@@ -10,16 +10,16 @@ namespace Efriender.Models
 
         #region [ CONSTRUTORES ]
 
-        public Visualizacao(int ID_Visualizador, int ID_Visto)
+        public Visualizacao(Usuario usuarioVisualizador, Usuario usuarioVisto)
         {
-            Id_visualizador = ID_Visualizador;
-            Id_visto = ID_Visto;
+            this.Usuario_Visualizador = usuarioVisualizador;   
+            this.Usuario_Visto = usuarioVisto;
         }
 
-        public Visualizacao(int ID_Visualizador, int ID_Visto, bool like)
+        public Visualizacao(Usuario usuarioVisualizador, Usuario usuarioVisto, bool like)
         {
-            this.Id_visualizador = ID_Visualizador;
-            this.Id_visto = ID_Visto;
+            this.Usuario_Visualizador = usuarioVisualizador;
+            this.Usuario_Visto = usuarioVisto;
             this.like = like;
         }
 
@@ -35,10 +35,9 @@ namespace Efriender.Models
         [Key]
         public int Id { get; set; }
         public bool like { get; set; }
-        public int Id_visualizador { get; set; } // FK DE USUARIO
-        public int Id_visto { get; set; } // FK DE USUARIO
+        public Usuario Usuario_Visualizador { get; set; } // FK DE USUARIO
+        public Usuario Usuario_Visto { get; set; } // FK DE USUARIO
 
-        private int vaiplz { get; set; }
 
         #endregion
 

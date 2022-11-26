@@ -40,7 +40,7 @@ namespace EFriender.Controllers
           [Authorize(Roles = Roles.Admin)]
         public async Task<IActionResult> Index()
         {
-            var ApplicationDbContext = _context.Usuarios.Include(u => u.Jogo);
+            var ApplicationDbContext = _context.Usuario.Include(u => u.Jogos);
             return View(await ApplicationDbContext.ToListAsync());
 
         }
@@ -48,7 +48,7 @@ namespace EFriender.Controllers
 
         public async Task<IActionResult> Home(int? id)
         {
-            var ApplicationDbContext = _context.Usuarios.Include(u => u.Jogo);
+            var ApplicationDbContext = _context.Usuario.Include(u => u.Jogos);
             return View(await ApplicationDbContext.ToListAsync());
         }
 
@@ -57,16 +57,16 @@ namespace EFriender.Controllers
 
         [Authorize]
         // GET: DetailsID
-        public async Task<IActionResult> Details(string? id)
+        public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Usuarios == null)
+            if (id == null || _context.Usuario == null)
             {
 
                 return NotFound();
             }
 
-            var usuario = await _context.Usuarios
-                .Include(u => u.Jogo)
+            var usuario = await _context.Usuario
+                .Include(u => u.Jogos)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (usuario == null)
             {
@@ -155,33 +155,38 @@ namespace EFriender.Controllers
         {
             var random = new Random();
 
+            string name = User.FindFirstValue(ClaimTypes.Email); // -- gambiarra
+
 
             // -- pega o id do usuario logado
-            string sessionId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            //int userId = int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-            //var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            //var userId = int.TryParse(userIdClaim, out var id) ? id : 0;
+                //string nameidentifier = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                //int userId = int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+                //var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                //var userId = int.TryParse(userIdClaim, out var id) ? id : 0;
 
+            // -- cria uma instancia de um Usuario e associa o Id do usuario logado
+            Usuario user = new Usuario(name);
 
             // -- cria uma lista de Usuarios
             List<Usuario> lUsuario = new List<Usuario>();
 
-            // -- recupera o usuario logado e adiciona na lista
-            Usuario usuarioLogado = _context.Usuarios.Where(u => u.Id == sessionId).FirstOrDefault();
-            lUsuario.Add(usuarioLogado);
+            // -- se user não for nulo, adiciona a lUsuario
+            if (user != null) {
+                lUsuario.Add(user);
+            }
 
             // -- pegar todas as visualizações do usuario
-            List<Visualizacao> visualizacoes = _context.Visualizacoes.Include(v => v.Usuario_Visualizador.Id == sessionId).ToList();
+            List<Visualizacao> visualizacoes = _context.Visualizacao.Include(v => v.Id_visualizador == 1).ToList();
             foreach(Visualizacao view in visualizacoes)
             {
-                Usuario usuarioVisto = new Usuario(view.Usuario_Visto);
+                Usuario usuarioVisto = new Usuario(view.Id_visto);
 
                 // -- adiciona o usuario visto a lista de usuarios criadas anteriormente
                 lUsuario.Add(usuarioVisto);
             }
 
             // -- pega uma lista de usuarios no DB excluindo o usuario logado e os usuarios vistos
-            List<Usuario> usuarios = _context.Usuarios.ToList().Except(lUsuario).ToList();
+            List<Usuario> usuarios = _context.Usuario.ToList().Except(lUsuario).ToList();
 
             if(usuarios.Count <= 0)
             {
@@ -200,12 +205,12 @@ namespace EFriender.Controllers
 
 
         [Authorize]
-        public async Task<IActionResult> Swipe(string? id)
+        public async Task<IActionResult> Swipe(int? id)
         {
 
             var random = new Random();
-            var Usuario = _context.Usuarios;
-            List<string> ListaIds = new List<string>();
+            var Usuario = _context.Usuario;
+            List<int> ListaIds = new List<int>();
 
             foreach (var item in Usuario)
             {
@@ -228,8 +233,8 @@ namespace EFriender.Controllers
 
             ViewBag.IdUltimo = ListaIds.Count() - 1;
 
-            var usuario = await _context.Usuarios
-                .Include(u => u.Jogo)
+            var usuario = await _context.Usuario
+                .Include(u => u.Jogos)
                 .FirstOrDefaultAsync(m => m.Id == id); // alterar aqui
             if (usuario == null)
             {
@@ -245,7 +250,7 @@ namespace EFriender.Controllers
         // GET: Usuarios
         public async Task<IActionResult> Usuarios()
         {
-            var ApplicationDbContext = _context.Usuarios.Include(u => u.Jogo);
+            var ApplicationDbContext = _context.Usuario.Include(u => u.Jogos);
             return View(await ApplicationDbContext.ToListAsync());
         }
 
@@ -263,33 +268,33 @@ namespace EFriender.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Usuario usuario)
+        public IActionResult Create(Usuario usuarios)
         {
-            string uniqueFileName = Imagem(usuario);
+            string uniqueFileName = Imagem(usuarios);
 
-            usuario.UrlImagem = uniqueFileName;
+            usuarios.UrlImagem = uniqueFileName;
 
-            usuario.Nome = User.Identity.Name;
+            usuarios.Nome = User.Identity.Name;
 
-            _context.Attach(usuario);
-            _context.Entry(usuario).State = EntityState.Added;
+            _context.Attach(usuarios);
+            _context.Entry(usuarios).State = EntityState.Added;
             _context.SaveChanges();
             return RedirectToAction(nameof(Home));
 
         }
 
-        private string Imagem(Usuario usuario)
+        private string Imagem(Usuario usuarios)
         {
             string uniqueFileName = null;
 
-            if (usuario.Imagem != null)
+            if (usuarios.Imagem != null)
             {
                 string uploadsFolder = Path.Combine(webHostEnvironment.WebRootPath, "imagens");
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + usuario.Imagem.FileName;
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + usuarios.Imagem.FileName;
                 string filePath = Path.Combine(uploadsFolder, uniqueFileName);
                 using (var filestream = new FileStream(filePath, FileMode.Create))
                 {
-                    usuario.Imagem.CopyTo(filestream);
+                    usuarios.Imagem.CopyTo(filestream);
                 }
             }
             return uniqueFileName;
@@ -298,12 +303,12 @@ namespace EFriender.Controllers
         // GET: Usuarios/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Usuarios == null)
+            if (id == null || _context.Usuario == null)
             {
                 return NotFound();
             }
 
-            var usuario = await _context.Usuarios.FindAsync(id);
+            var usuario = await _context.Usuario.FindAsync(id);
 
             if (usuario == null)
             {
@@ -313,7 +318,7 @@ namespace EFriender.Controllers
             if (usuario.Nome == User.Identity.Name)
             {
 
-                ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Id", usuario.Jogo.JogosId);
+                ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Id", usuario.JogosId);
                 return View(usuario);
             }
 
@@ -326,10 +331,9 @@ namespace EFriender.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Id,Idade,Genero,Nick,Discord,Curso,Faculdade,Descricao,Preferencias,JogosId,Imagem")] Usuario usuario)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Idade,Genero,Nick,Discord,Curso,Faculdade,Descricao,Preferencias,JogosId,Imagem")] Usuario usuario)
         {
-            //string nameidentifier = User.FindFirstValue(ClaimTypes.NameIdentifier)
-            //usuario.Nome = User.Identity.Name;
+            usuario.Nome = User.Identity.Name;
             if (id != usuario.Id)
             {
                 return NotFound();
@@ -358,35 +362,37 @@ namespace EFriender.Controllers
                 }
                 return RedirectToAction(nameof(Index));
 
-            ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Id", usuario.Jogo.JogosId);
+            ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Id", usuario.JogosId);
             return View(usuario);
         }
 
         [Authorize]
  
-        public async Task<IActionResult> Perfil(string? id)
+        public async Task<IActionResult> Perfil(int? id)
         {
-            string Id = id;
 
             ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Nome");
 
-            var usuarios = _context.Usuarios;
-            Usuario usuario = new Usuario();
+            var usuarioId = _context.Usuario;
 
-            foreach (var item in usuarios)
+            
+
+            foreach (var item in usuarioId)
             {
-                if(item.Id == User.FindFirstValue(ClaimTypes.NameIdentifier))
+                if(item.Nome == User.Identity.Name)
                 {
-                    usuario = item;
+                    id = item.Id;
                 }
             }
 
             ViewBag.Id = id;
 
-            if (id == null || _context.Usuarios == null)
+            if (id == null || _context.Usuario == null)
             {
                 return View("Create");
             }
+
+            var usuario = await _context.Usuario.FindAsync(id);
 
             if (usuario == null)
             {
@@ -395,7 +401,7 @@ namespace EFriender.Controllers
 
             if (usuario.Nome == User.Identity.Name)
             {
-                ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Nome", usuario.Jogo.JogosId);
+                ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Nome", usuario.JogosId);
                 return View(usuario);
             }
 
@@ -404,7 +410,7 @@ namespace EFriender.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Perfil(string id, [Bind("Id,Idade,Genero,Nick,Discord,Curso,Faculdade,Descricao,Preferencias,JogosId,Imagem")] Usuario usuario)
+        public async Task<IActionResult> Perfil(int id, [Bind("Id,Idade,Genero,Nick,Discord,Curso,Faculdade,Descricao,Preferencias,JogosId,Imagem")] Usuario usuario)
         {
             if (id != usuario.Id)
             {
@@ -430,20 +436,20 @@ namespace EFriender.Controllers
             }
             return RedirectToAction(nameof(Home));
 
-            ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Id", usuario.Jogo.JogosId);
+            ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Id", usuario.JogosId);
             return View(usuario);
         }
 
         // GET: Usuarios/Delete/5
-        public async Task<IActionResult> Delete(string? id)
+        public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Usuarios == null)
+            if (id == null || _context.Usuario == null)
             {
                 return NotFound();
             }
 
-            var usuario = await _context.Usuarios
-                .Include(u => u.Jogo.JogosId)
+            var usuario = await _context.Usuario
+                .Include(u => u.Jogos)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (usuario == null)
             {
@@ -458,14 +464,14 @@ namespace EFriender.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Usuarios == null)
+            if (_context.Usuario == null)
             {
                 return Problem("Entity set 'ApplicationDbContext.Usuario'  is null.");
             }
-            var usuario = await _context.Usuarios.FindAsync(id);
+            var usuario = await _context.Usuario.FindAsync(id);
             if (usuario != null)
             {
-                _context.Usuarios.Remove(usuario);
+                _context.Usuario.Remove(usuario);
             }
 
 
@@ -473,9 +479,9 @@ namespace EFriender.Controllers
             return RedirectToAction(nameof(Home));
         }
 
-        private bool UsuarioExists(string id)
+        private bool UsuarioExists(int id)
         {
-          return _context.Usuarios.Any(e => e.Id == id);
+          return _context.Usuario.Any(e => e.Id == id);
         }
     }
 }

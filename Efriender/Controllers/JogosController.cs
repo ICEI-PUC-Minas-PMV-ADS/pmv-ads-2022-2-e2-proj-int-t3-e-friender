@@ -99,7 +99,7 @@ namespace EFriender.Controllers
         }*/
 
 
-        public IActionResult Create(Jogos jogos)
+        public IActionResult Create(Jogo jogos)
         {
             string uniqueFileName = Imagem(jogos);
             
@@ -112,7 +112,7 @@ namespace EFriender.Controllers
 
         }
 
-        private string Imagem(Jogos jogos)
+        private string Imagem(Jogo jogos)
         {
             string uniqueFileName = null;
 
@@ -151,7 +151,7 @@ namespace EFriender.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Imagem,Descricao")] Jogos jogos)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Imagem,Descricao")] Jogo jogos)
         {
             if (id != jogos.JogosId)
             {
