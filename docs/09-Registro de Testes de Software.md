@@ -152,9 +152,20 @@ https://user-images.githubusercontent.com/100388026/198884050-1f668623-1479-47ed
 | Objetivo do Teste 	| Verificar se a aplicação está disponivel para ser acessda na internet. |
 | Passos 	| - Abri um browser (Chrome, Edge, Firefox, etc) em um sistema conectado a internet  <br> - Digitar o endereço da aplicação na barra de endereços. <br> |
 |Critério de Êxito | - A página inicial da aplicação será exibida. |
-|Resultado| - Teste não pôde ser realizado, pois a funcionalidade ainda não foi implementada.|
-|Registro| - Sem Registro|
+|Resultado| - Teste realizado.|
+|Registro| - A baixo pode se ver as várias formas de se acessar o site uma delas é usando a URL: http://efriender-001-site1.atempurl.com/.|
 |  	|  	|
+
+# Acesso ao site:
+
+https://user-images.githubusercontent.com/100388026/204134313-7b616523-4882-48ea-8221-275a86d82c39.mp4
+
+<br />
+<br />
+
+# Visualizando Perfil de Outros Usuários:
+
+https://user-images.githubusercontent.com/100388026/198884050-1f668623-1479-47ed-89ab-0e300484347d.mp4
 
 | **Caso de Teste** 	| **CT-11 – Responsividade do sistema** 	|
 |:---:	|:---:	|
@@ -163,8 +174,20 @@ https://user-images.githubusercontent.com/100388026/198884050-1f668623-1479-47ed
 | Passos 	| - Abri um browser (Chrome, Edge, Firefox, etc) em um sistema conectado a internet  <br> em um dispositivo movel - Digitar o endereço da aplicação na barra de endereços. <br> |
 |Critério de Êxito | - A página inicial da aplicação será exibida de forma adaptada e compativel com a viewport do dispositivo movél. |
 |Resultado| - Teste não pôde ser realizado, pois a funcionalidade ainda não foi implementada.|
-|Registro| - Sem Registro|
+|Registro| - Registro de Teste a Baixo|
 |  	|  	|
+
+# Aplicação aberta em smartphone:
+
+https://user-images.githubusercontent.com/100388026/204134838-8038cf04-7dbe-481e-a4c1-5f3472c22ae6.mp4
+
+<br />
+<br />
+
+# Aplicação aberta em computadores:
+
+https://user-images.githubusercontent.com/100388026/204134644-2a751d80-da53-49cd-a072-790f79260ef4.mp4
+
 
 | **Caso de Teste** 	| **CT-12 – Compatibilidade do sistema com os principais navegadores do mercado** 	|
 |:---:	|:---:	|
