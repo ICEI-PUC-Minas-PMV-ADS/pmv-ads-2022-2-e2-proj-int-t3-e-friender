@@ -140,10 +140,11 @@ https://user-images.githubusercontent.com/63081926/204156236-49677dcf-680a-44a7-
 | Passos 	| - Realizar a autenticação na aplicação. <br> - Clicar em um usuário com quem tenha ocorrido match, na lista de matches localizada na lateral esquerda da aplicação. <br> |
 |Critério de Êxito | - Será exibida o Perfil do Match. |
 |Resultado| - Teste executado com êxito. |
-|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/103212087/198861549-b732e1eb-ca95-44d5-856e-b19a9833500b.mp4|
+|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/63081926/204156312-1074ed73-59d1-4d39-bd49-b894daf3726d.mp4|
 |  	|  	|
 
-https://user-images.githubusercontent.com/100388026/198884050-1f668623-1479-47ed-89ab-0e300484347d.mp4
+https://user-images.githubusercontent.com/63081926/204156312-1074ed73-59d1-4d39-bd49-b894daf3726d.mp4
+
 
 <br />
 <br />
@@ -164,7 +165,10 @@ https://user-images.githubusercontent.com/100388026/198884050-1f668623-1479-47ed
 
 # Acesso ao site:
 
-https://user-images.githubusercontent.com/100388026/204134313-7b616523-4882-48ea-8221-275a86d82c39.mp4
+https://user-images.githubusercontent.com/63081926/204156326-22a02c3d-5d20-44f6-b3e6-6e05cb97a78f.mp4
+
+
+
 
 <br />
 <br />
