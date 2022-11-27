@@ -2,7 +2,7 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -10,24 +10,23 @@
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="3000">
-            <img src="~/imagens/img-layout/Carousel 1.png" class="d-block w-100 " alt="...">
+            <img src="~/imagens/img-layout/Valorant.png" class="d-block w-100 " alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h5 style="font-family:     Oswald" class="display-6">Bem vindo ao E-Friender.</h5>
-                <p style="font-family: Oswald">A plataforma de interação Gamer.</p>
+                <h5 class="display-6">Bem vindo ao E-Friender.</h5>
+                <p>A plataforma de interação Gamer.</p>
             </div>
         </div>
         <div class="carousel-item" data-bs-interval="6000">
-            <img src="~/imagens/img-layout/Carousel 2.png" class="d-block w-100" alt="...">
+            <img src="~/imagens/img-layout/Fifinha.png" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h5 style="font-family: Oswald" class="display-6">Junte-se à nossa Comunidade.</h5>
-                <p style ="font-family: Oswald">Busque por novas amizades.</p>
+                <h5 class="display-6">Junte-se a nossa equipe.</h5>
+                <p>Busque por novas amizades.</p>
             </div>
         </div>
         <div class="carousel-item" data-bs-interval="9000">
-            <img src="~/imagens/img-layout/Carousel 3.png" class="d-block w-100" alt="...">
+            <img src="~/imagens/img-layout/counter.png" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h5 style="font-family: Anton" class="display-6 m-3">IT'S A DUO!</h5>
-                <p style="font-family: Oswald">O seu colega de faculdade pode ser o duo que você procura!</p>
+                <h5 class="display-6 m-3">It's a DUO!</h5>
                 @if (!User.Identity.IsAuthenticated)
                 {
                     <a class="btn btn-primary" asp-area="Identity" asp-page="/Account/Register">Cadastre-se ja!</a>
@@ -44,50 +43,5 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
-<div class="espaco"></div>
 
-
-
-<section class="objetivo">
-    <div class="col-lg-6 col-sm-12">
-        <div class="goal">
-            <h2 class="title-obj">OBJETIVO</h2>
-            <p style="font-family: Oswald" class="text-obj">Somos um sistema com foco em estudantes EAD, permitindo suas interações através de gostos comuns para jogos online, a fim de suprir a ausência de relações  ocasionada pela modalidade de curso à distância, melhorando também suas experiências com os jogos. </p>
-        </div>
-    </div>
-</section>
-<div class="espaco"></div>
-<section class="funcional">
-    <div class="col-lg-6 col-sm-12 offset-lg-6 offset-sm-0 func">
-        <div class="func">
-            <h2 class="title-func">COMO FUNCIONA</h2>
-            <p style="font-family: Oswald" class="text-func1">
-                Passo I - Cadastre-se na plataforma.
-            </p>
-
-            <p style="font-family: Oswald" class="text-func">
-                Passo II - Crie um perfil com uma descrição detalhada sobre você e seus gostos.
-            </p>
-
-            <p style="font-family: Oswald" class="text-func">
-                Passo III - Busque por usuários que mais combinem com você.
-            </p>
-
-            <p style="font-family: Oswald" class="text-func4">
-                Passo IV - Interaja com usuários.
-            </p>
-
-            <p style="font-family: Oswald" class="text-func5"> Passo V - Jogue e estabeleça relações.</p>
-
-        </div>
-    </div>
-</section>
-<div class="espaco"></div>
-<section class="quem-somos">
-    <div class="col-lg-6 col-sm-12 quem">
-        <div class="quem-s">
-            <h2 class="title-quem">QUEM SOMOS</h2>
-            <p style="font-family: Oswald" class="text-quem">Somos um grupo de estudantes de Análise e Desenvolvimento de Sistemas da PUC Minas e buscamos, através do nosso projeto, melhorar e unir as comunidades gamer e universitária EAD.</p>
-        </div>
-    </div>
-</section>
+<img src="~/imagens/img-layout/HomeComplemento.png" />

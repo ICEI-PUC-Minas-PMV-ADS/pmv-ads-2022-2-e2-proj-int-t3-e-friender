@@ -5,54 +5,17 @@
     ViewData["Title"] = "Log in";
 }
 
-<style>
-    .field-validation-error {
-        display:none;
-        color: red;
-        font-weight: bold;
-        background-color: yellow;
-    }
-
-    .input-validation-error {
-        font-weight: bold;
-        background-color: #d9bfc4;
-    }
-
-    .validation-summary-errors{
-        width:100%;
-        text-align: center;
-    }
-
-    .validation-summary-errors ul {
-        display:block !important;
-        text-align:center;
-        height:auto;
-        width:auto;
-    }
-
-    .validation-summary-errors li {
-        display: none;
-        text-align: center;
-        width:100%;
-    }
-
-    .validation-summary-errors:after {
-        text-align:center;
-        content: 'Não foi possível realizar o login! Usuário e/ou senha incorreto.';
-        font-size:20px;
-        color:#e42c4f;
-        font-family:Oswald;
-        margin:auto;    
-    }
-</style>
 
 
 <div class="container">
 
+
+<h1>@ViewData["Title"]</h1>
 <div class="row">
     <div class="col-md-12">
         <section>
             <form id="account" method="post">
+                <hr />
                 <div asp-validation-summary="ModelOnly" class=""></div>
                 <div class="corpo">
                 <div class="box">
@@ -60,7 +23,6 @@
                     <img src="~/Logo_Efriender_Sem_Texto.png" class="logo" />
                 <div class="text ">
                     <input asp-for="Input.Username" class="" autocomplete="username" aria-required="true" placeholder="Usuário"/>
-                    <br />
                     <span asp-validation-for="Input.Username" class=""></span>
                 </div>
                 <div class="text ">
@@ -85,8 +47,8 @@
                     <p>
                         @*<a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>*@
                     </p>
-                    <p class="d-flex justify-content-center">
-                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="btn btn-primary fw-bold">Não possui uma conta? Se registre!</a>
+                    <p>
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Não possui uma conta? Se registre!</a>
                     </p>
                     <p>
                         @*<a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>*@

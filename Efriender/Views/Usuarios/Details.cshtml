@@ -10,7 +10,7 @@
 
 <div>
 
-    @*<h4>Usuario</h4>
+    <h4>Usuario</h4>
     <hr />
 
     <div class="text-center">
@@ -69,7 +69,7 @@
             
         </div>
         <hr />
-    </div>*@
+    </div>
 
     @{
         int IndexAtual = ViewBag.Id.IndexOf(Model.Id);
@@ -117,86 +117,18 @@
     Lista 7:@ViewBag.Id[7]<br />*@
 
     <div class="text-center m-3">
-        @*<a class="btn btn-primary m-2" asp-route-id="@Anterior">Anterior</a>
+        <a class="btn btn-primary m-2" asp-route-id="@Anterior">Anterior</a>
             <a class="btn btn-primary btn-lg"><i class="fa-solid fa-gamepad"></i></a>
-        <a class="btn btn-primary m-2" asp-route-id="@Proximo">Próximo</a>*@
+        <a class="btn btn-primary m-2" asp-route-id="@Proximo">Próximo</a>
     </div>
 
 
 
 
 </div>
+<div>
 
-@*<div>
-    <a class="btn btn-primary btn-lg" asp-action="Swipe" asp-route-id="@Model.Id">Voltar</a>
-</div>*@
 
+    <a asp-action="Usuarios">Voltar</a>
 </div>
-
-<section class="det-usuario d-flex justify-content-center align-items-center">
-
-    <div class="info-usuario d-flex justify-content-between align-items-center ">
-        
-        <div class="test d-flex justify-content-between align-items-center">
-            <img class="foto-usuario" src="~/imagens/@Model.UrlImagem" width="200px" />
-            <div> 
-                <p class="info-nick">Erickzz</p>
-            </div>
-
-        <h1 class="info-titulo">Nome</h1>
-            <p class="info-paragrafo">@Model.Nome</p>
-
-        <h1 class="info-titulo">Faculdade</h1>
-            <p class="info-paragrafo">@Model.Faculdade</p>
-
-        <h1 class="info-titulo">Curso</h1>
-            <p class="info-paragrafo">@Model.Curso</p>
-
-            
-            @if (Model.Discord != null)
-            {
-                <h1 class="info-titulo">Discord</h1>
-                <p class="info-paragrafo">@Model.Discord</p>
-            }
-
-        <h1 class="info-titulo">Idade</h1>
-            <p class="info-paragrafo">@Model.Idade</p>
-
-        <h1 class="info-titulo">Gênero</h1>
-            <p class="info-paragrafo">@Model.Genero</p>
-
-            @if (Model.JogoSecundario != null)
-            {
-                <h1 class="info-titulo">Jogo Secundário</h1>
-                <p class="info-paragrafo">@Model.JogoSecundario</p>
-            }
-
-        </div>
-    </div>
-
-    <div class="descrip-usuario d-flex justify-content-end align-items-center">
-          <div class="descricao m-4">
-            <h1 class="descript-titulo">Descrição</h1>
-            <p class="descript-paragrafo">@Model.Descricao</p>
-          </div>
-        <div class="des-preferencias m-4">
-
-            @if (Model.Preferencias != null)
-            {
-                <h1 class="descript-titulo">Preferências</h1>
-                <p class="descript-paragrafo">@Model.Preferencias</p>
-            }
-          </div>
-        <div class="des-jogos m-4">
-            <h1 class="descript-titulo-img">Jogo Favorito</h1>
-            <p class="descript-paragrafo-img"> <img src="~/imagens/@Model.Jogos.UrlImagem" width="150px" height="150px" /> </p>
-        </div>
-    </div>
-    <div class="botao-voltar">
-        <a class=" btn btn-primary btn-lg" asp-action="Swipe" asp-route-id="@Model.Id">Voltar</a>
-    </div>
-</section>
-
-
-
-        @*<div class="espaco"></div>*@
+</div>
