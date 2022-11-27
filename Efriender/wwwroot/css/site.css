@@ -1,7 +1,7 @@
 
-* {
+/** {
     font-family: 'Questrial', sans-serif;
-}
+}*/
 
 html {
     font-size: 14px;
@@ -25,14 +25,14 @@ body {
 .cardjogo {
     width: 200px;
     height: 200px;
-    border: 3px solid #e52f48;
+    border: 3px solid #e42c4f;
 }
 
 .cardusuarious {
     width: 300px;
     height: 300px;
     padding: 20px;
-    border: 3px solid #e52f48;
+    border: 3px solid #e42c4f;
 }
 
 .barranavegacao {
@@ -45,9 +45,24 @@ body {
 }
 
 .link-navbar:hover{
-    color: #ea3546 !important;
+    color: #e42c4f !important;
 }
-/* CAROUSEL*/
+
+/*------------------------------------BOTÃO NAVBAR------------------------------------*/
+
+.swipeButton {
+    text-align: center;
+    width: 100px;
+    background-color: #e42c4f;
+    border-radius: 50px;
+}
+.swipeButton img{
+    width: 60px;
+}
+
+/*------------------------------------FIM BOTÃO NAVBAR------------------------------------*/
+
+/*------------------------------------CAROUSEL------------------------------------*/
 .carousel-caption {
     transform: translateY(-50%);
     bottom: 0;
@@ -57,9 +72,10 @@ body {
 .carousel-item{
     max-height: 55vh;
 }
-/*--FIM CAROUSEL--*/
+/*------------------------------------FIM CAROUSEL------------------------------------*/
 
-/*LOGIN*/
+
+/*------------------------------------LOGIN------------------------------------*/
 .corpo {
     display: flex;
     justify-content: center;
@@ -150,7 +166,7 @@ body {
     font-weight: 800;
     letter-spacing: 3px;
     color: #ffffff;
-    background: #ff0000ab;
+    background: #e42c4f;
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px #ff0000ab;
 }
@@ -184,4 +200,341 @@ body {
     }
 }
 
-/*FIM LOGIN*/
+/*------------------------------------FIM LOGIN------------------------------------*/
+
+.espaco {
+    height: 9px;
+}
+
+/*------------------------------------HOME------------------------------------*/
+
+.homeUsuario {
+    margin: auto;
+    width: 80%;
+    height: 75vh;
+}
+
+.cardHome {
+    height: 32vh;
+    background-color: #E42C4F;
+    border-radius: 50px;
+    color: white;
+    font-size: 00px;
+    text-align: center;
+    vertical-align: bottom;
+    line-height: 70vh;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.cardHome:hover {
+        color: white;
+}
+
+.cardHome1 {
+    background: url(../imagens/img-layout/EDITARPERFILICON.png);
+    background-color: #E42C4F;
+    background-size: 50%;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.cardHome2 {
+    background: url(../imagens/img-layout/FINDADUOICON.png);
+    background-color: #E42C4F;
+    background-size: 50%;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+    /*-----------------OBJETIVO------------------*/
+    .objetivo {
+    background: url('/imagens/img-layout/Objt Back.png');
+    height: 600px;
+    font-style: italic;
+    font-family: 'Anton', sans-serif;
+}
+
+.goal {
+    /*border: 2px solid green;*/
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title-obj {
+    /*border: 2px solid blue;*/
+    display: flex;
+    font-size: 450%;
+    margin-bottom: 60px;
+    color: white;
+}
+
+.text-obj {
+    /*border: 2px solid blue;*/
+    font-size: 140%;
+    width: 40vw;
+    color: white;
+    text-align: center;
+}
+
+
+/*-----------------FIM-OBJETIVO------------------*/
+
+/*-----------------COMO-FUNCIONA------------------*/
+
+.funcional {
+    height: 600px;
+    background: url('/imagens/img-layout/Como F Back.png');
+    font-style: italic;
+    font-family: 'Anton', sans-serif;
+    background-repeat:no-repeat;
+}
+
+.func {
+    /*border: 2px solid green;*/
+    height: 67vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title-func {
+    /*border: 2px solid blue;*/
+    display: flex;
+    font-size: 450%;
+    margin-bottom: 60px;
+    color: white;
+}
+
+.text-func {
+    width: 30vw;
+    height: 5vh;
+    justify-content: center;
+    /*border: 2px solid blue;*/
+    font-size: 140%;
+    text-align: left;
+    color: white;
+}
+
+.text-func1 {
+    width: 30vw;
+    height: 4vh;
+    justify-content: center;
+    /*border: 2px solid blue;*/
+    font-size: 140%;
+    text-align: left;
+    color: white;
+}
+
+.text-func4 {
+    width: 30vw;
+    height: 4vh;
+    justify-content: center;
+    /*border: 2px solid blue;*/
+    font-size: 140%;
+    text-align: left;
+    color: white;
+}
+
+.text-func5 {
+    width: 30vw;
+    height: 4vh;
+    justify-content: center;
+    /*border: 2px solid blue;*/
+    font-size: 140%;
+    text-align: left;
+    color: white;
+}
+
+.botaoAdmin{
+    margin-left:10px;
+}
+
+.descricao input {
+    padding-bottom: 60px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.preferencia input {
+    padding-bottom: 60px;
+}
+
+
+/*-----------------FIM-COMO-FUNCIONA------------------*/
+
+/*-----------------QUEM-SOMOS?------------------*/
+
+.quem-somos {
+    background: url('/imagens/img-layout/Quem S-Back.png');
+    height: 550px;
+    font-style: italic;
+    font-family: 'Anton', sans-serif;
+    /*border: 2px solid green;*/
+    background-position:center;
+    display:flex;
+    align-items:center;
+}
+
+.quem-s {
+    /*border: 2px solid green;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title-quem {
+    /*border: 2px solid blue;*/
+    display: flex;
+    color: white;
+    font-size: 450%;
+    margin-bottom: 40px;
+}
+
+.text-quem {
+    /* border: 2px solid blue;*/
+    color: white;
+    font-size: 140%;
+    text-align: center;
+}
+
+
+/*-----------------FIM-QUEM-SOMOS?------------------*/
+
+/*------------------------------------FIM HOME------------------------------------*/
+
+.det-usuario{
+    border: solid 2px red;
+    align-content: center;
+    background: url('/imagens/img-layout/Back Tets Usuario.png');
+    height: 100vh;
+}
+
+.botao-voltar{
+    position:absolute;
+    left: 50px;
+    bottom: 50px;
+}
+
+/*------------------------------BLOCO ESQUERDA---------------------------*/
+.info-usuario {
+    /*border: 2px solid blue;*/
+    background-color: #d8d8d8;
+    border-radius: 20px;
+    width: 20vw;
+    height: 98vh;
+    flex-direction: column;
+    margin-right: 10px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.test{
+    flex-direction:column;
+    width:15vw;
+    /*border: 2px solid red;*/
+
+}
+
+
+.info-titulo {
+    font-size: 120%;
+    /*border: solid 2px grey;*/
+    text-align:center;
+    padding:5px;
+    text-decoration:underline #c3c3c3;
+}
+
+.info-paragrafo {
+    /*border: solid 2px white;*/
+    text-align: center;
+    margin-bottom: 10px ;
+    padding: 0;
+}
+
+.foto-usuario{
+    border: solid 2px;
+    border-radius: 1000px;
+    margin-top: 60px;
+    padding:0;
+    margin-bottom:10px;
+    text-align: center;
+}
+
+.info-nick {
+    font-weight: 800;
+    font-size:110%;
+    text-align: center;
+    /*border: solid 2px;*/
+    margin-bottom:20px;
+}
+
+
+/*------------------------------FIM BLOCO ESQUERDA---------------------------*/
+
+/*------------------------------BLOCO DIREITA---------------------------*/
+.descrip-usuario {
+    /*border: solid 2px blue;
+    background-color: #bfd5a3;*/
+    height: 70vh;
+    width: 40%;
+    flex-direction: column;
+    margin-top: 150px;
+}
+
+.descricao {
+    /*border: solid 2px;*/
+    height: 140px;
+    width: 35vw;
+    box-shadow: 0px 10px 40px #00000056;
+    border-radius: 15px;
+    background-color: #e5e5e5;
+}
+
+.des-preferencias {
+    /*border: solid 2px;*/
+    height: 140px;
+    width: 35vw;
+    box-shadow: 0px 10px 40px #00000056;
+    border-radius: 15px;
+    background-color: #e5e5e5;
+}
+
+.descript-titulo {
+    font-size: 130%;
+    /*border: solid 2px grey;*/
+    padding: 10px;
+}
+
+.descript-paragrafo {
+    border: solid 2px white;
+    padding: 10px;
+    width: 33vw;
+}
+
+.descript-paragrafo-img {
+    /*border: solid 2px white;*/
+    align-items: center;
+    border-radius: 20px;
+}
+
+.descript-titulo-img {
+    font-size: 130%;
+    /*border: solid 2px grey;*/
+    padding: 5px;
+}
+
+.des-jogos {
+    /*border: solid 2px;*/
+    height: 208px;
+    width: 12vw;
+    box-shadow: 0px 10px 40px #00000056;
+    border-radius: 15px;
+    text-align: center;
+    background-color: #e5e5e5;
+}
+
+/*------------------------------FIM BLOCO DIREITA---------------------------*/

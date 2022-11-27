@@ -12,9 +12,13 @@ using System.Diagnostics.Metrics;
 using Newtonsoft.Json.Linq;
 using NuGet.Packaging.Signing;
 using Efriender.Areas.Identity;
+using System.Security.Principal;
+using Microsoft.Extensions.Caching.Memory;
 using Efriender.Controllers;
 using Efriender.Models;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using System.Security.Claims;
+using System.Configuration.Internal;
 
 namespace EFriender.Controllers
 {
@@ -22,23 +26,35 @@ namespace EFriender.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly IWebHostEnvironment webHostEnvironment;
+        private IMemoryCache cache;
 
-        
-        public UsuariosController(ApplicationDbContext context, IWebHostEnvironment webHost)
+
+        public UsuariosController(ApplicationDbContext context, IWebHostEnvironment webHost, IMemoryCache cache)
         {
             _context = context;
             webHostEnvironment = webHost;
+            cache = cache;
         }
 
-        // GET: Index
-        [Authorize(Roles = Roles.Admin)]
+          // GET: Index
+          [Authorize(Roles = Roles.Admin)]
         public async Task<IActionResult> Index()
         {
             var ApplicationDbContext = _context.Usuario.Include(u => u.Jogos);
             return View(await ApplicationDbContext.ToListAsync());
 
         }
-    
+
+
+        public async Task<IActionResult> Home(int? id)
+        {
+            var ApplicationDbContext = _context.Usuario.Include(u => u.Jogos);
+            return View(await ApplicationDbContext.ToListAsync());
+        }
+
+
+
+
         [Authorize]
         // GET: DetailsID
         public async Task<IActionResult> Details(int? id)
@@ -59,10 +75,8 @@ namespace EFriender.Controllers
             //var idCount = _context.Usuario;
             //ViewBag.Id = idCount.Count();
 
-            List<int> ListaIds = new List<int>();
-
+            /*List<int> ListaIds = new List<int>();
             var Usuario = _context.Usuario;
-
 
             foreach (var item in Usuario)
             {
@@ -73,6 +87,8 @@ namespace EFriender.Controllers
 
             ViewBag.IdUltimo = ListaIds.Count() -1;
 
+            ViewBag.IdInit = ListaIds[0];
+            */
             return View(usuario);
         }
 
@@ -134,40 +150,98 @@ namespace EFriender.Controllers
         }
 
         [Authorize]
+        public async Task<IActionResult> Swipe2()
+        {
+            var random = new Random();
+
+            string name = User.FindFirstValue(ClaimTypes.Email); // -- gambiarra
+
+
+            // -- pega o id do usuario logado
+                //string nameidentifier = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                //int userId = int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+                //var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                //var userId = int.TryParse(userIdClaim, out var id) ? id : 0;
+
+            // -- cria uma instancia de um Usuario e associa o Id do usuario logado
+            Usuario user = new Usuario(name);
+
+            // -- cria uma lista de Usuarios
+            List<Usuario> lUsuario = new List<Usuario>();
+
+            // -- se user não for nulo, adiciona a lUsuario
+            if (user != null) {
+                lUsuario.Add(user);
+            }
+
+            // -- pegar todas as visualizações do usuario
+            List<Visualizacao> visualizacoes = _context.Visualizacao.Include(v => v.Id_visualizador == 1).ToList();
+            foreach(Visualizacao view in visualizacoes)
+            {
+                Usuario usuarioVisto = new Usuario(view.Id_visto);
+
+                // -- adiciona o usuario visto a lista de usuarios criadas anteriormente
+                lUsuario.Add(usuarioVisto);
+            }
+
+            // -- pega uma lista de usuarios no DB excluindo o usuario logado e os usuarios vistos
+            List<Usuario> usuarios = _context.Usuario.ToList().Except(lUsuario).ToList();
+
+            if(usuarios.Count <= 0)
+            {
+                // -- redirecionar para a pagina principal ou exibir uma mensagem de alerta informando sobre nao ter usuarios novos para visualizacao
+                return NotFound();
+            }
+
+            // -- criando um numero randomico dentro do range da lista
+            int lSize = usuarios.Count;
+            Random r = new Random();
+            int rInt = r.Next(0, lSize);
+
+            return View(usuarios[rInt]);
+
+        }
+
+
+        [Authorize]
         public async Task<IActionResult> Swipe(int? id)
         {
 
             var random = new Random();
-            var usuario = await _context.Usuario
-                .Include(u => u.Jogos)
-                .FirstOrDefaultAsync(m => m.Id == 6); // alterar aqui
-            if (usuario == null)
-            {
-                return NotFound();
-            }
-
-            // -- pegar todos os usuarios que o usuario logado ja visualizou 
-            var usuariosVistos = _context.Visualizacao.Include(v => v.Id_visualizador == 1);
-
-            // -- pegar todos os usuarios que nao tenham id igual a usariosVistos.Id_visto
-
-
-            //var idCount = _context.Usuario;
-            //ViewBag.Id = idCount.Count();
-
-            List<int> ListaIds = new List<int>();
-
             var Usuario = _context.Usuario;
-
+            List<int> ListaIds = new List<int>();
 
             foreach (var item in Usuario)
             {
                 ListaIds.Add(item.Id);
             }
 
+            var rand = ListaIds[random.Next(ListaIds.Count)];
+
+            while (rand == id)
+            {
+                rand = ListaIds[random.Next(ListaIds.Count)];
+
+            }
+
+
+
+            ViewBag.Random = rand;
+
             ViewBag.Id = ListaIds;
 
             ViewBag.IdUltimo = ListaIds.Count() - 1;
+
+            var usuario = await _context.Usuario
+                .Include(u => u.Jogos)
+                .FirstOrDefaultAsync(m => m.Id == id); // alterar aqui
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+
+            //var idCount = _context.Usuario;
+            //ViewBag.Id = idCount.Count();
 
             return View(usuario);
         }
@@ -300,6 +374,8 @@ namespace EFriender.Controllers
 
             var usuarioId = _context.Usuario;
 
+            
+
             foreach (var item in usuarioId)
             {
                 if(item.Nome == User.Identity.Name)
@@ -324,7 +400,7 @@ namespace EFriender.Controllers
 
             if (usuario.Nome == User.Identity.Name)
             {
-                ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Id", usuario.JogosId);
+                ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Nome", usuario.JogosId);
                 return View(usuario);
             }
 
@@ -357,7 +433,7 @@ namespace EFriender.Controllers
                     throw;
                 }
             }
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Home));
 
             ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Id", usuario.JogosId);
             return View(usuario);
@@ -399,7 +475,7 @@ namespace EFriender.Controllers
 
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Home));
         }
 
         private bool UsuarioExists(int id)
