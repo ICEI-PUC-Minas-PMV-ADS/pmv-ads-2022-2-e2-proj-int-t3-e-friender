@@ -189,9 +189,26 @@ https://user-images.githubusercontent.com/100388026/198881852-3576642b-b905-42ce
 | Objetivo do Teste 	| Verificar a disponibilidade do sistema, que deve ser de 24h durante todos os dias da semana. |
 | Passos 	| - Configurar um serviço de monitoramento de aplicações web (UpTimeRobot ou similar) para realizar checagens de resposta na aplicação em um intervalo de tempo de 1 em 1 hora. |
 |Critério de Êxito | - O relatorio de monitoramento do serviço deverá indicar que a aplicação respondeu em todas as chamadas solicitadas. |
-|Resultado| - Teste não pôde ser realizado, pois a funcionalidade ainda não foi implementada.|
-|Registro| - Sem Registro|
+|Resultado| - Teste Google Chrome, Microsoft Edge & Mozilla Fire Fox.|
+|Registro| - registro de teste a baixo|
 |  	|  	|
+
+# Google Chrome
+![GoogleChrome](https://user-images.githubusercontent.com/100388026/204133047-b1d2efa8-8731-4196-882d-807e252bc927.png)
+
+<br />
+<br />
+
+# Microsoft Edge
+
+ ![MicrosoftEdge](https://user-images.githubusercontent.com/100388026/204133061-faf668d5-b9dd-469d-8d1e-77ee981b5ae5.png)
+
+<br />
+<br />
+
+# Mozilla Fire Fox
+![MozillaFireFox](https://user-images.githubusercontent.com/100388026/204133163-25df71b0-4805-4c65-a1f5-66e7589ee7dc.png)
+
 
 ### Auditoria
 
