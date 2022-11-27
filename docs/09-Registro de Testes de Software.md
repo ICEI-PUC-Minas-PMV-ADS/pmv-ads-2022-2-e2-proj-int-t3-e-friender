@@ -34,10 +34,12 @@ https://user-images.githubusercontent.com/63081926/204156180-91a92cdb-4d00-410d-
 | Passos 	| - Acessar o endereço da aplicação <br> - Clicar em "Entrar" <br> - Preencher os campos obrigatórios (e-mail, senha) <br> - Clicar em "Entrar" |
 |Critério de Êxito | - Autenticação realizado com sucesso. Usuario redirecionado para a página inicial de usuário. |
 |Resultado| - Teste executado com êxito. |
-|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/103212087/198860980-f20e6026-fee6-4e6b-8370-b735a8138211.mp4|
+|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/63081926/204156205-22b0b0ff-d7d4-4861-b5e0-e81e9b73f8aa.mp4|
 |  	|  	|
 
-https://user-images.githubusercontent.com/100388026/198881852-3576642b-b905-42ce-9d28-a001d23c962a.mp4
+https://user-images.githubusercontent.com/63081926/204156205-22b0b0ff-d7d4-4861-b5e0-e81e9b73f8aa.mp4
+
+
 
 <br />
 <br />
@@ -51,10 +53,11 @@ https://user-images.githubusercontent.com/100388026/198881852-3576642b-b905-42ce
 | Passos 	| - Realizar a autenticação na aplicação <br> - Clicar em "Perfil" <br> - Alterar informações de Perfil (nome, nickname, curso, discord, idade, genero) |
 |Critério de Êxito | - Dados atualizados no sistema com sucesso. |
 |Resultado| - Teste executado com êxito. |
-|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/103212087/198861095-2099674e-5663-4a61-9c67-f8a30319e6ad.mp4|
+|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/63081926/204156217-e4b16c6c-376e-484a-b613-41cf3522f188.mp4|
 |  	|  	|
 
-https://user-images.githubusercontent.com/100388026/198884033-5bf84920-5c3a-455e-ae48-7280b3e6f814.mp4
+https://user-images.githubusercontent.com/63081926/204156217-e4b16c6c-376e-484a-b613-41cf3522f188.mp4
+
 
 <br />
 <br />
@@ -78,10 +81,12 @@ https://user-images.githubusercontent.com/100388026/198884033-5bf84920-5c3a-455e
 | Passos 	| - Realizar a autenticação na aplicação <br> - Pular um usuario que apareça na tela, clicando no icone de "x", localizado a esquerda da imagem do usuario que será curtido. |
 |Critério de Êxito | - Não será registrado nenhum like no sistema e a imagem de outro usúario irá substituir a imagem do usuário que não recebeu like. |
 |Resultado| - Teste executado com êxito. |
-|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/103212087/198861467-5c2b89c9-bc7d-4ae3-b95a-e665e2ed2a64.mp4|
+|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/63081926/204156236-49677dcf-680a-44a7-92c1-12d7f935f1f9.mp4|
 |  	|  	|
 
-https://user-images.githubusercontent.com/100388026/198884050-1f668623-1479-47ed-89ab-0e300484347d.mp4
+https://user-images.githubusercontent.com/63081926/204156236-49677dcf-680a-44a7-92c1-12d7f935f1f9.mp4
+
+
 
 <br />
 <br />
