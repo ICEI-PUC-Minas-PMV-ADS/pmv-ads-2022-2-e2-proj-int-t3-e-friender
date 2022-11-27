@@ -8,8 +8,15 @@ Por exemplo: a tabela a seguir deverá ser preenchida considerando os artefatos 
 
 |ID    | Descrição do Requisito  | Artefato(s) produzido(s) |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | tarefas.shtml / tarefas.cs / controllertarefas.cs | 
-|RF-002| Emitir um relatório de tarefas no mês   | relatorio.shtml |
+|RF-01| O sistema deve permitir o usuário se cadastrar e fazer login na plataforma.   | Microsoft.AspNetCore.Identity.Entity.EntityFrameworkCore - Microsoft.AspNetCore.Identity.Entity.UI  | 
+|RF-02| O sistema deve validar as informações de login do usuário.  | Microsoft.AspNetCore.Identity.Entity.EntityFrameworkCore - Microsoft.AspNetCore.Identity.Entity.UI |
+|RF-03|O usuário deve conseguir alterar informações do seu perfil.  | UsuariosController.cs - Usuario.cs - Create.cshtml - Edit.cshtml - Perfil.cshtml  | 
+|RF-04| O usuário terá a possibilidade de dar “likes” ou “pular” os perfis que forem apresentados. |  |
+|RF-05|O sistema deve conectar usuários que trocaram “likes”. (Match)  |   | 
+|RF-06|No perfil deve ser possível escolher filtros para a busca de usuários. |  |
+|RF-07| Usuários que deram match devem conseguir se comunicarem por chat.  |   | 
+|RF-08| O sistema deve permitir o usuário avaliar os perfis com quem obteve contato.   | |
+|RF-09| O usuário deve conseguir visualizar os perfis dos demais usuários  |  UsuariosController.cs - Usuario.cs - Swipe.cshtml  |
 
 # Instruções de acesso
 
