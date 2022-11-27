@@ -12,12 +12,10 @@ namespace Efriender.Models
         #region [ CONSTRUTORES ]
         public Combinacao(int ID_Usuario1, int ID_Usuario2)
         {
-            Id_Usuario1 = ID_Usuario1;
-            Id_Usuario2 = ID_Usuario2;
+            this.Id_Usuario1 = ID_Usuario1;
+            this.Id_Usuario2 = ID_Usuario2;
         }
 
-
-        public Combinacao() { }
         #endregion 
 
         [Key]
