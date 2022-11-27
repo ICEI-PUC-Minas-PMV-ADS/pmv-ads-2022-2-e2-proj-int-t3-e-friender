@@ -97,22 +97,29 @@ namespace EFriender.Controllers
 
             var random = new Random();
             var Usuario = _context.Usuario;
+            var idUsuario = 0;
             List<int> ListaIds = new List<int>();
 
             foreach (var item in Usuario)
             {
                 ListaIds.Add(item.Id);
+                if(item.Nome == User.Identity.Name)
+                {
+                    idUsuario = item.Id;
+                }
             }
 
-            var rand = ListaIds[random.Next(ListaIds.Count)];
+            var rand = 0;
 
-            while (rand == id)
+            var usuario = await _context.Usuario
+                .Include(u => u.Jogos)
+                .FirstOrDefaultAsync(m => m.Id == id); // alterar aqui
+
+            while (rand == id || rand == idUsuario || rand == 0)
             {
                 rand = ListaIds[random.Next(ListaIds.Count)];
 
             }
-
-
 
             ViewBag.Random = rand;
 
@@ -120,9 +127,7 @@ namespace EFriender.Controllers
 
             ViewBag.IdUltimo = ListaIds.Count() - 1;
 
-            var usuario = await _context.Usuario
-                .Include(u => u.Jogos)
-                .FirstOrDefaultAsync(m => m.Id == id); // alterar aqui
+
             if (usuario == null)
             {
                 return NotFound();
