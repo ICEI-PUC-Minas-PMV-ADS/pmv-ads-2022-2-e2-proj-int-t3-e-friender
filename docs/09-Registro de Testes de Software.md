@@ -104,7 +104,7 @@ https://user-images.githubusercontent.com/100388026/198884050-1f668623-1479-47ed
 | Passos 	| - Realizar a autenticação na aplicação com uma conta de usuário "a" <br> - Clicar em "Perfil" na barra de navegação superior. <br> - Utilizar o form de filtro para configurar as preferências quanto ao aparecimento de outros usuários (games preferidos, idade, genêro). <br> - Clocar em 'Aplicar'." |
 |Critério de Êxito | - Novos usuários serão mostrados na tela de acordo com as preferências configuaradas pelo usuário. |
 |Resultado| - Teste não pôde ser realizado, pois a funcionalidade ainda não foi implementada.|
-|Registro| - Sem Registro|
+|Registro| - Virá em atualizações futuras|
 |  	|  	|
 
 | **Caso de Teste** 	| **CT-07 – Comunicar por chat com outro usuario que tenha dado Match** 	|
