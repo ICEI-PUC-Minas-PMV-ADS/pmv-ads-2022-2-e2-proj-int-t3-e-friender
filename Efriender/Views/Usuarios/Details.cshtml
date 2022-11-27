@@ -181,14 +181,15 @@
           </div>
         <div class="des-preferencias m-4">
 
-            
+            @if (Model.Preferencias != null)
+            {
                 <h1 class="descript-titulo">Preferências</h1>
                 <p class="descript-paragrafo">@Model.Preferencias</p>
-            
+            }
           </div>
         <div class="des-jogos m-4">
             <h1 class="descript-titulo-img">Jogo Favorito</h1>
-            <p class="descript-paragrafo-img"> <img src="~/imagens/@Model.Jogos.UrlImagem" width="150px" height="150px" class="rounded-3"/> </p>
+            <p class="descript-paragrafo-img"> <img src="~/imagens/@Model.Jogos.UrlImagem" width="150px" height="150px" /> </p>
         </div>
     </div>
     <div class="botao-voltar">

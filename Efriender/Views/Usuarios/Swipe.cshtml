@@ -7,35 +7,22 @@
 
 }
 
-<style>
-    body{
-        overflow-x:hidden;
-    }
-    
-</style>
+<div class="flex-column h-100">
 
-<<<<<<< HEAD
     <div class="row h-100">
         <div class="col my-auto mx-auto align-items-center d-flex justify-content-end"><a class="btn btn-primary m-2" asp-action="Swipe" asp-route-id="@ViewBag.Random">Anterior</a></div>
-=======
-<div class="usuario-swipe flex-column ">
-
-    <div class="row justify-content-center">
-        <div class="col my-auto mx-auto align-items-center d-flex justify-content-end"><a class="btn btn-primary m-2" asp-route-id="@ViewBag.Random">Anterior</a>
-        </div>
->>>>>>> 71cb9ae19f51a9bc3c3a5eee5b0e327246109e7f
         
-        <div class="box-info background-grey mt-4 w-20 mx-auto col-sm text-center align-content-center justify-content-center center-block">
-            <div class="gambiarra  rounded-circle overflow-hidden">
+        <div class="background-gray mt-4 w-25 mx-auto col-sm text-center align-content-center justify-content-center center-block border rounded">
+            <div class="m-4 rounded-circle overflow-hidden">
                 <img class="overflow-hidden" src="~/imagens/@Model.UrlImagem" width="300px" height="300px" />
             </div>
             
-              <h4 class="text-white">@Model.Nome</h4>
+              <h4 class="text-dark">@Model.Nome</h4>
 
-            <h4 class="text-white">@Model.Curso</h4>
+            <h4 class="text-dark">@Model.Curso</h4>
 
-            <h4 class="text-white">@Model.Jogos.Nome</h4>
-            <div class="botao-swipe justify-content-center d-grid gap-2"><a class="btn btn-primary mt-2 mb-2" asp-action="Details" asp-route-id="@Model.Id">Ver Perfil Completo</a></div>
+            <h4 class="text-dark">@Model.Jogos.Nome</h4>
+            <div class="d-grid gap-2"><a class="btn btn-primary mt-2 mb-2" asp-action="Details" asp-route-id="@Model.Id">Ver Perfil Completo</a></div>
             
 
         </div>

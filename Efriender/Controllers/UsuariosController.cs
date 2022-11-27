@@ -278,7 +278,7 @@ namespace EFriender.Controllers
             _context.Attach(usuarios);
             _context.Entry(usuarios).State = EntityState.Added;
             _context.SaveChanges();
-            return RedirectToAction(nameof(Home));
+            return RedirectToAction(nameof(Usuarios));
 
         }
 

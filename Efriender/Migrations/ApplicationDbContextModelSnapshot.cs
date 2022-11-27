@@ -100,7 +100,6 @@ namespace Efriender.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("Preferencias")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("UrlImagem")
