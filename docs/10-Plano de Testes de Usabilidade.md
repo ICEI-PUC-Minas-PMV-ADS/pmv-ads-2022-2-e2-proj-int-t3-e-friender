@@ -48,11 +48,11 @@ Desenvolvedores responsaveis pelo Frontend.
 
 ### DURAÇÃO
 
-O teste terá duração maxima de 60 minutos.
+O teste terá duração maxima de 20 minutos.
 
 ### TEMPO DO TIME
 
-Estima-se cerca de 40 horas para planejamento, execução, análise e apresentação dos resultados.
+Estima-se cerca de 10 horas para planejamento, execução, análise e apresentação dos resultados.
 
 
 
