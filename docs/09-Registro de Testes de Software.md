@@ -175,7 +175,8 @@ https://user-images.githubusercontent.com/63081926/204156326-22a02c3d-5d20-44f6-
 
 # Visualizando Perfil de Outros Usuários:
 
-https://user-images.githubusercontent.com/100388026/198884050-1f668623-1479-47ed-89ab-0e300484347d.mp4
+https://user-images.githubusercontent.com/63081926/204156393-69a0448c-9d3c-496e-afa8-bff3af9a0be1.mp4
+
 
 | **Caso de Teste** 	| **CT-11 – Responsividade do sistema** 	|
 |:---:	|:---:	|
@@ -189,14 +190,16 @@ https://user-images.githubusercontent.com/100388026/198884050-1f668623-1479-47ed
 
 # Aplicação aberta em smartphone:
 
-https://user-images.githubusercontent.com/100388026/204134838-8038cf04-7dbe-481e-a4c1-5f3472c22ae6.mp4
+https://user-images.githubusercontent.com/63081926/204156399-0fea4c1e-1e7c-44d5-815d-d05f21d00d86.mp4
+
 
 <br />
 <br />
 
 # Aplicação aberta em computadores:
 
-https://user-images.githubusercontent.com/100388026/204134644-2a751d80-da53-49cd-a072-790f79260ef4.mp4
+https://user-images.githubusercontent.com/63081926/204156408-d25afd8c-8a64-4f3c-860f-ef5d8e96cb7d.mp4
+
 
 
 | **Caso de Teste** 	| **CT-12 – Compatibilidade do sistema com os principais navegadores do mercado** 	|
@@ -234,7 +237,7 @@ https://user-images.githubusercontent.com/100388026/198881852-3576642b-b905-42ce
 
 # Microsoft Edge
 
- ![MicrosoftEdge](https://user-images.githubusercontent.com/100388026/204133061-faf668d5-b9dd-469d-8d1e-77ee981b5ae5.png)
+![MicrosoftEdge](https://user-images.githubusercontent.com/63081926/204156421-29c7d866-aa85-420a-8a6d-327bbaff5bde.PNG)
 
 <br />
 <br />
