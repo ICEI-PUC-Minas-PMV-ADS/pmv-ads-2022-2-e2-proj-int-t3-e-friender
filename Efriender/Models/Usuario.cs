@@ -77,7 +77,7 @@ namespace EFriender.Models
         public string Descricao { get; set; }
 
         [Display(Name = "Preferências")]
-        public string? Preferencias { get; set; }
+        public string Preferencias { get; set; }
 
         [Display(Name = "Jogo Favorito")]
         [ForeignKey("Jogos")]

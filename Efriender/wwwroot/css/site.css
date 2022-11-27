@@ -407,11 +407,13 @@ body {
 
 /*------------------------------------FIM HOME------------------------------------*/
 
+
+/*------------------------------------USUARIO/DETAILS------------------------------------*/
 .det-usuario{
-    border: solid 2px red;
     align-content: center;
     background: url('/imagens/img-layout/Back Tets Usuario.png');
     height: 100vh;
+    margin-top:-16px;
 }
 
 .botao-voltar{
@@ -510,7 +512,7 @@ body {
 }
 
 .descript-paragrafo {
-    border: solid 2px white;
+    /*border: solid 2px white;*/
     padding: 10px;
     width: 33vw;
 }
@@ -538,3 +540,31 @@ body {
 }
 
 /*------------------------------FIM BLOCO DIREITA---------------------------*/
+
+/*------------------------------------FIM-USUARIO/DETAILS------------------------------------*/
+
+
+/*------------------------------------USUARIO/SWIPE------------------------------------*/
+
+.usuario-swipe {
+    height: 92.9vh;
+    background: url('/imagens/img-layout/Back Tets Usuario.png');
+}
+
+.box-info {
+    height: 77vh;
+    background-color: #2b2b2b;
+    box-shadow: 0px 10px 20px #00000056;
+    border-radius: 20px;
+}
+
+.gambiarra{
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+.botao-swipe{
+    /*border: solid 2px red;*/
+    margin-top: 70px;
+}
+
