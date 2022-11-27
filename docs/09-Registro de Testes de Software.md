@@ -212,7 +212,8 @@ https://user-images.githubusercontent.com/63081926/204156408-d25afd8c-8a64-4f3c-
 |Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/103212087/198860980-f20e6026-fee6-4e6b-8370-b735a8138211.mp4||
 |  	|  	|
 
-https://user-images.githubusercontent.com/100388026/198881852-3576642b-b905-42ce-9d28-a001d23c962a.mp4 
+https://user-images.githubusercontent.com/63081926/204156575-caa1297b-e245-49bd-b048-f3aa03084b7b.mp4
+
 
 <br />
 <br />
