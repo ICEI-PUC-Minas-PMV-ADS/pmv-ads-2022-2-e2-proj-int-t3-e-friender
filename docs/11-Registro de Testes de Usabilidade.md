@@ -7,5 +7,5 @@ Os testes foram feitos de forma remota, o que impediu o registro de imagens do t
 ![exemplo](https://user-images.githubusercontent.com/103212087/198888523-47cf206b-d502-452a-9e77-91da6b3368cd.png)
 
 # Documento de Registro dos Testes
-![exemplo][Registro.de.Teste.de.Usabilidade.xlsx](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-2-e2-proj-int-t3-e-friender/files/10099371/Registro.de.Teste.de.Usabilidade.xlsx)
+[Registro.de.Teste.de.Usabilidade.xlsx](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-2-e2-proj-int-t3-e-friender/files/10099371/Registro.de.Teste.de.Usabilidade.xlsx)
 
