@@ -19,3 +19,7 @@ https://user-images.githubusercontent.com/100388026/203198534-13989655-078b-4e44
 # Criando Perfil de Usuário:
 
 https://user-images.githubusercontent.com/100388026/203200278-60c3f3ed-3fa0-4d28-a344-1af2e72410aa.mp4
+
+# Visualizando os Demais Perfis de Usuários, após logado:
+
+https://user-images.githubusercontent.com/100388026/204135660-1a3abeb9-cab6-4700-b222-50eb8ac24d3b.mp4
