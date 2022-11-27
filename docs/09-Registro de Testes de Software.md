@@ -16,10 +16,11 @@ Esta seção contem os casos de teste referentes aos casos de uso e não funcion
 | Passos 	| - Acessar o endereço da aplicação <br> - Clicar em "Criar conta" <br> - Preencher os campos obrigatórios (e-mail, nome, sobrenome, celular, CPF, senha, confirmação de senha) <br> - Aceitar os termos de uso <br> - Clicar em "Registrar" |
 |Critério de Êxito | - Realizar o Cadastro com Sucesso. |
 |Resultado| - Teste executado com êxito. |
-|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/103212087/198860980-f20e6026-fee6-4e6b-8370-b735a8138211.mp4|
+|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: [https://user-images.githubusercontent.com/103212087/198860980-f20e6026-fee6-4e6b-8370-b735a8138211.mp4](https://user-images.githubusercontent.com/63081926/204156180-91a92cdb-4d00-410d-8310-77c2318b7e81.mp4)|
 |  	|  	|
 
-https://user-images.githubusercontent.com/100388026/198881852-3576642b-b905-42ce-9d28-a001d23c962a.mp4
+https://user-images.githubusercontent.com/63081926/204156180-91a92cdb-4d00-410d-8310-77c2318b7e81.mp4
+
 
 <br />
 <br />
