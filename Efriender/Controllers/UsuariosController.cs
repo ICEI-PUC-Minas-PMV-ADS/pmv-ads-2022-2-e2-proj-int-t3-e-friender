@@ -26,14 +26,12 @@ namespace EFriender.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly IWebHostEnvironment webHostEnvironment;
-        private IMemoryCache cache;
 
 
         public UsuariosController(ApplicationDbContext context, IWebHostEnvironment webHost, IMemoryCache cache)
         {
             _context = context;
             webHostEnvironment = webHost;
-            cache = cache;
         }
 
           // GET: Index
@@ -90,116 +88,6 @@ namespace EFriender.Controllers
             ViewBag.IdInit = ListaIds[0];
             */
             return View(usuario);
-        }
-
-        public bool Passar(int ID_Visualizador, int ID_Visto)
-        {
-            try
-            { 
-                VisualizacaoController visualizacaoController = new VisualizacaoController(new Visualizacao(ID_Visualizador, ID_Visto));
-                if (visualizacaoController.result) return true;
-                else return false;
-            } catch (Exception ex)
-            {
-                throw new Exception("Erro ao passar para outro gamer.", ex);
-            }
-
-        }
-
-        public bool Match(int ID_Visualizador, int ID_Visto, bool like)
-        {
-            // -- adicionar lista de visualizacao que usuario visualizou
-            VisualizacaoController visualizacaoController = new VisualizacaoController(new Visualizacao(ID_Visualizador, ID_Visto, like));
-            
-            // -- verificar na lista de visualizacao se usuario visualizado tambem curtiu
-            List<Visualizacao> visualizadorVisto = new List<Visualizacao>();
-        
-            visualizadorVisto = visualizacaoController.GetByVisualizador(ID_Visto);
-          
-       
-            var test = visualizadorVisto.Where(x => ID_Visualizador == x.Id_visualizador && x.like == true);
-
-            // -- se sim, adiciona na tabela de Match o match dos dois usuarios, com flags de nao visualizado para os dois
-            if (test.Any())
-            {
-                // adicionar na tabela de match
-                CombinacaoController combinacaoController = new CombinacaoController(new Combinacao(ID_Visualizador, ID_Visto));
-
-                // -- imprime um alerta na tela do usuario sobre o match
-                //View("Swipe");
-                //Ok();
-                return true;
-            }
-            return false;
-
-
-
-        }
-
-        // -- botão swipe
-        public async Task<IActionResult> btnSwipe()
-        {
-            // -- consulta a tabela de visualizacao, com todos usuarios visualizados pelo user
-            var visualizacoes = new VisualizacaoController();
-            // -- comsulta a lista de usuarios total, e excluir o proprio user dela
-
-            // -- subtrai a lista de usuarios visualizados da lista total
-
-            // -- gera a view
-            return View(visualizacoes);
-        }
-
-        [Authorize]
-        public async Task<IActionResult> Swipe2()
-        {
-            var random = new Random();
-
-            string name = User.FindFirstValue(ClaimTypes.Email); // -- gambiarra
-
-
-            // -- pega o id do usuario logado
-                //string nameidentifier = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                //int userId = int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-                //var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                //var userId = int.TryParse(userIdClaim, out var id) ? id : 0;
-
-            // -- cria uma instancia de um Usuario e associa o Id do usuario logado
-            Usuario user = new Usuario(name);
-
-            // -- cria uma lista de Usuarios
-            List<Usuario> lUsuario = new List<Usuario>();
-
-            // -- se user não for nulo, adiciona a lUsuario
-            if (user != null) {
-                lUsuario.Add(user);
-            }
-
-            // -- pegar todas as visualizações do usuario
-            List<Visualizacao> visualizacoes = _context.Visualizacao.Include(v => v.Id_visualizador == 1).ToList();
-            foreach(Visualizacao view in visualizacoes)
-            {
-                Usuario usuarioVisto = new Usuario(view.Id_visto);
-
-                // -- adiciona o usuario visto a lista de usuarios criadas anteriormente
-                lUsuario.Add(usuarioVisto);
-            }
-
-            // -- pega uma lista de usuarios no DB excluindo o usuario logado e os usuarios vistos
-            List<Usuario> usuarios = _context.Usuario.ToList().Except(lUsuario).ToList();
-
-            if(usuarios.Count <= 0)
-            {
-                // -- redirecionar para a pagina principal ou exibir uma mensagem de alerta informando sobre nao ter usuarios novos para visualizacao
-                return NotFound();
-            }
-
-            // -- criando um numero randomico dentro do range da lista
-            int lSize = usuarios.Count;
-            Random r = new Random();
-            int rInt = r.Next(0, lSize);
-
-            return View(usuarios[rInt]);
-
         }
 
 
@@ -359,14 +247,13 @@ namespace EFriender.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Home));
 
             ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Id", usuario.JogosId);
             return View(usuario);
         }
 
         [Authorize]
- 
         public async Task<IActionResult> Perfil(int? id)
         {
 

@@ -11,26 +11,7 @@ namespace EFriender.Models
     public class Usuario
 
     {
-        private Task<Usuario?> loggedUser;
 
-        #region [ CONSTRUTORES ]
-
-        public Usuario(int Id)
-        {
-            this.Id = Id;
-        }
-
-        public Usuario(string username)
-        {
-            this.Nome = username;
-        }
-
-        public Usuario(Task<Usuario?> loggedUser)
-        {
-            this.Id = loggedUser.Id;
-        }
-
-        #endregion
 
         [Key]
         public int Id { get; set; }
@@ -85,13 +66,5 @@ namespace EFriender.Models
         public int JogosId { get; set; }
 
         public Jogos Jogos { get; set; }
-
-        public ICollection<Visualizacao>? VisualizacoesRealizadas { get; set; }
-        public ICollection<Visualizacao>? VisualizacoesRecebidas { get; set; }
-
-        public ICollection<Combinacao>? UsuarioPrimario { get; set; }
-        public ICollection<Combinacao>? UsuarioSecundario { get; set; }
-
-
     }
 }
