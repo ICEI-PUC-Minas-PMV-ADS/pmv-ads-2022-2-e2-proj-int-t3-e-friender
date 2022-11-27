@@ -67,7 +67,7 @@ https://user-images.githubusercontent.com/100388026/198884033-5bf84920-5c3a-455e
 | Passos 	| - Realizar a autenticação na aplicação <br> - Dar like em usuario que apareça na tela, clicando no icone de "checkmark", localizado a direita da imagem do usuario que será curtido. |
 |Critério de Êxito | - Será registrado o like no sistema e a imagem de outro usuario para avaliação irá substituir a imagem do usuário que levou o like. |
 |Resultado| - Teste não pôde ser realizado, pois a funcionalidade ainda não foi implementada.|
-|Registro| - Sem Registro|
+|Registro| - Virá em atualizações futuras|
 |  	|  	|
 
 | **Caso de Teste** 	| **CT-04B – Pular um usuario** 	|
@@ -94,7 +94,7 @@ https://user-images.githubusercontent.com/100388026/198884050-1f668623-1479-47ed
 | Passos 	| - Realizar a autenticação na aplicação com uma conta de usuário "a" <br> - Dar like em um usuário 'b'. <br> - Sair da aplicação clicando no botão 'Sair' na barra de nevegação. <br> - Realizar autenticação na aplicação com as credênciais do usuário 'b'. <br> - Dar like no usuário 'a' quando o mesmo aparecer na tela'. |
 |Critério de Êxito | - O usuário 'b' será notificado do 'match' com o usuário 'a' e o contato do mesmo ficara disponivel na lista de matches, localizada no canto esquerdo da aplicação. |
 |Resultado| - Teste não pôde ser realizado, pois a funcionalidade ainda não foi implementada.|
-|Registro| - Sem Registro|
+|Registro| - Virá em atualizações futuras|
 |  	|  	|
 
 | **Caso de Teste** 	| **CT-06 – Utilizar perfil para realizar filtro de usuarios que poderão aparecer na tela** 	|
@@ -114,7 +114,7 @@ https://user-images.githubusercontent.com/100388026/198884050-1f668623-1479-47ed
 | Passos 	| - Realizar a autenticação na aplicação com uma conta de usuário "a" <br> - Clicar em "Conversar" na barra de navegação superior. <br> - Clicar em um usuário com quem tenha ocorrido match para abrir a janela de chat. <br> - Enviar mensagem para o usuário 'match'." |
 |Critério de Êxito | - A mensagem será enviado com sucesso para o usuário "match". |
 |Resultado| - Teste não pôde ser realizado, pois a funcionalidade ainda não foi implementada.|
-|Registro| - Sem Registro|
+|Registro| - Virá em atualizações futuras|
 |  	|  	|
 
 | **Caso de Teste** 	| **CT-08 – Avaliar o Perfil de outro usuario com quem tenha tido contato** 	|
@@ -124,7 +124,7 @@ https://user-images.githubusercontent.com/100388026/198884050-1f668623-1479-47ed
 | Passos 	| - Realizar a autenticação na aplicação. <br> - Clicar em um usuário com quem tenha ocorrido match, na lista de matches localizada na lateral esquerda da aplicação. <br> - Após a abertura do perfil de usuário, clicar no botão 'Avaliar', localizado no canto inferior direito da aplicação <br> - Avaliar o Perfil do usuário, dando uma nota que poderá ir de até 01 (uma) a 05 (cinco) estrelas. |
 |Critério de Êxito | - A avaliação será contabilizada com sucesso. |
 |Resultado| - Teste não pôde ser realizado, pois a funcionalidade ainda não foi implementada.|
-|Registro| - Sem Registro|
+|Registro| - Virá em atualizações futuras|
 |  	|  	|
 
 | **Caso de Teste** 	| **CT-09 – Visualizar o Perfil de outros usuarios** 	|
