@@ -4,12 +4,13 @@
 
 @{
     ViewData["Title"] = "Swipe";
+
 }
 
 <div class="flex-column h-100">
 
     <div class="row h-100">
-        <div class="col my-auto mx-auto align-items-center d-flex justify-content-end"><a class="btn btn-primary m-2" asp-route-id="@ViewBag.Random">Anterior</a></div>
+        <div class="col my-auto mx-auto align-items-center d-flex justify-content-end"><a class="btn btn-primary m-2" asp-action="Swipe" asp-route-id="@ViewBag.Random">Anterior</a></div>
         
         <div class="background-gray mt-4 w-25 mx-auto col-sm text-center align-content-center justify-content-center center-block border rounded">
             <div class="m-4 rounded-circle overflow-hidden">
@@ -26,7 +27,7 @@
 
         </div>
 
-        <div class="col col my-auto mx-auto align-items-center d-flex justify-content-start"><a class="btn btn-primary m-2" asp-route-id="@ViewBag.Random">Próximo</a></div>
+        <div class="col col my-auto mx-auto align-items-center d-flex justify-content-start"><a class="btn btn-primary m-2" asp-action="Swipe" asp-route-id="@ViewBag.Random">Próximo</a></div>
         
 
        

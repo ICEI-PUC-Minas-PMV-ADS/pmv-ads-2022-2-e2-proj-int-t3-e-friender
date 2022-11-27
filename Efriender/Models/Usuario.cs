@@ -1,4 +1,6 @@
 ﻿using Efriender.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration.UserSecrets;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.Metrics;
@@ -9,8 +11,31 @@ namespace EFriender.Models
     public class Usuario
 
     {
+        private Task<Usuario?> loggedUser;
+
+        #region [ CONSTRUTORES ]
+
+        public Usuario(int Id)
+        {
+            this.Id = Id;
+        }
+
+        public Usuario(string username)
+        {
+            this.Nome = username;
+        }
+
+        public Usuario(Task<Usuario?> loggedUser)
+        {
+            this.Id = loggedUser.Id;
+        }
+
+        #endregion
+
         [Key]
         public int Id { get; set; }
+
+        //public string Email { get; set; }
 
         [Required(ErrorMessage = "Obrigatório inserir a Imagem de Perfil")]
         [Display(Name = "Imagem")]
