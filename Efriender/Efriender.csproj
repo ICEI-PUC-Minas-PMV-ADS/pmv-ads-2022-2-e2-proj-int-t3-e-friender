@@ -8,6 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Areas\Identity\Data\ApplicationUser.cs" />
+    <Compile Remove="Areas\Identity\Data\EfriendDbContext.cs" />
+    <Compile Remove="Areas\Identity\Data\EfrienderContext.cs" />
     <Compile Remove="Controllers\UsuariosController - Copy.cs" />
     <Compile Remove="Controllers\ValuesController.cs" />
     <Compile Remove="Controllers\ValuesController1.cs" />
@@ -28,6 +31,10 @@
     <PackageReference Include="MySql.Data" Version="8.0.31" />
     <PackageReference Include="MySql.EntityFrameworkCore" Version="6.0.7" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Identity\Data\" />
   </ItemGroup>
 
 </Project>

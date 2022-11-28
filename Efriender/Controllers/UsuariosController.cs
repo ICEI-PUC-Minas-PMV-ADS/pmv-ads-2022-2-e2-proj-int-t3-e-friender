@@ -48,7 +48,7 @@ namespace EFriender.Controllers
 
         public async Task<IActionResult> Home(int? id)
         {
-            var ApplicationDbContext = _context.Usuarios.Include(u => u.Jogo);
+            var ApplicationDbContext = _context.Usuarios; 
             return View(await ApplicationDbContext.ToListAsync());
         }
 
@@ -323,16 +323,25 @@ namespace EFriender.Controllers
 
         // POST: Usuarios/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // For more details, see .
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Id,Idade,Genero,Nick,Discord,Curso,Faculdade,Descricao,Preferencias,JogosId,Imagem")] Usuario usuario)
+        public async Task<IActionResult> Edit([Bind("Id,Idade,Genero,Discord,Descricao,Jogos,Imagem")] Usuario usuario)
         {
-            //string nameidentifier = User.FindFirstValue(ClaimTypes.NameIdentifier)
-            //usuario.Nome = User.Identity.Name;
-            if (id != usuario.Id)
+            //Usuario usuarioSessao = _context.Usuarios.Where(u => u.Id == User.FindFirstValue(ClaimTypes.NameIdentifier)).FirstOrDefault();
+            if (usuario == null || usuario.Id != User.FindFirstValue(ClaimTypes.NameIdentifier))
             {
                 return NotFound();
+            }
+
+            Usuario userUpdate = _context.Usuarios.Where(u => u.Id == usuario.Id).FirstOrDefault();
+            if(userUpdate != null)
+            {
+                userUpdate.Descricao = usuario.Descricao;
+                userUpdate.Nome = usuario.Nome;
+                userUpdate.Imagem = usuario.Imagem;
+                userUpdate.Idade = usuario.Idade;
+                userUpdate.Discord = usuario.Discord;
             }
 
 
@@ -340,14 +349,14 @@ namespace EFriender.Controllers
                 {
                 string uniqueFileName = Imagem(usuario);
 
-                usuario.UrlImagem = uniqueFileName;
+                userUpdate.UrlImagem = uniqueFileName;
 
-                _context.Update(usuario);
-                    await _context.SaveChangesAsync();
+                _context.Update(userUpdate);
+                await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!UsuarioExists(usuario.Id))
+                    if (!UsuarioExists(userUpdate.Id))
                     {
                         return NotFound();
                     }
@@ -356,48 +365,48 @@ namespace EFriender.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Home));
 
-            ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Id", usuario.Jogo.JogosId);
+            ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Nome", userUpdate.Jogo.JogosId);
             return View(usuario);
         }
 
         [Authorize]
  
-        public async Task<IActionResult> Perfil(string? id)
+        public async Task<IActionResult> Perfil()
         {
-            string Id = id;
 
-            ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Nome");
+            //var usuarioSessao2 = _context.Usuarios.Where(u => u.Id == User.FindFirstValue(ClaimTypes.NameIdentifier))
+            //    .Select(x => new
+            //    {
+            //        x.Id,
+            //        x.Idade,
+            //        x.Nome,
+            //        x.Genero,
+            //        x.Descricao,
+            //        x.Discord,
+            //        x.Imagem,
+            //        x.UrlImagem,
+            //        x.Jogo
+            //    }).FirstOrDefault();
 
-            var usuarios = _context.Usuarios;
-            Usuario usuario = new Usuario();
+            Usuario usuarioSessao = _context.Usuarios.Where(u => u.Id == User.FindFirstValue(ClaimTypes.NameIdentifier)).FirstOrDefault();
 
-            foreach (var item in usuarios)
-            {
-                if(item.Id == User.FindFirstValue(ClaimTypes.NameIdentifier))
-                {
-                    usuario = item;
-                }
-            }
+            //if (id == null || _context.Usuarios == null)
+            //{
+            //    return View("Create");
+            //}
 
-            ViewBag.Id = id;
-
-            if (id == null || _context.Usuarios == null)
-            {
-                return View("Create");
-            }
-
-            if (usuario == null)
+            if (usuarioSessao == null)
             {
                 return NotFound();
             }
-
-            if (usuario.Nome == User.Identity.Name)
-            {
-                ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Nome", usuario.Jogo.JogosId);
-                return View(usuario);
-            }
+            var urlimg = usuarioSessao.UrlImagem;
+            var check = new SelectList(_context.Jogos, "JogosId", "Nome");
+            ViewData["JogosId"] = new SelectList(_context.Jogos, "JogosId", "Nome");
+            return View(usuarioSessao);
+            //return View(usuarioSessao);
+          
 
             return Unauthorized();
 

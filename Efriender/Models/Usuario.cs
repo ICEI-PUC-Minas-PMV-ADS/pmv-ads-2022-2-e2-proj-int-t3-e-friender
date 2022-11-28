@@ -31,62 +31,60 @@ namespace Efriender.Models
             Nome = usuario.Nome;
             Idade = usuario.Idade;
             Genero = usuario.Genero;
-            JogoSecundario = usuario.JogoSecundario;
+            //JogoSecundario = usuario.JogoSecundario;
             Discord = usuario.Discord;
-            Curso = usuario.Curso;
-            Faculdade = usuario.Faculdade;
+            //Curso = usuario.Curso;
+            //Faculdade = usuario.Faculdade;
             Descricao = usuario.Descricao;
-            Preferencias = usuario.Preferencias;
+            //Preferencias = usuario.Preferencias;
             Jogo = usuario.Jogo;
         }
 
         #endregion
 
-
-        [Required(ErrorMessage = "Obrigatório inserir a Imagem de Perfil")]
+        //[Required(ErrorMessage = "Obrigatório inserir a Imagem de Perfil")]
         [Display(Name = "Imagem")]
         [NotMapped]
         public IFormFile? Imagem { get; set; }
 
-        [Required(ErrorMessage = "Obrigatório inserir a Imagem de Perfil")]
-        public string UrlImagem { get; set; } = "FotoPadrao.png";
+        //[Required(ErrorMessage = "Obrigatório inserir a Imagem de Perfil")]
+        public string? UrlImagem { get; set; } = "FotoPadrao.png";
 
         public string? Nome { get; set; }
 
-        [Required(ErrorMessage = "Obrigatório inserir a Idade")]
-        public int Idade { get; set; }
+        //[Required(ErrorMessage = "Obrigatório inserir a Idade")]
+        public int? Idade { get; set; }
 
         [Display(Name = "Gênero")]
-        [Required(ErrorMessage = "Obrigatório inserir o Gênero")]
-        public Generos Genero { get; set; }
+        //[Required(ErrorMessage = "Obrigatório inserir o Gênero")]
+        public Generos? Genero { get; set; }
         public enum Generos
         {
             Masculino,
             Feminino,
         }
 
+        public string? Discord { get; set; }
+
+        [Display(Name = "Descrição")]
+        //[Required(ErrorMessage = "Obrigatório inserir a descrição")]
+        public string? Descricao { get; set; }
+
+        [Display(Name = "Preferências")]
+        public string? Preferencias { get; set; }
+
+        [Required(ErrorMessage = "Obrigatório inserir o curso")]
+        public string? Curso { get; set; }
+
+        [Required(ErrorMessage = "Obrigatório inserir a Faculdade")]
+        public string? Faculdade { get; set; }
+
         [Display(Name = "Jogo Adicional")]
         public string? JogoSecundario { get; set; }
 
-        public string? Discord { get; set; }
-
-        [Required(ErrorMessage = "Obrigatório inserir o curso")]
-        public string Curso { get; set; }
-
-        [Required(ErrorMessage = "Obrigatório inserir a Faculdade")]
-        public string Faculdade { get; set; }
-
-        [Display(Name = "Descrição")]
-        [Required(ErrorMessage = "Obrigatório inserir a descrição")]
-        public string Descricao { get; set; }
-
-        [Display(Name = "Preferências")]
-        public string Preferencias { get; set; }
-
         [Display(Name = "Jogo Favorito")]
         [ForeignKey("Jogos")]
-        [Required(ErrorMessage = "Obrigatório inserir o jogo")]
-        public Jogo Jogo { get; set; }
+        public Jogo? Jogo { get; set; }
 
 
 

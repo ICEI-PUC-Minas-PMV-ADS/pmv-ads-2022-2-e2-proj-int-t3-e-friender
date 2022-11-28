@@ -146,12 +146,6 @@
         <h1 class="info-titulo">Nome</h1>
             <p class="info-paragrafo">@Model.Nome</p>
 
-        <h1 class="info-titulo">Faculdade</h1>
-            <p class="info-paragrafo">@Model.Faculdade</p>
-
-        <h1 class="info-titulo">Curso</h1>
-            <p class="info-paragrafo">@Model.Curso</p>
-
             
             @if (Model.Discord != null)
             {
@@ -165,12 +159,6 @@
         <h1 class="info-titulo">Gênero</h1>
             <p class="info-paragrafo">@Model.Genero</p>
 
-            @if (Model.JogoSecundario != null)
-            {
-                <h1 class="info-titulo">Jogo Secundário</h1>
-                <p class="info-paragrafo">@Model.JogoSecundario</p>
-            }
-
         </div>
     </div>
 
@@ -180,10 +168,6 @@
             <p class="descript-paragrafo">@Model.Descricao</p>
           </div>
         <div class="des-preferencias m-4">
-
-            
-                <h1 class="descript-titulo">Preferências</h1>
-                <p class="descript-paragrafo">@Model.Preferencias</p>
             
           </div>
         <div class="des-jogos m-4">

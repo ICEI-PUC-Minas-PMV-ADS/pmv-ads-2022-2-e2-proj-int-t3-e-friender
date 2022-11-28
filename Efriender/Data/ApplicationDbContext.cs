@@ -1,7 +1,9 @@
 ﻿using Efriender.Models;
 using EFriender.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using MySql.Data.MySqlClient;
 
 namespace Efriender.Data;
 
@@ -13,7 +15,6 @@ public class ApplicationDbContext : IdentityDbContext<Usuario>
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
-
     }
 
     public DbSet<Usuario> Usuarios { get; set; }

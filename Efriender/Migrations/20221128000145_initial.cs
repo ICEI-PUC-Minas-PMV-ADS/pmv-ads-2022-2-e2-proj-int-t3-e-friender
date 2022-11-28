@@ -82,25 +82,17 @@ namespace Efriender.Migrations
                 {
                     Id = table.Column<string>(type: "varchar(255)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    UrlImagem = table.Column<string>(type: "longtext", nullable: false)
+                    UrlImagem = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Nome = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Idade = table.Column<int>(type: "int", nullable: false),
-                    Genero = table.Column<int>(type: "int", nullable: false),
-                    JogoSecundario = table.Column<string>(type: "longtext", nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Idade = table.Column<int>(type: "int", nullable: true),
+                    Genero = table.Column<int>(type: "int", nullable: true),
                     Discord = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Curso = table.Column<string>(type: "longtext", nullable: false)
+                    Descricao = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Faculdade = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Descricao = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Preferencias = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    Jogos = table.Column<int>(type: "int", nullable: false),
+                    Jogos = table.Column<int>(type: "int", nullable: true),
                     UserName = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     NormalizedUserName = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: true)
@@ -131,8 +123,7 @@ namespace Efriender.Migrations
                         name: "FK_AspNetUsers_Jogos_Jogos",
                         column: x => x.Jogos,
                         principalTable: "Jogos",
-                        principalColumn: "JogosId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "JogosId");
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
