@@ -11,8 +11,6 @@ Sendo a primeira página a ser criada foi considerado template padrão a ***Home
 
 # Código do Template Padrão da Aplicação:
 
-![HomePage - Codigo](https://user-images.githubusercontent.com/100388026/203179487-1dea7198-9e0f-4130-9875-0494766bde0e.png)
-
 <br />
 <br />
 
