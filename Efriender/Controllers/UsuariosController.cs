@@ -24,6 +24,7 @@ using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Controller;
 using Efriender.Controllers;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using MySqlX.XDevAPI;
+using System.Composition;
 
 namespace EFriender.Controllers
 {
@@ -31,14 +32,12 @@ namespace EFriender.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly IWebHostEnvironment webHostEnvironment;
-        private IMemoryCache cache;
 
 
-        public UsuariosController(ApplicationDbContext context, IWebHostEnvironment webHost, IMemoryCache cache)
+        public UsuariosController(ApplicationDbContext context, IWebHostEnvironment webHost)
         {
             _context = context;
             this.webHostEnvironment = webHost;
-            this.cache = cache;
         }
 
           // GET: Index
@@ -197,26 +196,22 @@ namespace EFriender.Controllers
             }
         }
 
+      
         public Usuario getUsuarioVisualizador()
         {
-            try
-            {
-                string sessionId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                Usuario usuarioVisualizador = _context.Usuarios.Where(u => u.Id == sessionId).FirstOrDefault();
-                return usuarioVisualizador;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Erro ao obter usuario visualizador por ID.", ex);
-            }
-
-
+                try
+                {
+                    string sessionId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                    Usuario usuarioVisualizador = _context.Usuarios.Where(u => u.Id == sessionId).FirstOrDefault();
+                    return usuarioVisualizador;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Erro ao obter usuario visualizador por ID.", ex);
+                }
         }
 
-        #endregion 
-
-
-
+        #endregion
 
         [Authorize]
         // GET: DetailsID
@@ -230,7 +225,7 @@ namespace EFriender.Controllers
 
             var usuario = await _context.Usuarios
                 .Include(u => u.Jogo)
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.Id == id); // alterar aqui
             if (usuario == null)
             {
                 return NotFound();
@@ -309,38 +304,13 @@ namespace EFriender.Controllers
         }
 
         // GET: Usuarios/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null || _context.Usuarios == null)
-            {
-                return NotFound();
-            }
-
-            var usuario = await _context.Usuarios.FindAsync(id);
-
-            if (usuario == null)
-            {
-                return NotFound();
-            }
-
-            if (usuario.Nome == User.Identity.Name)
-            {
-
-                ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Id", usuario.Jogo.JogosId);
-                return View(usuario);
-            }
-
-            return Unauthorized();
-
-        }
 
 
-        // POST: Usuarios/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see .
+
+        //POST: Usuarios/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit([Bind("Id,Idade,Genero,Discord,Descricao,Jogos,Imagem, Preferencias, Curso, Faculdade")] Usuario usuario)
+        public async Task<IActionResult> Edit([Bind("Id,Idade,Genero,Discord,Descricao,Jogos,Imagem,Preferencias,Curso,Faculdade")] Usuario usuario)
         {
             //Usuario usuarioSessao = _context.Usuarios.Where(u => u.Id == User.FindFirstValue(ClaimTypes.NameIdentifier)).FirstOrDefault();
             if (usuario == null || usuario.Id != User.FindFirstValue(ClaimTypes.NameIdentifier))
@@ -348,49 +318,91 @@ namespace EFriender.Controllers
                 return NotFound();
             }
 
-            Usuario userUpdate = _context.Usuarios.Where(u => u.Id == usuario.Id).FirstOrDefault();
-            if(userUpdate != null)
+            Usuario userToUpdate = _context.Usuarios.Where(u => u.Id == usuario.Id).FirstOrDefault();
+            if (userToUpdate != null)
             {
-                userUpdate.Descricao = usuario.Descricao;
-                userUpdate.Nome = usuario.Nome;
-                userUpdate.Imagem = usuario.Imagem;
-                userUpdate.Idade = usuario.Idade;
-                userUpdate.Discord = usuario.Discord;
-                userUpdate.Preferencias = usuario.Preferencias;
-                userUpdate.Curso = usuario.Curso;
-                userUpdate.Faculdade = usuario.Faculdade;
-            }
-
-
                 try
                 {
-                string uniqueFileName = Imagem(usuario);
+                    // -- atualizando atributos
+                    string uniqueFileName = Imagem(usuario);
+                    userToUpdate.UrlImagem = uniqueFileName;
+                    userToUpdate.Discord = usuario.Discord;
+                    userToUpdate.Curso = usuario.Curso;
+                    userToUpdate.Faculdade = usuario.Faculdade;
+                    userToUpdate.Preferencias = usuario.Preferencias;
+                    userToUpdate.Genero = usuario.Genero;
+                    userToUpdate.Idade = usuario.Idade;
+                    userToUpdate.Nome = usuario.Nome;
+                    userToUpdate.Jogo = usuario.Jogo;
 
-                userUpdate.UrlImagem = uniqueFileName;
+                    // -- atualizando e salvando no db
+                    _context.Update(userToUpdate);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Home));
 
-                _context.Update(userUpdate);
-                await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
+                } catch (Exception ex)
                 {
-                    if (!UsuarioExists(userUpdate.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    throw new Exception("Erro ao editar perfil do usuario.", ex);
                 }
-                return RedirectToAction(nameof(Home));
-
-            ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Nome", userUpdate.Jogo.JogosId);
-            return View(usuario);
+            }
+            return RedirectToAction("Error", "Shared");
         }
+                //public async Task<IActionResult> Perfil(int? id)
+                //{
 
-        [Authorize]
-        public async Task<IActionResult> Perfil()
+                //    ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Nome");
+
+                //    var usuarioId = _context.Usuario;
+
+
+
+                //    foreach (var item in usuarioId)
+                //    {
+                //        if(item.Nome == User.Identity.Name)
+                //        {
+                //            id = item.Id;
+                //        }
+                //    }
+                //        userUpdate.UrlImagem = uniqueFileName;
+
+                //        _context.Update(userUpdate);
+                //        await _context.SaveChangesAsync();
+                //        }
+                //        catch (DbUpdateConcurrencyException)
+                //        {
+                //            if (!UsuarioExists(userUpdate.Id))
+                //            {
+                //                return NotFound();
+                //            }
+                //            else
+                //            {
+                //                throw;
+                //            }
+                //        }
+                //        return RedirectToAction(nameof(Home));
+
+                //    ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Nome", userUpdate.Jogo.JogosId);
+                //    return View(usuario);
+                //}
+
+                [Authorize]
+ 
+        public async Task<IActionResult> Perfil(string id)
         {
+
+            ViewData["JogosId"] = new SelectList(_context.Jogos, "Id", "Nome");
+
+            var usuarioId = _context.Usuarios.ToList();
+
+            
+
+            foreach (var item in usuarioId)
+            {
+                if(item.Nome == User.Identity.Name)
+                {
+                    id = item.Id;
+                }
+            }
 
             //var usuarioSessao2 = _context.Usuarios.Where(u => u.Id == User.FindFirstValue(ClaimTypes.NameIdentifier))
             //    .Select(x => new

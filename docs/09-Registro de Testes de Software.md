@@ -16,10 +16,11 @@ Esta seção contem os casos de teste referentes aos casos de uso e não funcion
 | Passos 	| - Acessar o endereço da aplicação <br> - Clicar em "Criar conta" <br> - Preencher os campos obrigatórios (e-mail, nome, sobrenome, celular, CPF, senha, confirmação de senha) <br> - Aceitar os termos de uso <br> - Clicar em "Registrar" |
 |Critério de Êxito | - Realizar o Cadastro com Sucesso. |
 |Resultado| - Teste executado com êxito. |
-|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/103212087/198860980-f20e6026-fee6-4e6b-8370-b735a8138211.mp4|
+|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: [https://user-images.githubusercontent.com/103212087/198860980-f20e6026-fee6-4e6b-8370-b735a8138211.mp4](https://user-images.githubusercontent.com/63081926/204156180-91a92cdb-4d00-410d-8310-77c2318b7e81.mp4)|
 |  	|  	|
 
-https://user-images.githubusercontent.com/100388026/198881852-3576642b-b905-42ce-9d28-a001d23c962a.mp4
+https://user-images.githubusercontent.com/63081926/204156180-91a92cdb-4d00-410d-8310-77c2318b7e81.mp4
+
 
 <br />
 <br />
@@ -33,10 +34,12 @@ https://user-images.githubusercontent.com/100388026/198881852-3576642b-b905-42ce
 | Passos 	| - Acessar o endereço da aplicação <br> - Clicar em "Entrar" <br> - Preencher os campos obrigatórios (e-mail, senha) <br> - Clicar em "Entrar" |
 |Critério de Êxito | - Autenticação realizado com sucesso. Usuario redirecionado para a página inicial de usuário. |
 |Resultado| - Teste executado com êxito. |
-|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/103212087/198860980-f20e6026-fee6-4e6b-8370-b735a8138211.mp4|
+|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/63081926/204156205-22b0b0ff-d7d4-4861-b5e0-e81e9b73f8aa.mp4|
 |  	|  	|
 
-https://user-images.githubusercontent.com/100388026/198881852-3576642b-b905-42ce-9d28-a001d23c962a.mp4
+https://user-images.githubusercontent.com/63081926/204156205-22b0b0ff-d7d4-4861-b5e0-e81e9b73f8aa.mp4
+
+
 
 <br />
 <br />
@@ -50,10 +53,11 @@ https://user-images.githubusercontent.com/100388026/198881852-3576642b-b905-42ce
 | Passos 	| - Realizar a autenticação na aplicação <br> - Clicar em "Perfil" <br> - Alterar informações de Perfil (nome, nickname, curso, discord, idade, genero) |
 |Critério de Êxito | - Dados atualizados no sistema com sucesso. |
 |Resultado| - Teste executado com êxito. |
-|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/103212087/198861095-2099674e-5663-4a61-9c67-f8a30319e6ad.mp4|
+|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/63081926/204156217-e4b16c6c-376e-484a-b613-41cf3522f188.mp4|
 |  	|  	|
 
-https://user-images.githubusercontent.com/100388026/198884033-5bf84920-5c3a-455e-ae48-7280b3e6f814.mp4
+https://user-images.githubusercontent.com/63081926/204156217-e4b16c6c-376e-484a-b613-41cf3522f188.mp4
+
 
 <br />
 <br />
@@ -67,7 +71,7 @@ https://user-images.githubusercontent.com/100388026/198884033-5bf84920-5c3a-455e
 | Passos 	| - Realizar a autenticação na aplicação <br> - Dar like em usuario que apareça na tela, clicando no icone de "checkmark", localizado a direita da imagem do usuario que será curtido. |
 |Critério de Êxito | - Será registrado o like no sistema e a imagem de outro usuario para avaliação irá substituir a imagem do usuário que levou o like. |
 |Resultado| - Teste não pôde ser realizado, pois a funcionalidade ainda não foi implementada.|
-|Registro| - Sem Registro|
+|Registro| - Virá em atualizações futuras|
 |  	|  	|
 
 | **Caso de Teste** 	| **CT-04B – Pular um usuario** 	|
@@ -77,10 +81,12 @@ https://user-images.githubusercontent.com/100388026/198884033-5bf84920-5c3a-455e
 | Passos 	| - Realizar a autenticação na aplicação <br> - Pular um usuario que apareça na tela, clicando no icone de "x", localizado a esquerda da imagem do usuario que será curtido. |
 |Critério de Êxito | - Não será registrado nenhum like no sistema e a imagem de outro usúario irá substituir a imagem do usuário que não recebeu like. |
 |Resultado| - Teste executado com êxito. |
-|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/103212087/198861467-5c2b89c9-bc7d-4ae3-b95a-e665e2ed2a64.mp4|
+|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/63081926/204156236-49677dcf-680a-44a7-92c1-12d7f935f1f9.mp4|
 |  	|  	|
 
-https://user-images.githubusercontent.com/100388026/198884050-1f668623-1479-47ed-89ab-0e300484347d.mp4
+https://user-images.githubusercontent.com/63081926/204156236-49677dcf-680a-44a7-92c1-12d7f935f1f9.mp4
+
+
 
 <br />
 <br />
@@ -94,7 +100,7 @@ https://user-images.githubusercontent.com/100388026/198884050-1f668623-1479-47ed
 | Passos 	| - Realizar a autenticação na aplicação com uma conta de usuário "a" <br> - Dar like em um usuário 'b'. <br> - Sair da aplicação clicando no botão 'Sair' na barra de nevegação. <br> - Realizar autenticação na aplicação com as credênciais do usuário 'b'. <br> - Dar like no usuário 'a' quando o mesmo aparecer na tela'. |
 |Critério de Êxito | - O usuário 'b' será notificado do 'match' com o usuário 'a' e o contato do mesmo ficara disponivel na lista de matches, localizada no canto esquerdo da aplicação. |
 |Resultado| - Teste não pôde ser realizado, pois a funcionalidade ainda não foi implementada.|
-|Registro| - Sem Registro|
+|Registro| - Virá em atualizações futuras|
 |  	|  	|
 
 | **Caso de Teste** 	| **CT-06 – Utilizar perfil para realizar filtro de usuarios que poderão aparecer na tela** 	|
@@ -104,7 +110,7 @@ https://user-images.githubusercontent.com/100388026/198884050-1f668623-1479-47ed
 | Passos 	| - Realizar a autenticação na aplicação com uma conta de usuário "a" <br> - Clicar em "Perfil" na barra de navegação superior. <br> - Utilizar o form de filtro para configurar as preferências quanto ao aparecimento de outros usuários (games preferidos, idade, genêro). <br> - Clocar em 'Aplicar'." |
 |Critério de Êxito | - Novos usuários serão mostrados na tela de acordo com as preferências configuaradas pelo usuário. |
 |Resultado| - Teste não pôde ser realizado, pois a funcionalidade ainda não foi implementada.|
-|Registro| - Sem Registro|
+|Registro| - Virá em atualizações futuras|
 |  	|  	|
 
 | **Caso de Teste** 	| **CT-07 – Comunicar por chat com outro usuario que tenha dado Match** 	|
@@ -114,7 +120,7 @@ https://user-images.githubusercontent.com/100388026/198884050-1f668623-1479-47ed
 | Passos 	| - Realizar a autenticação na aplicação com uma conta de usuário "a" <br> - Clicar em "Conversar" na barra de navegação superior. <br> - Clicar em um usuário com quem tenha ocorrido match para abrir a janela de chat. <br> - Enviar mensagem para o usuário 'match'." |
 |Critério de Êxito | - A mensagem será enviado com sucesso para o usuário "match". |
 |Resultado| - Teste não pôde ser realizado, pois a funcionalidade ainda não foi implementada.|
-|Registro| - Sem Registro|
+|Registro| - Virá em atualizações futuras|
 |  	|  	|
 
 | **Caso de Teste** 	| **CT-08 – Avaliar o Perfil de outro usuario com quem tenha tido contato** 	|
@@ -124,7 +130,7 @@ https://user-images.githubusercontent.com/100388026/198884050-1f668623-1479-47ed
 | Passos 	| - Realizar a autenticação na aplicação. <br> - Clicar em um usuário com quem tenha ocorrido match, na lista de matches localizada na lateral esquerda da aplicação. <br> - Após a abertura do perfil de usuário, clicar no botão 'Avaliar', localizado no canto inferior direito da aplicação <br> - Avaliar o Perfil do usuário, dando uma nota que poderá ir de até 01 (uma) a 05 (cinco) estrelas. |
 |Critério de Êxito | - A avaliação será contabilizada com sucesso. |
 |Resultado| - Teste não pôde ser realizado, pois a funcionalidade ainda não foi implementada.|
-|Registro| - Sem Registro|
+|Registro| - Virá em atualizações futuras|
 |  	|  	|
 
 | **Caso de Teste** 	| **CT-09 – Visualizar o Perfil de outros usuarios** 	|
@@ -134,10 +140,11 @@ https://user-images.githubusercontent.com/100388026/198884050-1f668623-1479-47ed
 | Passos 	| - Realizar a autenticação na aplicação. <br> - Clicar em um usuário com quem tenha ocorrido match, na lista de matches localizada na lateral esquerda da aplicação. <br> |
 |Critério de Êxito | - Será exibida o Perfil do Match. |
 |Resultado| - Teste executado com êxito. |
-|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/103212087/198861549-b732e1eb-ca95-44d5-856e-b19a9833500b.mp4|
+|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/63081926/204156312-1074ed73-59d1-4d39-bd49-b894daf3726d.mp4|
 |  	|  	|
 
-https://user-images.githubusercontent.com/100388026/198884050-1f668623-1479-47ed-89ab-0e300484347d.mp4
+https://user-images.githubusercontent.com/63081926/204156312-1074ed73-59d1-4d39-bd49-b894daf3726d.mp4
+
 
 <br />
 <br />
@@ -152,9 +159,24 @@ https://user-images.githubusercontent.com/100388026/198884050-1f668623-1479-47ed
 | Objetivo do Teste 	| Verificar se a aplicação está disponivel para ser acessda na internet. |
 | Passos 	| - Abri um browser (Chrome, Edge, Firefox, etc) em um sistema conectado a internet  <br> - Digitar o endereço da aplicação na barra de endereços. <br> |
 |Critério de Êxito | - A página inicial da aplicação será exibida. |
-|Resultado| - Teste não pôde ser realizado, pois a funcionalidade ainda não foi implementada.|
-|Registro| - Sem Registro|
+|Resultado| - Teste realizado.|
+|Registro| - A baixo pode se ver as várias formas de se acessar o site uma delas é usando a URL: http://efriender-001-site1.atempurl.com/.|
 |  	|  	|
+
+# Acesso ao site:
+
+https://user-images.githubusercontent.com/63081926/204156326-22a02c3d-5d20-44f6-b3e6-6e05cb97a78f.mp4
+
+
+
+
+<br />
+<br />
+
+# Visualizando Perfil de Outros Usuários:
+
+https://user-images.githubusercontent.com/63081926/204156393-69a0448c-9d3c-496e-afa8-bff3af9a0be1.mp4
+
 
 | **Caso de Teste** 	| **CT-11 – Responsividade do sistema** 	|
 |:---:	|:---:	|
@@ -163,8 +185,22 @@ https://user-images.githubusercontent.com/100388026/198884050-1f668623-1479-47ed
 | Passos 	| - Abri um browser (Chrome, Edge, Firefox, etc) em um sistema conectado a internet  <br> em um dispositivo movel - Digitar o endereço da aplicação na barra de endereços. <br> |
 |Critério de Êxito | - A página inicial da aplicação será exibida de forma adaptada e compativel com a viewport do dispositivo movél. |
 |Resultado| - Teste não pôde ser realizado, pois a funcionalidade ainda não foi implementada.|
-|Registro| - Sem Registro|
+|Registro| - Registro de Teste a Baixo|
 |  	|  	|
+
+# Aplicação aberta em smartphone:
+
+https://user-images.githubusercontent.com/63081926/204156399-0fea4c1e-1e7c-44d5-815d-d05f21d00d86.mp4
+
+
+<br />
+<br />
+
+# Aplicação aberta em computadores:
+
+https://user-images.githubusercontent.com/63081926/204156408-d25afd8c-8a64-4f3c-860f-ef5d8e96cb7d.mp4
+
+
 
 | **Caso de Teste** 	| **CT-12 – Compatibilidade do sistema com os principais navegadores do mercado** 	|
 |:---:	|:---:	|
@@ -176,7 +212,8 @@ https://user-images.githubusercontent.com/100388026/198884050-1f668623-1479-47ed
 |Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/103212087/198860980-f20e6026-fee6-4e6b-8370-b735a8138211.mp4||
 |  	|  	|
 
-https://user-images.githubusercontent.com/100388026/198881852-3576642b-b905-42ce-9d28-a001d23c962a.mp4 
+https://user-images.githubusercontent.com/63081926/204156575-caa1297b-e245-49bd-b048-f3aa03084b7b.mp4
+
 
 <br />
 <br />
@@ -189,9 +226,26 @@ https://user-images.githubusercontent.com/100388026/198881852-3576642b-b905-42ce
 | Objetivo do Teste 	| Verificar a disponibilidade do sistema, que deve ser de 24h durante todos os dias da semana. |
 | Passos 	| - Configurar um serviço de monitoramento de aplicações web (UpTimeRobot ou similar) para realizar checagens de resposta na aplicação em um intervalo de tempo de 1 em 1 hora. |
 |Critério de Êxito | - O relatorio de monitoramento do serviço deverá indicar que a aplicação respondeu em todas as chamadas solicitadas. |
-|Resultado| - Teste não pôde ser realizado, pois a funcionalidade ainda não foi implementada.|
-|Registro| - Sem Registro|
+|Resultado| - Teste Google Chrome, Microsoft Edge & Mozilla Fire Fox.|
+|Registro| - registro de teste a baixo|
 |  	|  	|
+
+# Google Chrome
+![GoogleChrome](https://user-images.githubusercontent.com/100388026/204133047-b1d2efa8-8731-4196-882d-807e252bc927.png)
+
+<br />
+<br />
+
+# Microsoft Edge
+
+![MicrosoftEdge](https://user-images.githubusercontent.com/63081926/204156421-29c7d866-aa85-420a-8a6d-327bbaff5bde.PNG)
+
+<br />
+<br />
+
+# Mozilla Fire Fox
+![MozillaFireFox](https://user-images.githubusercontent.com/100388026/204133163-25df71b0-4805-4c65-a1f5-66e7589ee7dc.png)
+
 
 ### Auditoria
 

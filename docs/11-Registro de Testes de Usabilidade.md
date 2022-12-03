@@ -6,16 +6,64 @@ Os testes foram feitos de forma remota, o que impediu o registro de imagens do t
 # Exemplo do Resultado
 ![exemplo](https://user-images.githubusercontent.com/103212087/198888523-47cf206b-d502-452a-9e77-91da6b3368cd.png)
 
-
-# Documento do Registro
-[Registro de Teste de Usabilidade.xlsx](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-2-e2-proj-int-t3-e-friender/files/9896239/Registro.de.Teste.de.Usabilidade.xlsx)
-
-# Cadastro de Usuário:
-Fácil de se preecher o cadastro autentica quase que no instante da confirmação do usuário e senha.
-
-https://user-images.githubusercontent.com/100388026/203198534-13989655-078b-4e44-9a6a-c9a6323b5934.mp4
+# Documento de Registro dos Testes
+[Registro.de.Teste.de.Usabilidade.xlsx](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-2-e2-proj-int-t3-e-friender/files/10099371/Registro.de.Teste.de.Usabilidade.xlsx)
 
 
-# Criando Perfil de Usuário:
 
-https://user-images.githubusercontent.com/100388026/203200278-60c3f3ed-3fa0-4d28-a344-1af2e72410aa.mp4
+<br />
+<br />
+<br />
+<br />
+
+**Execução de tarefas feitas pelo usuário** ***Matheus Quevedo*** **dentro da aplicção: Usuário:**
+
+| **ETAPAS ESPERADAS** | **Pontos Positivos** | **Pontos Negativos** | **Resultado do Teste** | **SENTIMENTO** |
+|        ---      	 |         ---    	|       -----     	|        ----       |    -----     | 
+| **TAREFA 1 - CADASTRO**     |     Cadastro rápido de ser feito.      |  Precisou tentar mais de uma vez, pois não havia uma instrução de senha válida.  |   Tarefa realizada com sucesso. |    :)   |        
+| **TAREFA 2 - AUTENTICAR CADASTRO**  | Tempo rápido de resposta da autenticação.   | Precisou tentar mais de uma vez, pois não havia uma instrução de caracteres válidos para senha.   |  Tarefa realizada com sucesso. |    :I   |  
+| **TAREFA 3 - ATUALIZAR DADOS DO PERFIL** | Perfil simples de ser editado.  | O tamanho do arquivo usado para foto de perfil não foi aceito pelo sistema  | Tarefa realizada com sucesso. |     :)   |     
+| **TAREFA 4 - VER PERFIL DE USUÁRIOS** | Fácil acesso aos outros usuários.  | Pouca interatividade com outros usuários. | Tarefa realizada com sucesso. | :I |         
+| **TAREFA 5 - DISPOSITIVO MÓVEIS**    | Funcionando perfeitamente nos dispositivos mobile.    | O layout perde a qualidade.   |     Tarefa realizada com sucesso |  :) |         
+| **TAREFA 6 - AVALIAÇÃO DE LAYOUT**    | Layout e design bem ambientados para o propósito da aplicação  | Algumas páginas não seguem o mesmo padrão de design.  | Tarefa realizada com sucesso. |   :D |          
+| **TAREFA 7 - EXECUTAR UM MATCH COM OUTRO USUÁRIO**  | Funcionalidade virá em atualizações futuras. | Funcionalidade virá em atualizações futuras.  |   Tarefa não realizada, pois a funcionalidade ainda não foi implementada. |    :X |          
+| **TAREFA 8 - ENTRAR EM CONTATO COM OUTRO USUÁRIO**    | Funcionalidade virá em atualizações futuras.  | Funcionalidade virá em atualizações futuras.  |      Tarefa não realizada, pois a funcionalidade ainda não foi implementada. |       :X |          
+|**OBSERVAÇÕES GERAIS**   | Apresentou pouca dificuldade para interagir com o sistema. Encontrou de forma intuitiva os botões para executar as tarefas.  |     |      | :D  |  
+       
+<br />
+<br />       
+       
+**Execução de tarefas feitas pelo usuário** ***Gisele Klein*** **dentro da aplicção: Usuário:**
+       
+| **ETAPAS ESPERADAS** | **Pontos Positivos** | **Pontos Negativos** | **Resultado do Teste** | **SENTIMENTO** |
+|        ---      	 |         ---    	|       -----     	|        ----       |    -----     | 
+| **TAREFA 1 - CADASTRO**     | Botão de cadastro bem posicionado e intuitivo na home page.  | Nome de usuário invalidado pelo sistema, sem instrução do motivo. |  Tarefa realizada com sucesso, porém com dificuldade. |   :I |        
+| **TAREFA 2 - AUTENTICAR CADASTRO**  | Tempo rápido de resposta da autenticação.   |Erro ao cadastar nome de usuário, mas não identificou o motivo | Tarefa realizada com sucesso, porém com dificuldade. |    :(  |  
+| **TAREFA 3 - ATUALIZAR DADOS DO PERFIL** | Perfil simples e funcional.  | Poderia haver mais opções de edição do perfil.    |  Tarefa realizada com sucesso. |   :) |     
+| **TAREFA 4 - VER PERFIL DE USUÁRIOS** | Encontrou os outros usuários de forma intuitiva.  | Incapaz de trazer um ponto negativo.| Tarefa realizada com sucesso. |  :) |         
+| **TAREFA 5 - DISPOSITIVO MÓVEIS**    | Aplicação funcionando no dispositivo mobile.  | Algumas páginas perderam a formatação mas estão legíveis. | Tarefa realizada com sucesso. |  :) |         
+| **TAREFA 6 - AVALIAÇÃO DE LAYOUT**    | Layout muito bonito e chamativo.  | A página de perfil dos usuários poderia ser mais bem trabalhada  |  Tarefa realizada com sucesso. |   :) |          
+| **TAREFA 7 - EXECUTAR UM MATCH COM OUTRO USUÁRIO**  | Funcionalidade virá em atualizações futuras.   | Funcionalidade virá em atualizações futuras.     |   Tarefa não realizada, pois a funcionalidade ainda não foi implementada. |          :X |          
+| **TAREFA 8 - ENTRAR EM CONTATO COM OUTRO USUÁRIO**    | Funcionalidade virá em atualizações futuras.   | Funcionalidade virá em atualizações futuras.   |  Tarefa não realizada, pois a funcionalidade ainda não foi implementada. |  :X |          
+|**OBSERVAÇÕES GERAIS**   | Apresentou um pouco de dificuldade para criar o usuário, devido ao erro com o nome cadastro, porém teve boa interação com o restante da aplicação. |     |     | :) |   
+
+<br />
+<br />
+
+**Execução de tarefas feitas pelo usuário** ***Bruno Sivelli*** **dentro da aplicção: Usuário:**
+
+| **ETAPAS ESPERADAS** | **Pontos Positivos** | **Pontos Negativos** | **Resultado do Teste** | **SENTIMENTO** |
+|        ---      	 |         ---    	|       -----     	|        ----       |    -----     | 
+| **TAREFA 1 - CADASTRO**     |    Não teve nenhuma dificuldade com o cadastro.     |   Incapaz de trazer um ponto negativo. |   Tarefa realizada com sucesso. |    :D |        
+| **TAREFA 2 - AUTENTICAR CADASTRO**  | Fácil e rápida autenticação do cadastro.    | Incapaz de trazer um ponto negativo. | Tarefa realizada com sucesso. |   :D |  
+| **TAREFA 3 - ATUALIZAR DADOS DO PERFIL** | Perfil fácil de ser atualizado.   | Teve dificuldade para encontrar o botão de editar o perfil |  Tarefa realizada com sucesso, porém com dificuldade. |   :I |     
+| **TAREFA 4 - VER PERFIL DE USUÁRIOS** | Gostou da informação principal do perfil dos usuários ser o jogo que eles jogam.    | Acha que poderiam ter mais informações no perfil.   |  Tarefa realizada com sucesso. |  :) |         
+| **TAREFA 5 - DISPOSITIVO MÓVEIS**    | Telas adaptadas e legíveis mesmo em tamanhos pequenos.    | Não encontrou pontos negativos. |  Tarefa realizada com sucesso. |   :D |         
+| **TAREFA 6 - AVALIAÇÃO DE LAYOUT**    | Layout simples porém chamativo e passa credibilidade da qualidade da aplicação.   | Algumas páginas estão fora do padrão da página home.   | Tarefa realizada com sucesso. |  :) |          
+| **TAREFA 7 - EXECUTAR UM MATCH COM OUTRO USUÁRIO**  | Funcionalidade virá em atualizações futuras.  | Funcionalidade virá em atualizações futuras.     |  Tarefa não realizada, pois a funcionalidade ainda não foi implementada. |  :X |          
+| **TAREFA 8 - ENTRAR EM CONTATO COM OUTRO USUÁRIO**    | Funcionalidade virá em atualizações futuras.     | Funcionalidade virá em atualizações futuras.   |  Tarefa não realizada, pois a funcionalidade ainda não foi implementada. |  :X |          
+|**OBSERVAÇÕES GERAIS**   | Teve facilidade com  o cadastro do perfil, o que facilitou sua interação com o sistema. Acha que faltam informações nos perfis para melhorar o objetivo da aplicação.  |      |     | :D  | 
+
+
+
+

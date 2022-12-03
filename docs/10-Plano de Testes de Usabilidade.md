@@ -11,19 +11,18 @@ Apresenta-se a seguir o Plano de Teste de Usabilidade da aplicação E-FRIENDER.
 
 ### TAREFAS
 
-- Entre no website da aplicação e precisa se cadastrar. Descreva e apresente na tela como seria esse processo. 
-- Realize autenticação no sistema com suas credências de acesso obtidas no cadastro. 
-- Acesse a área de Perfil e atualize seus dados.
-- Acesse a área de Perfil e utilize o filtro de preferência por usuários. Descreva os passos necessários. 
-- Na tela principal, pule um usuário. 
-- Na tela principal, dê like em um usaário. 
-- Abra uma conversa com um match e envie uma mensagem. 
-- Entre no Perfil de um usuário com quem tenha dado match e realize avaliação do Perfil.
-- Visualize o Perfil de usuarios com quem não tenha dado match.
+- Para todas as tarefas, o usuário deve deixar um comentário a respeito das suas percepções e dificuldades encontradas;
+- Entre no website da aplicação e se cadastrar; 
+- Realize autenticação no sistema com suas credências de acesso obtidas no cadastro; 
+- Acesse a área de Perfil e atualize seus dados;
+- Na tela principal, pule um usuário;  
+- Abra uma conversa com um match e envie uma mensagem;
+- Acesse a aplicação através de um dispositivo mobile;
+- Avalie o layout e design da aplicação.
 
 ### PERFIL PARA TESTE
 
-Para a execução das tarefas desse ciclo será priorizada o perfil de Usuário.
+Para a execução das tarefas desse ciclo será priorizada o perfil de Usuário encontrado nas personas.
 
 ### USUÁRIOS
 
@@ -40,7 +39,7 @@ O recrutamento será feito por meio de divulgação nas redes sociais da aplica�
 ### LOCAL, DATA E HORA
 
 Formato: Remoto
-Data: 05/11/2022 as 14:00
+Data e horário de acordo com a disposição dos usuários.
 
 ### PESSOAS DO TIME ENVOLVIDAS
 
@@ -48,11 +47,11 @@ Desenvolvedores responsaveis pelo Frontend.
 
 ### DURAÇÃO
 
-O teste terá duração maxima de 60 minutos.
+O teste terá duração maxima de 20 minutos.
 
 ### TEMPO DO TIME
 
-Estima-se cerca de 40 horas para planejamento, execução, análise e apresentação dos resultados.
+Estima-se cerca de 10 horas para planejamento, execução, análise e apresentação dos resultados.
 
 
 

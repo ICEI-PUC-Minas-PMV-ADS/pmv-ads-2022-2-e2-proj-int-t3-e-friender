@@ -206,7 +206,7 @@ body {
     height: 9px;
 }
 
-/*------------------------------------HOME------------------------------------*/
+/*------------------------------------USUARIO-HOME------------------------------------*/
 
 .homeUsuario {
     margin: auto;
@@ -246,9 +246,15 @@ body {
     background-position: top;
     background-repeat: no-repeat;
 }
-    /*-----------------OBJETIVO------------------*/
-    .objetivo {
+ /*------------------------------------FIM-USUARIO-HOME------------------------------------*/
+
+ /*------------------------------------HOME------------------------------------*/
+
+ /*-----------------OBJETIVO------------------*/
+.objetivo {
     background: url('/imagens/img-layout/Objt Back.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     height: 600px;
     font-style: italic;
     font-family: 'Anton', sans-serif;
@@ -287,6 +293,7 @@ body {
 .funcional {
     height: 600px;
     background: url('/imagens/img-layout/Como F Back.png');
+    background-size: 100% 100%;
     font-style: italic;
     font-family: 'Anton', sans-serif;
     background-repeat:no-repeat;
@@ -310,6 +317,16 @@ body {
 }
 
 .text-func {
+    width: 30vw;
+    height: 5vh;
+    justify-content: center;
+    /*border: 2px solid blue;*/
+    font-size: 140%;
+    text-align: left;
+    color: white;
+}
+
+.text-func2 {
     width: 30vw;
     height: 5vh;
     justify-content: center;
@@ -369,14 +386,15 @@ body {
 /*-----------------QUEM-SOMOS?------------------*/
 
 .quem-somos {
-    background: url('/imagens/img-layout/Quem S-Back.png');
+    background: url('/imagens/img-layout/Quem - Back.png');
+    background-size: 100% 100%;
     height: 550px;
     font-style: italic;
     font-family: 'Anton', sans-serif;
     /*border: 2px solid green;*/
-    background-position:center;
-    display:flex;
-    align-items:center;
+    background-position: center;
+    display: flex;
+    align-items: center;
 }
 
 .quem-s {
@@ -402,18 +420,339 @@ body {
     text-align: center;
 }
 
-
 /*-----------------FIM-QUEM-SOMOS?------------------*/
+@media screen and (max-width: 1250px) and (min-width: 992px) {
+    .objetivo{
+        background-color: #d71e40;
+        background-image: none;
+        height: 50vh;
+        
+    }
+    .goal {
+        /*border: 2px solid green;*/
+        height: 52vh;
+        width: 100VW;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .title-obj {
+        /*border: 2px solid blue;*/
+        display: flex;
+        font-size: 400%;
+        margin-bottom: 60px;
+        color: white;
+    }
+
+    .text-obj {
+        /*border: 2px solid blue;*/
+        font-size: 140%;
+        width: 70vw;
+        color: white;
+        text-align: center;
+    }
+/*-----------------------------------------------------------------*/
+    .funcional {
+        background-color: #d71e40;
+        background-image: none;
+    }
+
+    .func {
+        /*border: 2px solid;*/
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .title-func {
+        /*border: 2px solid blue;*/
+        display: flex;
+        font-size: 400%;
+        margin-bottom: 60px;
+        color: white;
+    }
+
+    .text-func1 {
+        width: 45vw;
+        height: 9vh;
+        justify-content: center;
+        /*border: 2px solid blue;*/
+        font-size: 140%;
+        text-align: left;
+        color: white;
+    }
+
+    .text-func2 {
+        width: 45vw;
+        height: 9vh;
+        justify-content: center;
+        /*border: 2px solid blue;*/
+        font-size: 140%;
+        text-align: left;
+        color: white;
+    }
+
+    .text-func {
+        width: 45vw;
+        height: 9vh;
+        justify-content: center;
+        /*border: 2px solid blue;*/
+        font-size: 140%;
+        text-align: left;
+        color: white;
+    }
+
+    .text-func4 {
+        width: 45vw;
+        height: 9vh;
+        justify-content: center;
+        /*border: 2px solid blue;*/
+        font-size: 140%;
+        text-align: left;
+        color: white;
+    }
+
+    .text-func5 {
+        width: 45vw;
+        height: 9vh;
+        justify-content: center;
+        /*border: 2px solid blue;*/
+        font-size: 140%;
+        text-align: left;
+        color: white;
+    }
+
+ /*-----------------------------------------------------------------*/
+
+    .quem-somos {
+        background-color: rgb(39, 39, 39);
+        background-image: none;
+        display: flex;
+        height: 30vh;
+    }
+
+    .quem-s {
+        /*border: 2px solid green;*/
+        height: 50vh;
+        width: 100VW;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .title-quem {
+        /*border: 2px solid blue;*/
+        display: flex;
+        color: white;
+        font-size: 400%;
+        margin-bottom: 40px;
+    }
+
+    .text-quem {
+        /*border: 2px solid blue;*/
+        color: white;
+        font-size: 140%;
+        text-align: center;
+        width: 70vw;
+    }
+
+    .foto-quem {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(39, 39, 39);
+    }
+
+    .fotos {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        margin: 10px;
+    }
+
+    
+}
+
+@media screen and (max-width:991px){
+    .objetivo {
+        background-color: #d71e40;
+        background-image: none;
+        height: 60vh;
+    }
+
+    .goal {
+        /*border: 2px solid green;*/
+        height: 62vh;
+        width: 100VW;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .title-obj {
+        /*border: 2px solid blue;*/
+        display: flex;
+        font-size: 400%;
+        margin-bottom: 60px;
+        color: white;
+        height: 5vh;
+    }
+
+    .text-obj {
+        /*border: 2px solid blue;*/
+        font-size: 140%;
+        width: 70vw;
+        color: white;
+        text-align: center;
+    }
+    /*-----------------------------------------------------------------*/
+    .funcional {
+        background-color: #d71e40;
+        background-image: none;
+        height: 80vh;
+    }
+
+    .func {
+        /*border: 2px solid;*/
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .title-func {
+        /*border: 2px solid blue;*/
+        display: flex;
+        font-size: 400%;
+        margin-bottom: 60px;
+        color: white;
+        width: 100vw;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .text-func1 {
+        width: 100vw;
+        height: 9vh;
+        justify-content: center;
+        /*border: 2px solid blue;*/
+        font-size: 140%;
+        text-align: center;
+        color: white;
+    }
+
+    .text-func2 {
+        width: 100vw;
+        height: 9vh;
+        justify-content: center;
+        /*border: 2px solid blue;*/
+        font-size: 140%;
+        text-align: center;
+        color: white;
+    }
+
+    .text-func {
+        width: 100vw;
+        height: 9vh;
+        justify-content: center;
+        /*border: 2px solid blue;*/
+        font-size: 140%;
+        text-align: center;
+        color: white;
+    }
+
+    .text-func4 {
+        width: 100vw;
+        height: 9vh;
+        justify-content: center;
+        /*border: 2px solid blue;*/
+        font-size: 140%;
+        text-align: center;
+        color: white;
+    }
+
+    .text-func5 {
+        width: 100vw;
+        height: 9vh;
+        justify-content: center;
+        /*border: 2px solid blue;*/
+        font-size: 140%;
+        text-align: center;
+        color: white;
+    }
+
+    /*-----------------------------------------------------------------*/
+
+    .quem-somos {
+        background-color: rgb(39, 39, 39);
+        background-image: none;
+        display: flex;
+        height: 45vh;
+    }
+
+    .quem-s {
+        /*border: 2px solid green;*/
+        height: 72vh;
+        width: 100VW;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .title-quem {
+        /*border: 2px solid blue;*/
+        display: flex;
+        color: white;
+        font-size: 400%;
+        margin-bottom: 40px;
+    }
+
+    .text-quem {
+        /*border: 2px solid blue;*/
+        color: white;
+        font-size: 140%;
+        text-align: center;
+        width: 70vw;
+    }
+
+    .foto-quem {
+        display: flex;
+        align-items: center;
+        background-color: rgb(39, 39, 39);
+        /*border: 2px solid green;*/
+        text-align: center;
+    }
+/*-----------------------------------------------------------------*/
+
+}
+
+
+/*-----------------------------------------------------------------*/
+
+
+@media screen and (min-width: 1251px){
+    .foto-quem{
+        display:none;
+    }
+}
 
 /*------------------------------------FIM HOME------------------------------------*/
 
 
 /*------------------------------------USUARIO/DETAILS------------------------------------*/
-.det-usuario{
+.det-usuario {
     align-content: center;
     background: url('/imagens/img-layout/Back Tets Usuario.png');
+    background-repeat: no-repeat;
     height: 100vh;
-    margin-top:-16px;
+    margin-top: -16px;
 }
 
 .botao-voltar{
@@ -568,3 +907,4 @@ body {
     margin-top: 70px;
 }
 
+/*------------------------------------FIM-USUARIO/SWIPE------------------------------------*/
