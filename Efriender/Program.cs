@@ -20,12 +20,12 @@ builder.Services.AddDefaultIdentity<Usuario>(options => options.SignIn.RequireCo
     .AddEntityFrameworkStores<ApplicationDbContext>();
 //builder.Services.AddIdentity<IdentityUser>().AddEntityFrameworkStores<ApplicationDbContext>();
 
-
+builder.Services.AddMvc().AddControllersAsServices();
 
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddControllers(
-    options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
+    options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = false);
 
 var app = builder.Build();
 

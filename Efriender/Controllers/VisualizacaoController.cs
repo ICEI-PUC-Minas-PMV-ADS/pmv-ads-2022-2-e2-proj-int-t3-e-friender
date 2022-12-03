@@ -1,19 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using EFriender.Models;
 using Efriender.Data;
-using Microsoft.AspNetCore.Authorization;
-using System.Diagnostics.Metrics;
-using Newtonsoft.Json.Linq;
-using NuGet.Packaging.Signing;
-using Efriender.Areas.Identity;
-using System.Linq;
 using Efriender.Models;
+
 
 namespace Efriender.Controllers
 {
@@ -31,15 +22,15 @@ namespace Efriender.Controllers
         }
 
 
-        public VisualizacaoController(Visualizacao visualizacao)
+        public VisualizacaoController(ApplicationDbContext context, Visualizacao visualizacao)
         {
-            this.result = this.Create(visualizacao);
+            this.Create(visualizacao);
         }
 
-        public VisualizacaoController()
-        {
+        //public VisualizacaoController()
+        //{
 
-        }
+        //}
 
         #endregion 
 
@@ -59,7 +50,7 @@ namespace Efriender.Controllers
             List<Visualizacao> lVisualizacao = new List<Visualizacao>();
             try
             {
-                lVisualizacao = _context.Visualizacoes.Where(x => x.Usuario_Visualizador.Id == ID_Visualizador).ToList();
+                lVisualizacao = _context.Visualizacoes.Where(x => x.usuarioVisualizador.Id == ID_Visualizador).ToList();
                 return lVisualizacao;
             } catch(Exception ex)
             {
@@ -115,19 +106,13 @@ namespace Efriender.Controllers
         // POST: VisualizacaoController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public bool Create(Visualizacao visualizacao)
+        public async Task<IActionResult> Create(Visualizacao visualizacao)
         {
-            try
-            {
-                _context.Visualizacoes.Add(visualizacao);
-                _context.SaveChanges();
-                return true;
-                //return RedirectToAction(nameof(Index)); //ActionREsult
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Erro ao inserir nova visualização.", ex);
-            }
+
+                _context.Add(visualizacao);
+                await _context.SaveChangesAsync();
+            return Ok();
+ 
         }
 
         // POST: VisualizacaoController/Edit/5

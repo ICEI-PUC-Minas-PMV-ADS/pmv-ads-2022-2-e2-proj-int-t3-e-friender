@@ -1,4 +1,5 @@
 ﻿using EFriender.Models;
+using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -12,20 +13,20 @@ namespace Efriender.Models
 
         public Visualizacao(Usuario usuarioVisualizador, Usuario usuarioVisto)
         {
-            this.Usuario_Visualizador = usuarioVisualizador;   
-            this.Usuario_Visto = usuarioVisto;
+            this.usuarioVisualizador = usuarioVisualizador;
+            this.usuarioVisto = usuarioVisto;
         }
 
         public Visualizacao(Usuario usuarioVisualizador, Usuario usuarioVisto, bool like)
         {
-            this.Usuario_Visualizador = usuarioVisualizador;
-            this.Usuario_Visto = usuarioVisto;
+            this.usuarioVisualizador = usuarioVisualizador;
+            this.usuarioVisto = usuarioVisto;
             this.like = like;
         }
 
         public Visualizacao()
         {
-   
+
         }
 
         #endregion
@@ -35,20 +36,10 @@ namespace Efriender.Models
         [Key]
         public int Id { get; set; }
         public bool like { get; set; }
-        public Usuario Usuario_Visualizador { get; set; } // FK DE USUARIO
-        public Usuario Usuario_Visto { get; set; } // FK DE USUARIO
-
+        public Usuario usuarioVisualizador { get; set; }
+        public Usuario usuarioVisto { get; set; }
 
         #endregion
 
     }
 }
-
-
-
-
-//[ForeignKey("Id_visto")]
-//public Usuario? usuarioVisto { get; set; }
-
-//[ForeignKey("Id_visualizador")]
-//public Usuario? usuarioVisualizador { get; set; }

@@ -14,9 +14,6 @@
     
 </style>
 
-<<<<<<< HEAD
-    <div class="row h-100">
-        <div class="col my-auto mx-auto align-items-center d-flex justify-content-end"><a class="btn btn-primary m-2" asp-action="Swipe" asp-route-id="@ViewBag.Random">Anterior</a></div>
 =======
 <div class="usuario-swipe flex-column ">
 
@@ -32,13 +29,23 @@
             
               <h4 class="text-white">@Model.Nome</h4>
 
-            <h4 class="text-white">@Model.Jogo.Nome</h4>
+            
+                @if (Model.Jogo == null)
+{
+                    <h4 class="text-white">SEM JOGO SELECIONADO</h4>
+} else {
+    <h4 class="text-white">@Model.Jogo.Nome</h4>
+}
+
+
+
+                
             <div class="botao-swipe justify-content-center d-grid gap-2"><a class="btn btn-primary mt-2 mb-2" asp-action="Details" asp-route-id="@Model.Id">Ver Perfil Completo</a></div>
             
 
         </div>
 
-        <div class="col col my-auto mx-auto align-items-center d-flex justify-content-start"><a class="btn btn-primary m-2" asp-action="Swipe" asp-route-id="@ViewBag.Random">Próximo</a></div>
+        <div class="col col my-auto mx-auto align-items-center d-flex justify-content-start"><a class="btn btn-primary m-2" asp-action="Passar" asp-route-usuarioVistoID="@Model.Id" property="@Model.Id">Próximo</a></div>
         
 
        
@@ -69,8 +76,10 @@
         Lista 7:@ViewBag.Id[7]<br />*@
 
         <div class="text-center m-3">
-
-            <a class="btn btn-primary btn-lg"><i class="fa-solid fa-gamepad"></i></a>
+            <div class="col col my-auto mx-auto align-items-center d-flex justify-content-start"><a class="btn btn-primary m-2" asp-action="Passar" asp-route-usuarioVistoID="@Model.Id" property="@Model.Id">Próximo</a></div>
+            
+            
+            <a class="btn btn-primary btn-lg" asp-action="Match" asp-route-usuarioVistoID="@Model.Id" property="@Model.Id"><i class="fa-solid fa-gamepad"></i></a>
         </div>
 
     </div>

@@ -92,7 +92,13 @@ namespace Efriender.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Descricao = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Jogos = table.Column<int>(type: "int", nullable: true),
+                    Preferencias = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Curso = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Faculdade = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    JogosId = table.Column<int>(type: "int", nullable: true),
                     UserName = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     NormalizedUserName = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: true)
@@ -120,8 +126,8 @@ namespace Efriender.Migrations
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_AspNetUsers_Jogos_Jogos",
-                        column: x => x.Jogos,
+                        name: "FK_AspNetUsers_Jogos_JogosId",
+                        column: x => x.JogosId,
                         principalTable: "Jogos",
                         principalColumn: "JogosId");
                 })
@@ -263,23 +269,23 @@ namespace Efriender.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     like = table.Column<bool>(type: "tinyint(1)", nullable: false),
-                    Usuario_VisualizadorId = table.Column<string>(type: "varchar(255)", nullable: false)
+                    usuarioVisualizadorId = table.Column<string>(type: "varchar(255)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Usuario_VistoId = table.Column<string>(type: "varchar(255)", nullable: false)
+                    usuarioVistoId = table.Column<string>(type: "varchar(255)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Visualizações", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Visualizações_AspNetUsers_Usuario_VistoId",
-                        column: x => x.Usuario_VistoId,
+                        name: "FK_Visualizações_AspNetUsers_usuarioVistoId",
+                        column: x => x.usuarioVistoId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Visualizações_AspNetUsers_Usuario_VisualizadorId",
-                        column: x => x.Usuario_VisualizadorId,
+                        name: "FK_Visualizações_AspNetUsers_usuarioVisualizadorId",
+                        column: x => x.usuarioVisualizadorId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -318,9 +324,9 @@ namespace Efriender.Migrations
                 column: "NormalizedEmail");
 
             migrationBuilder.CreateIndex(
-                name: "IX_AspNetUsers_Jogos",
+                name: "IX_AspNetUsers_JogosId",
                 table: "AspNetUsers",
-                column: "Jogos");
+                column: "JogosId");
 
             migrationBuilder.CreateIndex(
                 name: "UserNameIndex",
@@ -339,14 +345,14 @@ namespace Efriender.Migrations
                 column: "usuario2Id");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Visualizações_Usuario_VistoId",
+                name: "IX_Visualizações_usuarioVistoId",
                 table: "Visualizações",
-                column: "Usuario_VistoId");
+                column: "usuarioVistoId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Visualizações_Usuario_VisualizadorId",
+                name: "IX_Visualizações_usuarioVisualizadorId",
                 table: "Visualizações",
-                column: "Usuario_VisualizadorId");
+                column: "usuarioVisualizadorId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

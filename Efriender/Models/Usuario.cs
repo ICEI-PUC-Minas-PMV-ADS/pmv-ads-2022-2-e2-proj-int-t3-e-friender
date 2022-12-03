@@ -67,23 +67,17 @@ namespace Efriender.Models
         public string? Discord { get; set; }
 
         [Display(Name = "Descrição")]
-        //[Required(ErrorMessage = "Obrigatório inserir a descrição")]
         public string? Descricao { get; set; }
 
         [Display(Name = "Preferências")]
         public string? Preferencias { get; set; }
 
-        [Required(ErrorMessage = "Obrigatório inserir o curso")]
         public string? Curso { get; set; }
 
-        [Required(ErrorMessage = "Obrigatório inserir a Faculdade")]
         public string? Faculdade { get; set; }
-
-        [Display(Name = "Jogo Adicional")]
-        public string? JogoSecundario { get; set; }
-
+        
         [Display(Name = "Jogo Favorito")]
-        [ForeignKey("Jogos")]
+        //[ForeignKey("Jogos")]
         public Jogo? Jogo { get; set; }
 
 

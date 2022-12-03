@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Efriender.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221128000145_initial")]
+    [Migration("20221202014047_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -77,6 +77,9 @@ namespace Efriender.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("Curso")
+                        .HasColumnType("longtext");
+
                     b.Property<string>("Descricao")
                         .HasColumnType("longtext");
 
@@ -90,13 +93,16 @@ namespace Efriender.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("tinyint(1)");
 
+                    b.Property<string>("Faculdade")
+                        .HasColumnType("longtext");
+
                     b.Property<int?>("Genero")
                         .HasColumnType("int");
 
                     b.Property<int?>("Idade")
                         .HasColumnType("int");
 
-                    b.Property<int?>("Jogos")
+                    b.Property<int?>("JogosId")
                         .HasColumnType("int");
 
                     b.Property<bool>("LockoutEnabled")
@@ -125,6 +131,9 @@ namespace Efriender.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("tinyint(1)");
 
+                    b.Property<string>("Preferencias")
+                        .HasColumnType("longtext");
+
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("longtext");
 
@@ -140,7 +149,7 @@ namespace Efriender.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Jogos");
+                    b.HasIndex("JogosId");
 
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
@@ -158,22 +167,22 @@ namespace Efriender.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("Usuario_VistoId")
-                        .IsRequired()
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<string>("Usuario_VisualizadorId")
-                        .IsRequired()
-                        .HasColumnType("varchar(255)");
-
                     b.Property<bool>("like")
                         .HasColumnType("tinyint(1)");
 
+                    b.Property<string>("usuarioVistoId")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("usuarioVisualizadorId")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("Usuario_VistoId");
+                    b.HasIndex("usuarioVistoId");
 
-                    b.HasIndex("Usuario_VisualizadorId");
+                    b.HasIndex("usuarioVisualizadorId");
 
                     b.ToTable("Visualizações");
                 });
@@ -329,28 +338,28 @@ namespace Efriender.Migrations
                 {
                     b.HasOne("EFriender.Models.Jogo", "Jogo")
                         .WithMany("Usuarios")
-                        .HasForeignKey("Jogos");
+                        .HasForeignKey("JogosId");
 
                     b.Navigation("Jogo");
                 });
 
             modelBuilder.Entity("Efriender.Models.Visualizacao", b =>
                 {
-                    b.HasOne("Efriender.Models.Usuario", "Usuario_Visto")
+                    b.HasOne("Efriender.Models.Usuario", "usuarioVisto")
                         .WithMany()
-                        .HasForeignKey("Usuario_VistoId")
+                        .HasForeignKey("usuarioVistoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Efriender.Models.Usuario", "Usuario_Visualizador")
+                    b.HasOne("Efriender.Models.Usuario", "usuarioVisualizador")
                         .WithMany()
-                        .HasForeignKey("Usuario_VisualizadorId")
+                        .HasForeignKey("usuarioVisualizadorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Usuario_Visto");
+                    b.Navigation("usuarioVisto");
 
-                    b.Navigation("Usuario_Visualizador");
+                    b.Navigation("usuarioVisualizador");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

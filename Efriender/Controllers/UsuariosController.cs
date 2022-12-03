@@ -19,6 +19,11 @@ using Efriender.Models;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.Security.Claims;
 using System.Configuration.Internal;
+using SQLitePCL;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Controller;
+using Efriender.Controllers;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using MySqlX.XDevAPI;
 
 namespace EFriender.Controllers
 {
@@ -32,8 +37,8 @@ namespace EFriender.Controllers
         public UsuariosController(ApplicationDbContext context, IWebHostEnvironment webHost, IMemoryCache cache)
         {
             _context = context;
-            webHostEnvironment = webHost;
-            cache = cache;
+            this.webHostEnvironment = webHost;
+            this.cache = cache;
         }
 
           // GET: Index
@@ -51,6 +56,164 @@ namespace EFriender.Controllers
             var ApplicationDbContext = _context.Usuarios; 
             return View(await ApplicationDbContext.ToListAsync());
         }
+
+        #region [ MÉTODOS ] 
+
+        public async Task<IActionResult> Swipe()
+        {
+            var random = new Random();
+
+            // -- id do usuario logado na sessão
+            string sessionId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            // -- cria uma lista de Usuarios
+            List<Usuario> lUsuario = new List<Usuario>();
+
+            // -- recupera o usuario logado e adiciona na lista
+            Usuario usuarioLogado = _context.Usuarios.Where(u => u.Id == sessionId).FirstOrDefault();
+            lUsuario.Add(usuarioLogado);
+
+            List<Visualizacao> visualizacoesTest = _context.Visualizacoes.Include(x => x.usuarioVisto).ToList();
+
+            // -- pegar todas as visualizações do usuario
+            List<Visualizacao> visualizacoes = _context.Visualizacoes.Where(v => v.usuarioVisualizador.Id == usuarioLogado.Id).Include(x => x.usuarioVisto).ToList();
+            foreach (Visualizacao view in visualizacoes)
+            {
+                // -- adiciona o usuario visto a lista de usuarios criadas anteriormente
+                lUsuario.Add(view.usuarioVisto);
+            }
+
+            // -- lista de usuarios ainda não vistos
+            List<Usuario> usuariosNaoVistos = _context.Usuarios.ToList().Except(lUsuario).ToList();
+
+            // -- se não houverem usuarios para serem visualizados
+            if (usuariosNaoVistos.Count <= 0)
+            {
+                // -- redirecionar para a pagina principal ou exibir uma mensagem de alerta informando sobre nao ter usuarios novos para visualizacao
+                //return NotFound();
+                return RedirectToAction(nameof(Home));
+            }
+
+            // -- criando um numero randomico dentro do range da lista
+            int lSize = usuariosNaoVistos.Count;
+            Random r = new Random();
+            int rInt = r.Next(0, lSize);
+            return View(usuariosNaoVistos[rInt]);
+
+        }
+
+
+        public async Task<IActionResult> Passar(string usuarioVistoID)
+        {
+            try
+            {
+                // -- pegar o id do usuario da sessao
+                string sessionId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+                Usuario usuarioVisualizador = _context.Usuarios.Where(u => u.Id == sessionId).FirstOrDefault();
+                Usuario usuarioVisto = _context.Usuarios.Where(u => u.Id == usuarioVistoID).FirstOrDefault();
+
+                
+                
+                
+                
+                Visualizacao visualizacao = new Visualizacao(usuarioVisualizador, usuarioVisto);
+
+                _context.Visualizacoes.Add(visualizacao);
+                _context.SaveChanges();
+
+
+                //VisualizacaoController visualizacaoController = new VisualizacaoController(_context, );
+
+
+                //VisualizacaoController visualizacaoController = new VisualizacaoController(_context, visualizacao);
+
+                
+                return RedirectToAction(nameof(Swipe));
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao passar para outro gamer.", ex);
+            }
+
+        }
+
+        public async Task<IActionResult> Match(string usuarioVistoID)
+        {
+
+            // -- salvar a visualizacao na tabela de visualizacao
+            try
+            {
+                Visualizacao visualizacao = new Visualizacao(this.getUsuarioVisualizador(), this.getUsuarioVisto(usuarioVistoID), true);
+                _context.Visualizacoes.Add(visualizacao);
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Erro ao salvar visualizacão.", ex);
+            }
+
+            // -- verificar na lista de visualizacao se usuario visualizado tambem curtiu
+            Visualizacao visualizacaoOposta = _context.Visualizacoes.Where(x => x.usuarioVisualizador.Id == usuarioVistoID).Where(x => x.usuarioVisto.Id == this.getUsuarioVisualizador().Id).FirstOrDefault();
+
+            // -- se os dois usuarios tiverem se curtido, é match!
+            if (visualizacaoOposta != null && visualizacaoOposta.like)
+            {
+                // -- salvar o match na tabela de combinação
+                try
+                {
+                    Combinacao combinacao = new Combinacao(this.getUsuarioVisualizador(), this.getUsuarioVisto(usuarioVistoID));
+                    _context.Combinacoes.Add(combinacao);
+                    _context.SaveChanges();
+                } catch (Exception ex)
+                {
+                    throw new Exception("Erro ao salvar novo match.", ex);
+                }
+                // -- imprimir mensagem de alerta na tela
+            }
+
+            return RedirectToAction(nameof(Swipe));
+
+        
+
+        }
+
+        #endregion
+
+        #region [ UTILS ]
+
+        public Usuario getUsuarioVisto(string usuarioVistoID)
+        {
+            try
+            {
+                Usuario usuarioVisto = _context.Usuarios.Where(u => u.Id == usuarioVistoID).FirstOrDefault();
+                return usuarioVisto;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao obter usuario visto por ID.", ex);
+            }
+        }
+
+        public Usuario getUsuarioVisualizador()
+        {
+            try
+            {
+                string sessionId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                Usuario usuarioVisualizador = _context.Usuarios.Where(u => u.Id == sessionId).FirstOrDefault();
+                return usuarioVisualizador;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao obter usuario visualizador por ID.", ex);
+            }
+
+
+        }
+
+        #endregion 
 
 
 
@@ -93,162 +256,12 @@ namespace EFriender.Controllers
             return View(usuario);
         }
 
-        //public bool Passar(int ID_Visualizador, int ID_Visto)
-        //{
-        //    try
-        //    { 
-        //        VisualizacaoController visualizacaoController = new VisualizacaoController(new Visualizacao(ID_Visualizador, ID_Visto));
-        //        if (visualizacaoController.result) return true;
-        //        else return false;
-        //    } catch (Exception ex)
-        //    {
-        //        throw new Exception("Erro ao passar para outro gamer.", ex);
-        //    }
-
-        //}
-
-        //public bool Match(int ID_Visualizador, int ID_Visto, bool like)
-        //{
-        //    // -- adicionar lista de visualizacao que usuario visualizou
-        //    VisualizacaoController visualizacaoController = new VisualizacaoController(new Visualizacao(ID_Visualizador, ID_Visto, like));
-            
-        //    // -- verificar na lista de visualizacao se usuario visualizado tambem curtiu
-        //    List<Visualizacao> visualizadorVisto = new List<Visualizacao>();
-        
-        //    visualizadorVisto = visualizacaoController.GetByVisualizador(ID_Visto);
-          
-       
-        //    var test = visualizadorVisto.Where(x => ID_Visualizador == x.Id_visualizador && x.like == true);
-
-        //    // -- se sim, adiciona na tabela de Match o match dos dois usuarios, com flags de nao visualizado para os dois
-        //    if (test.Any())
-        //    {
-        //        // adicionar na tabela de match
-        //        CombinacaoController combinacaoController = new CombinacaoController(new Combinacao(ID_Visualizador, ID_Visto));
-
-        //        // -- imprime um alerta na tela do usuario sobre o match
-        //        //View("Swipe");
-        //        //Ok();
-        //        return true;
-        //    }
-        //    return false;
-
-
-
-        //}
-
-        //// -- botão swipe
-        //public async Task<IActionResult> btnSwipe()
-        //{
-        //    // -- consulta a tabela de visualizacao, com todos usuarios visualizados pelo user
-        //    var visualizacoes = new VisualizacaoController();
-        //    // -- comsulta a lista de usuarios total, e excluir o proprio user dela
-
-        //    // -- subtrai a lista de usuarios visualizados da lista total
-
-        //    // -- gera a view
-        //    return View(visualizacoes);
-        //}
-
-        [Authorize]
-        public async Task<IActionResult> Swipe2()
-        {
-            var random = new Random();
-
-
-            // -- pega o id do usuario logado
-            string sessionId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            //int userId = int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-            //var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            //var userId = int.TryParse(userIdClaim, out var id) ? id : 0;
-
-
-            // -- cria uma lista de Usuarios
-            List<Usuario> lUsuario = new List<Usuario>();
-
-            // -- recupera o usuario logado e adiciona na lista
-            Usuario usuarioLogado = _context.Usuarios.Where(u => u.Id == sessionId).FirstOrDefault();
-            lUsuario.Add(usuarioLogado);
-
-            // -- pegar todas as visualizações do usuario
-            List<Visualizacao> visualizacoes = _context.Visualizacoes.Include(v => v.Usuario_Visualizador.Id == sessionId).ToList();
-            foreach(Visualizacao view in visualizacoes)
-            {
-                Usuario usuarioVisto = new Usuario(view.Usuario_Visto);
-
-                // -- adiciona o usuario visto a lista de usuarios criadas anteriormente
-                lUsuario.Add(usuarioVisto);
-            }
-
-            // -- pega uma lista de usuarios no DB excluindo o usuario logado e os usuarios vistos
-            List<Usuario> usuarios = _context.Usuarios.ToList().Except(lUsuario).ToList();
-
-            if(usuarios.Count <= 0)
-            {
-                // -- redirecionar para a pagina principal ou exibir uma mensagem de alerta informando sobre nao ter usuarios novos para visualizacao
-                return NotFound();
-            }
-
-            // -- criando um numero randomico dentro do range da lista
-            int lSize = usuarios.Count;
-            Random r = new Random();
-            int rInt = r.Next(0, lSize);
-
-            return View(usuarios[rInt]);
-
-        }
-
-
-        [Authorize]
-        public async Task<IActionResult> Swipe(string? id)
-        {
-
-            var random = new Random();
-            var Usuario = _context.Usuarios;
-            List<string> ListaIds = new List<string>();
-
-            foreach (var item in Usuario)
-            {
-                ListaIds.Add(item.Id);
-            }
-
-            var rand = ListaIds[random.Next(ListaIds.Count)];
-
-            while (rand == id)
-            {
-                rand = ListaIds[random.Next(ListaIds.Count)];
-
-            }
-
-
-
-            ViewBag.Random = rand;
-
-            ViewBag.Id = ListaIds;
-
-            ViewBag.IdUltimo = ListaIds.Count() - 1;
-
-            var usuario = await _context.Usuarios
-                .Include(u => u.Jogo)
-                .FirstOrDefaultAsync(m => m.Id == id); // alterar aqui
-            if (usuario == null)
-            {
-                return NotFound();
-            }
-
-            //var idCount = _context.Usuario;
-            //ViewBag.Id = idCount.Count();
-
-            return View(usuario);
-        }
-
         // GET: Usuarios
         public async Task<IActionResult> Usuarios()
         {
             var ApplicationDbContext = _context.Usuarios.Include(u => u.Jogo);
             return View(await ApplicationDbContext.ToListAsync());
         }
-
 
         // GET: Usuarios/Create
         [Authorize]
@@ -321,12 +334,13 @@ namespace EFriender.Controllers
 
         }
 
+
         // POST: Usuarios/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see .
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit([Bind("Id,Idade,Genero,Discord,Descricao,Jogos,Imagem")] Usuario usuario)
+        public async Task<IActionResult> Edit([Bind("Id,Idade,Genero,Discord,Descricao,Jogos,Imagem, Preferencias, Curso, Faculdade")] Usuario usuario)
         {
             //Usuario usuarioSessao = _context.Usuarios.Where(u => u.Id == User.FindFirstValue(ClaimTypes.NameIdentifier)).FirstOrDefault();
             if (usuario == null || usuario.Id != User.FindFirstValue(ClaimTypes.NameIdentifier))
@@ -342,6 +356,9 @@ namespace EFriender.Controllers
                 userUpdate.Imagem = usuario.Imagem;
                 userUpdate.Idade = usuario.Idade;
                 userUpdate.Discord = usuario.Discord;
+                userUpdate.Preferencias = usuario.Preferencias;
+                userUpdate.Curso = usuario.Curso;
+                userUpdate.Faculdade = usuario.Faculdade;
             }
 
 
@@ -372,7 +389,6 @@ namespace EFriender.Controllers
         }
 
         [Authorize]
- 
         public async Task<IActionResult> Perfil()
         {
 
@@ -484,6 +500,7 @@ namespace EFriender.Controllers
 
         private bool UsuarioExists(string id)
         {
+            
           return _context.Usuarios.Any(e => e.Id == id);
         }
     }

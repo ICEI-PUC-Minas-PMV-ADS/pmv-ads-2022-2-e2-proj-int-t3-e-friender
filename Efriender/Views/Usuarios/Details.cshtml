@@ -171,8 +171,11 @@
             
           </div>
         <div class="des-jogos m-4">
-            <h1 class="descript-titulo-img">Jogo Favorito</h1>
-            <p class="descript-paragrafo-img"> <img src="~/imagens/@Model.Jogo.UrlImagem" width="150px" height="150px" class="rounded-3"/> </p>
+            @if(Model.Jogo.UrlImagem != null){
+                <h1 class="descript-titulo-img">Jogo Favorito</h1>
+                <p class="descript-paragrafo-img"> <img src="~/imagens/@Model.Jogo.UrlImagem" width="150px" height="150px" class="rounded-3"/> </p>
+            }
+            
         </div>
     </div>
     <div class="botao-voltar">
@@ -180,6 +183,13 @@
     </div>
 </section>
 
-
+@if (Model.Jogo == null)
+{
+    <h4 class="text-white">SEM JOGO SELECIONADO</h4>
+}
+else
+{
+    <h4 class="text-white">@Model.Jogo.Nome</h4>
+}
 
         @*<div class="espaco"></div>*@
