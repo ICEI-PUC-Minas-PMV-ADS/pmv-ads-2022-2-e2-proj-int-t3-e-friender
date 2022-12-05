@@ -83,7 +83,7 @@ namespace EFriender.Controllers
             }
 
             // -- lista de usuarios ainda não vistos
-            List<Usuario> usuariosNaoVistos = _context.Usuarios.ToList().Except(lUsuario).ToList();
+            List<Usuario> usuariosNaoVistos = _context.Usuarios.Include(x => x.Jogo).ToList().Except(lUsuario).ToList();
 
             // -- se não houverem usuarios para serem visualizados
             if (usuariosNaoVistos.Count <= 0)

@@ -140,7 +140,7 @@
         <div class="test d-flex justify-content-between align-items-center">
             <img class="foto-usuario" src="~/imagens/@Model.UrlImagem" width="200px" />
             <div> 
-                <p class="info-nick">Erickzz</p>
+                <p class="info-nick">@Model.UserName</p>
             </div>
 
         <h1 class="info-titulo">Nome</h1>
@@ -168,10 +168,11 @@
             <p class="descript-paragrafo">@Model.Descricao</p>
           </div>
         <div class="des-preferencias m-4">
-            
-          </div>
+            <h1 class="descript-titulo">Descrição</h1>
+            <p class="descript-paragrafo">@Model.Preferencias</p>
+        </div>
         <div class="des-jogos m-4">
-            @if(Model.Jogo.UrlImagem != null){
+            @if(@Model.Jogo != null){
                 <h1 class="descript-titulo-img">Jogo Favorito</h1>
                 <p class="descript-paragrafo-img"> <img src="~/imagens/@Model.Jogo.UrlImagem" width="150px" height="150px" class="rounded-3"/> </p>
             }
