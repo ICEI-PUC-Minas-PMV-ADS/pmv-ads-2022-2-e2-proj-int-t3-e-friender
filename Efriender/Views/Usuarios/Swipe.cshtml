@@ -14,10 +14,10 @@
     
 </style>
 
-<div class="usuario-swipe flex-column ">
+<div class="usuario-swipe flex-column">
 
     <div class="row justify-content-center">
-        <div class="col my-auto mx-auto align-items-center d-flex justify-content-end"><a class="btn btn-primary m-2" asp-route-id="@ViewBag.Random">Anterior</a>
+        <div class="col my-auto mx-auto align-items-center d-flex justify-content-end">
         </div>
         
         <div class="box-info background-grey mt-4 w-20 mx-auto col-sm text-center align-content-center justify-content-center center-block">
@@ -74,7 +74,7 @@
         Lista 7:@ViewBag.Id[7]<br />*@
 
         <div class="text-center m-3">
-            <div class="col col my-auto mx-auto align-items-center d-flex justify-content-start"><a class="btn btn-primary m-2" asp-action="Passar" asp-route-usuarioVistoID="@Model.Id" property="@Model.Id">Próximo</a></div>
+            
             
             
             <a class="btn btn-primary btn-lg" asp-action="Match" asp-route-usuarioVistoID="@Model.Id" property="@Model.Id"><i class="fa-solid fa-gamepad"></i></a>

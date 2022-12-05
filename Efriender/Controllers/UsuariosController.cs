@@ -88,9 +88,19 @@ namespace EFriender.Controllers
             // -- se não houverem usuarios para serem visualizados
             if (usuariosNaoVistos.Count <= 0)
             {
+                //List<Visualizacao> visualizacoes = _context.Visualizacoes.Where(v => v.Id == usuarioLogado.Id).ToList();
+                usuariosNaoVistos = _context.Usuarios.Include(x => x.Jogo).ToList();
+                foreach(Visualizacao view in visualizacoes)
+                {
+                    _context.Visualizacoes.Remove(view);
+                }
+               
+                _context.SaveChangesAsync();
+                usuariosNaoVistos.Remove(usuarioLogado);
+                
                 // -- redirecionar para a pagina principal ou exibir uma mensagem de alerta informando sobre nao ter usuarios novos para visualizacao
-                //return NotFound();
-                return RedirectToAction(nameof(Home));
+                ////return NotFound();
+                //return RedirectToAction(nameof(Home));
             }
 
             // -- criando um numero randomico dentro do range da lista
@@ -299,7 +309,7 @@ namespace EFriender.Controllers
         //POST: Usuarios/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit([Bind("Id,Idade,Genero,Discord,Descricao,Jogo,Imagem,Preferencias,Curso,Faculdade")] Usuario usuario)
+        public async Task<IActionResult> Edit([Bind("Id, Nome,Idade,Genero,Discord,Descricao,Jogo,Imagem,Preferencias,Curso,Faculdade")] Usuario usuario)
         {
             //Usuario usuarioSessao = _context.Usuarios.Where(u => u.Id == User.FindFirstValue(ClaimTypes.NameIdentifier)).FirstOrDefault();
             if (usuario == null || usuario.Id != User.FindFirstValue(ClaimTypes.NameIdentifier))
@@ -314,15 +324,19 @@ namespace EFriender.Controllers
                 {
                     // -- atualizando atributos
                     string uniqueFileName = Imagem(usuario);
-                    userToUpdate.UrlImagem = uniqueFileName;
+                    if(!string.IsNullOrEmpty(uniqueFileName)) userToUpdate.UrlImagem = uniqueFileName;
                     userToUpdate.Discord = usuario.Discord;
                     userToUpdate.Curso = usuario.Curso;
                     userToUpdate.Faculdade = usuario.Faculdade;
                     userToUpdate.Preferencias = usuario.Preferencias;
                     userToUpdate.Genero = usuario.Genero;
                     userToUpdate.Idade = usuario.Idade;
-                    userToUpdate.Nome = usuario.Nome;
-                    userToUpdate.Jogo = usuario.Jogo;
+                    if (!string.IsNullOrEmpty(usuario.Nome))
+                    {
+                        userToUpdate.Nome = usuario.Nome;
+                    }
+
+                    userToUpdate.Jogo = _context.Jogos.Where(v => v.JogosId == usuario.Jogo.JogosId).FirstOrDefault();
                     if (string.IsNullOrEmpty(usuario.Descricao))
                     {
                         userToUpdate.Descricao = " ";
@@ -401,21 +415,8 @@ namespace EFriender.Controllers
                 }
             }
 
-            //var usuarioSessao2 = _context.Usuarios.Where(u => u.Id == User.FindFirstValue(ClaimTypes.NameIdentifier))
-            //    .Select(x => new
-            //    {
-            //        x.Id,
-            //        x.Idade,
-            //        x.Nome,
-            //        x.Genero,
-            //        x.Descricao,
-            //        x.Discord,
-            //        x.Imagem,
-            //        x.UrlImagem,
-            //        x.Jogo
-            //    }).FirstOrDefault();
-
-            Usuario usuarioSessao = _context.Usuarios.Where(u => u.Id == User.FindFirstValue(ClaimTypes.NameIdentifier)).FirstOrDefault();
+        
+            Usuario usuarioSessao = _context.Usuarios.Where(u => u.Id == User.FindFirstValue(ClaimTypes.NameIdentifier)).Include(v => v.Jogo).FirstOrDefault();
 
             //if (id == null || _context.Usuarios == null)
             //{
@@ -427,7 +428,7 @@ namespace EFriender.Controllers
                 return NotFound();
             }
             var urlimg = usuarioSessao.UrlImagem;
-            var check = new SelectList(_context.Jogos, "JogosId", "Nome");
+            //var check = new SelectList(_context.Jogos, "JogosId", "Nome");
             ViewData["JogosId"] = new SelectList(_context.Jogos, "JogosId", "Nome");
             return View(usuarioSessao);
             //return View(usuarioSessao);
