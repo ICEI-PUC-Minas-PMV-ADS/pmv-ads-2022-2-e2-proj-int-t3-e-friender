@@ -25,22 +25,22 @@ namespace Efriender.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("Id_Usuario1")
-                        .HasColumnType("int");
+                    b.Property<string>("usuario1Id")
+                        .HasColumnType("varchar(255)");
 
-                    b.Property<int>("Id_Usuario2")
-                        .HasColumnType("int");
+                    b.Property<string>("usuario2Id")
+                        .HasColumnType("varchar(255)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Id_Usuario1");
+                    b.HasIndex("usuario1Id");
 
-                    b.HasIndex("Id_Usuario2");
+                    b.HasIndex("usuario2Id");
 
-                    b.ToTable("Combinaçoes");
+                    b.ToTable("Combinaçoes", (string)null);
                 });
 
-            modelBuilder.Entity("EFriender.Models.Jogos", b =>
+            modelBuilder.Entity("EFriender.Models.Jogo", b =>
                 {
                     b.Property<int>("JogosId")
                         .ValueGeneratedOnAdd()
@@ -60,7 +60,7 @@ namespace Efriender.Migrations
 
                     b.HasKey("JogosId");
 
-                    b.ToTable("Jogos");
+                    b.ToTable("Jogos", (string)null);
                 });
 
             modelBuilder.Entity("Efriender.Models.Usuario", b =>
@@ -182,7 +182,7 @@ namespace Efriender.Migrations
 
                     b.HasIndex("usuarioVisualizadorId");
 
-                    b.ToTable("Visualizações");
+                    b.ToTable("Visualizações", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

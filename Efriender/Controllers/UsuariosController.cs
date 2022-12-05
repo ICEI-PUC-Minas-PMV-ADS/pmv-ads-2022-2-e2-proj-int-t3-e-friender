@@ -310,7 +310,7 @@ namespace EFriender.Controllers
         //POST: Usuarios/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit([Bind("Id,Idade,Genero,Discord,Descricao,Jogos,Imagem,Preferencias,Curso,Faculdade")] Usuario usuario)
+        public async Task<IActionResult> Edit([Bind("Id,Idade,Genero,Discord,Descricao,Jogo,Imagem,Preferencias,Curso,Faculdade")] Usuario usuario)
         {
             //Usuario usuarioSessao = _context.Usuarios.Where(u => u.Id == User.FindFirstValue(ClaimTypes.NameIdentifier)).FirstOrDefault();
             if (usuario == null || usuario.Id != User.FindFirstValue(ClaimTypes.NameIdentifier))
@@ -334,6 +334,14 @@ namespace EFriender.Controllers
                     userToUpdate.Idade = usuario.Idade;
                     userToUpdate.Nome = usuario.Nome;
                     userToUpdate.Jogo = usuario.Jogo;
+                    if (string.IsNullOrEmpty(usuario.Descricao))
+                    {
+                        userToUpdate.Descricao = "";
+                    } else
+                    {
+                        userToUpdate.Descricao = usuario.Descricao;
+                    }
+                    
 
                     // -- atualizando e salvando no db
                     _context.Update(userToUpdate);

@@ -77,7 +77,6 @@ namespace Efriender.Models
         public string? Faculdade { get; set; }
         
         [Display(Name = "Jogo Favorito")]
-        //[ForeignKey("Jogos")]
         public Jogo? Jogo { get; set; }
 
 
