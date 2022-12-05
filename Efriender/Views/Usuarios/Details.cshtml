@@ -168,7 +168,7 @@
             <p class="descript-paragrafo">@Model.Descricao</p>
           </div>
         <div class="des-preferencias m-4">
-            <h1 class="descript-titulo">Descrição</h1>
+            <h1 class="descript-titulo">Preferências</h1>
             <p class="descript-paragrafo">@Model.Preferencias</p>
         </div>
         <div class="des-jogos m-4">
@@ -183,6 +183,18 @@
         <a class=" btn btn-primary btn-lg" asp-action="Swipe" asp-route-id="@Model.Id">Voltar</a>
     </div>
 </section>
+<!--footer>
+<div class="container">
+    <input type="text" id="input" placeholder="Escreva sua mensagem aqui...">
+    <button type="button" name="button" id="cancel">cancelar</button>
+    <button type="button" name="button" id="comment">comentar</button>
+
+    <div class="box-container">
+        <div class="box"></div>
+        <button type="button" name="button" id="delete">deletar</button>
+    </div>
+</div>
+</footer>--><
 
 @if (Model.Jogo == null)
 {
