@@ -37,7 +37,7 @@ namespace Efriender.Migrations
 
                     b.HasIndex("usuario2Id");
 
-                    b.ToTable("Combinaçoes", (string)null);
+                    b.ToTable("Combinaçoes");
                 });
 
             modelBuilder.Entity("EFriender.Models.Jogo", b =>
@@ -47,11 +47,9 @@ namespace Efriender.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Descricao")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Nome")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("UrlImagem")
@@ -60,7 +58,7 @@ namespace Efriender.Migrations
 
                     b.HasKey("JogosId");
 
-                    b.ToTable("Jogos", (string)null);
+                    b.ToTable("Jogos");
                 });
 
             modelBuilder.Entity("Efriender.Models.Usuario", b =>
@@ -182,7 +180,7 @@ namespace Efriender.Migrations
 
                     b.HasIndex("usuarioVisualizadorId");
 
-                    b.ToTable("Visualizações", (string)null);
+                    b.ToTable("Visualizações");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

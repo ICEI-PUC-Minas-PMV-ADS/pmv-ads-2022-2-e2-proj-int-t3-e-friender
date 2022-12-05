@@ -111,22 +111,11 @@ namespace EFriender.Controllers
 
                 Usuario usuarioVisualizador = _context.Usuarios.Where(u => u.Id == sessionId).FirstOrDefault();
                 Usuario usuarioVisto = _context.Usuarios.Where(u => u.Id == usuarioVistoID).FirstOrDefault();
-
-                
-                
-                
-                
+            
                 Visualizacao visualizacao = new Visualizacao(usuarioVisualizador, usuarioVisto);
 
                 _context.Visualizacoes.Add(visualizacao);
                 _context.SaveChanges();
-
-
-                //VisualizacaoController visualizacaoController = new VisualizacaoController(_context, );
-
-
-                //VisualizacaoController visualizacaoController = new VisualizacaoController(_context, visualizacao);
-
                 
                 return RedirectToAction(nameof(Swipe));
 
@@ -336,7 +325,7 @@ namespace EFriender.Controllers
                     userToUpdate.Jogo = usuario.Jogo;
                     if (string.IsNullOrEmpty(usuario.Descricao))
                     {
-                        userToUpdate.Descricao = "";
+                        userToUpdate.Descricao = " ";
                     } else
                     {
                         userToUpdate.Descricao = usuario.Descricao;
@@ -344,7 +333,7 @@ namespace EFriender.Controllers
                     
 
                     // -- atualizando e salvando no db
-                    _context.Update(userToUpdate);
+                    _context.Usuarios.Update(userToUpdate);
                     await _context.SaveChangesAsync();
                     return RedirectToAction(nameof(Home));
 
