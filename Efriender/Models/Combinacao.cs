@@ -12,7 +12,7 @@ namespace Efriender.Models
         public Combinacao(Usuario usuario1, Usuario usuario2)
         {
             this.usuario1 = usuario1;
-            this.usuario1 = usuario2;
+            this.usuario2 = usuario2;
         }
         public Combinacao() { }
 

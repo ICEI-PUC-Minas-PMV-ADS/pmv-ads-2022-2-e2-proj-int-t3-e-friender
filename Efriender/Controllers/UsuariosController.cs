@@ -25,6 +25,8 @@ using Efriender.Controllers;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using MySqlX.XDevAPI;
 using System.Composition;
+using Efriender.Enums;
+using Efriender.Servies;
 
 namespace EFriender.Controllers
 {
@@ -95,7 +97,7 @@ namespace EFriender.Controllers
                     _context.Visualizacoes.Remove(view);
                 }
                
-                _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
                 usuariosNaoVistos.Remove(usuarioLogado);
                 
                 // -- redirecionar para a pagina principal ou exibir uma mensagem de alerta informando sobre nao ter usuarios novos para visualizacao
@@ -165,6 +167,8 @@ namespace EFriender.Controllers
                     Combinacao combinacao = new Combinacao(this.getUsuarioVisualizador(), this.getUsuarioVisto(usuarioVistoID));
                     _context.Combinacoes.Add(combinacao);
                     _context.SaveChanges();
+                    TempData["msg"] = "<script>alert('Deu Match! ;)');</script>";
+                    ViewBag.Alert = CommonServices.ShowAlert(Alerts.Success, "Deu Match! ;)");
                 } catch (Exception ex)
                 {
                     throw new Exception("Erro ao salvar novo match.", ex);

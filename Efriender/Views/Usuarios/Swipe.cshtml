@@ -24,6 +24,8 @@
             <div class="gambiarra  rounded-circle overflow-hidden">
                 <img class="overflow-hidden" src="~/imagens/@Model.UrlImagem" width="300px" height="300px" />
             </div>
+            @Html.Raw(@ViewBag.Alert)
+            @Html.Raw(TempData["msg"])
             
               <h4 class="text-white">@Model.Nome</h4>
 
