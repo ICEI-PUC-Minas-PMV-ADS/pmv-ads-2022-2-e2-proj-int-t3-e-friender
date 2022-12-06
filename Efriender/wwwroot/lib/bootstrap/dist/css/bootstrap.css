@@ -3156,9 +3156,9 @@ $mynewcolor:#E42C4F;
 }
 
 .btn-light {
-  color: #000;
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
+   color: #000;
+   background-color: #d8d8d8 !important;
+   border-color: #f8f9fa;
 }
 .btn-light:hover {
   color: #000;

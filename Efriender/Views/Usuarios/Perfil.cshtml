@@ -1,130 +1,262 @@
-﻿    @using static Efriender.Models.Usuario
+﻿@using EFriender.Models
 @model Efriender.Models.Usuario
 
+
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Perfil";
 }
 
-<div class="container mt-5">
-
-    <div class="row">
-        <div class="col-md-8 m-auto">
-            <form asp-action="Edit" enctype="multipart/form-data">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <input type="hidden" asp-for="Id" />
-
-                <div class="form-group  w-100 text-center imagemUsuario">
-                <img class="rounded-circle" id="PreviewPhoto" src="~/imagens/@Model.UrlImagem" alt="Imagem Padrão" width="200px" height="200px" margin="20px" />
-                
-                <h2 class="p-2">@User.Identity.Name</h2>
-
-            </div>
-
-            <div class="form-group text-center">
-                <div class="custom-file">
-                    <input type="file"asp-for="Imagem" class="custom-file-input btn btn-primary mt-3" id="UploadedImage"
-                           onchange="document.getElementById('PreviewPhoto').src = window.URL.createObjectURL(this.files[0])" title=" " />
-                </div>
-            </div>
-
+<div class="container">
 
     <div>
 
-                <div class="col-md-12 d-flex flex-fill">
+        @*<h4>Usuario</h4>
+        <hr />
 
-                    <div class="form-group m-2 col-6">
-                <label asp-for="Nome" class="control-label"></label>
-                <input asp-for="Nome" class="form-control" />
-                <span asp-validation-for="Nome" class="text-danger"></span>
-            </div>
+        <div class="text-center">
+        <img class="mb-4 rounded" src="~/imagens/@Model.UrlImagem" width="300px" height="300px" />
+        </div>
 
-         
-       </div>
+        <hr />
 
-        <div class="col-md-12 d-flex flex-fill">
+        <div class="text-center d-flex justify-content-between">
 
-                    <div class="form-group m-2 col-6">
-                <label asp-for="Idade" class="control-label"></label>
-                <input asp-for="Idade" class="form-control" />
-                <span asp-validation-for="Idade" class="text-danger"></span>
-            </div>
+        <div class="w-25">
+        <h2>Nome:</h2>
+        <h4 class="opacity-50">@Model.Nome</h4>
 
-                    <div class="form-group m-2 col-md-6">
-                <label asp-for="Genero" class="control-label"></label>
-                <select asp-for="Genero" class="form-control" asp-items="Html.GetEnumSelectList<Generos>()"></select>
-                <span asp-validation-for="Genero" class="text-danger"></span>
-            </div>
-       </div>
+        <h2>Idade:</h2>
+        <h4 class="opacity-50">@Model.Idade</h4>
 
-                <div class="col-md-12 d-flex">
+        <h2>Gênero:</h2>
+        <h4 class="opacity-50">@Model.Genero</h4>
+        </div>
+
+        <div class="w-25">
+        <h2>Jogo Favorito:</h2>
+        <h4 class="opacity-50">@Model.Jogos.Nome</h4>
+        <img src="~/imagens/@Model.Jogos.UrlImagem" width="75px" height="75px" />
+
+        @if (Model.Discord != null)
+        {
+        <h2>Discord:</h2>
+        <h4 class="opacity-50">@Model.Discord</h4>
+        }
+        </div>
+
+        <div>
+        <h2>Curso:</h2>
+        <h4 class="opacity-50">@Model.Curso</h4>
+
+        <h2>Faculdade:</h2>
+        <h4 class="opacity-50">@Model.Faculdade</h4>
+
+        <h2>Descrição:</h2>
+        <h4 class="opacity-50">@Model.Descricao</h4>
+
+        @if (Model.Preferencias != null)
+        {
+        <h2>Preferências:</h2>
+        <h4 class="opacity-50">@Model.Preferencias</h4>
+        }
+
+        @if(Model.JogoSecundario != null)
+        {
+        <h2>Jogo Adicional:</h2>
+        <h4 class="opacity-50">@Model.JogoSecundario</h4>
+        }
 
 
-                    <div class="form-group m-2 col-4">
-                <label asp-for="Discord" class="control-label"></label>
-                <span class="opcional">(Opcional)</span>
-                <input asp-for="Discord" class="form-control" />
-                <span asp-validation-for="Discord" class="text-danger"></span>
-            </div>
+        </div>
+        <hr />
+        </div>*@
 
-                    <div class="form-group m-2 col-4">
-                <label asp-for="Curso" class="control-label"></label>
-                <input asp-for="Curso" class="form-control" />
-                <span asp-validation-for="Curso" class="text-danger"></span>
-            </div>
+        @*{
+        int IndexAtual = ViewBag.Id.IndexOf(Model.Id);
+        int UltimoIndex = ViewBag.IdUltimo;
+        int UltimoId = ViewBag.Id[UltimoIndex];
+        int IndexProximo = IndexAtual + 1;
+        int IndexAnterior = IndexAtual - 1;
+        if (IndexAtual == 0)
+        {
+        IndexAnterior = UltimoIndex;
+        }
 
-                    <div class="form-group m-2 col-4">
-                <label asp-for="Faculdade" class="control-label"></label>
-                <input asp-for="Faculdade" class="form-control" />
-                <span asp-validation-for="Faculdade" class="text-danger"></span>
-            </div>
-       </div>
+        if(IndexAtual == UltimoIndex)
+        {
+        IndexProximo = 0;
+        }
+        int Proximo = ViewBag.Id[IndexProximo];
+        int Anterior = ViewBag.Id[IndexAnterior];
 
-                <div class="col-md-12 d-flex">
+        }*@
 
-                    <div class="form-group m-2 col-6">
-                <label asp-for="Descricao" class="control-label"></label>
-                <textarea asp-for="Descricao" class="form-control"></textarea>
-                <span asp-validation-for="Descricao" class="text-danger"></span>
-            </div>
 
-                    <div class="form-group m-2 col-6">
-                <label asp-for="Preferencias" class="control-label"></label>
-                <textarea asp-for="Preferencias" class="form-control"> </textarea>
-                <span asp-validation-for="Preferencias" class="text-danger"></span>
-            </div>
-       </div>
 
-       <div class="col-12 d-flex">
-            <div class="form-group m-2 col-6">
-                  <label asp-for="Jogo.JogosId" class="control-label"></label>
-                  <select asp-for="Jogo.JogosId" class="form-control" asp-items="ViewBag.JogosId"></select>
-            </div>
-            
-       </div>
+        @*IndexAtual : @IndexAtual
+        <br />
+        Index Proximo: @IndexProximo
+        <br />
+        Index Anterior: @IndexAnterior
+        <br />
+        Ultimo Index: @UltimoIndex <br />
+        Id Atual : @Model.Id <br />
+        Id Proximo: @ViewBag.Id[IndexProximo] <br />
+        Id Anterior: @ViewBag.Id[IndexAnterior] <br /> <br />
+        Ultimo Id: @UltimoId <br />
+
+        <br />
+
+        Lista 0: @ViewBag.Id[0]<br />
+        Lista 1:@ViewBag.Id[1]<br />
+        Lista 2:@ViewBag.Id[2]<br />
+        Lista 3: @ViewBag.Id[3]<br />
+        Lista 4:@ViewBag.Id[4]<br />
+        Lista 5:@ViewBag.Id[5]<br />
+        Lista 6: @ViewBag.Id[6]<br />
+        Lista 7:@ViewBag.Id[7]<br />*@
+
+        <div class="text-center m-3">
+            @*<a class="btn btn-primary m-2" asp-route-id="@Anterior">Anterior</a>
+            <a class="btn btn-primary btn-lg"><i class="fa-solid fa-gamepad"></i></a>
+            <a class="btn btn-primary m-2" asp-route-id="@Proximo">Próximo</a>*@
+        </div>
+
+
+
+
     </div>
 
-            <div class="d-flex justify-content-center">
-                <div class="form-group m-2">
-                    <input type="submit" value="Salvar" class="btn btn-primary" />
-                </div>
+    @*<div>
+    <a class="btn btn-primary btn-lg" asp-action="Swipe" asp-route-id="@Model.Id">Voltar</a>
+    </div>*@
+
+</div>
+
+<section class="det-usuario d-flex justify-content-center align-items-center">
+
+    <div class="info-usuario d-flex justify-content-between align-items-center ">
+
+        <div class="test d-flex justify-content-between align-items-center">
+            <img class="foto-usuario" src="~/imagens/@Model.UrlImagem" width="200px" />
+            <div>
+                <p class="info-nick">@Model.UserName</p>
             </div>
-            </form>
+
+            <h1 class="info-titulo">Nome</h1>
+            <p class="info-paragrafo">@Model.Nome</p>
+
+
+            @if (Model.Discord != null)
+            {
+                <h1 class="info-titulo">Discord</h1>
+                <p class="info-paragrafo">@Model.Discord</p>
+            }
+
+            <h1 class="info-titulo">Idade</h1>
+            <p class="info-paragrafo">@Model.Idade</p>
+
+            <h1 class="info-titulo">Gênero</h1>
+            <p class="info-paragrafo">@Model.Genero</p>
+
         </div>
     </div>
 
-    <div>
-        <a class="btn btn-primary" asp-action="Home">Voltar</a>
-    </div>
-</div>
+    <div class="descrip-usuario d-flex justify-content-end align-items-center">
+        <div class="descricao m-4">
+            <h1 class="descript-titulo">Descrição</h1>
+            <p class="descript-paragrafo">@Model.Descricao</p>
+        </div>
+        <div class="des-preferencias m-4">
+            <h1 class="descript-titulo">Preferências</h1>
+            <p class="descript-paragrafo">@Model.Preferencias</p>
+        </div>
+        <div class="des-jogos m-4">
+            @if (@Model.Jogo != null)
+            {
+                <h1 class="descript-titulo-img">Jogo Favorito</h1>
+                <p class="descript-paragrafo-img"> <img src="~/imagens/@Model.Jogo.UrlImagem" width="150px" height="150px" class="rounded-3" /> </p>
+            }
 
-@section Scripts {
-    @{
-    await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-    <script type="text/javascript">
-        $(".custom-file-input").on("change", function () {
-            var fileName = $(this).val().split("\\").pop();
-            $(this).siblings(".custom-file-label").addClass("selected").html(fileName)
-        });
-    </script>
-    }
-    }
+        </div>
+    </div>
+    <div class="botao-voltar">
+        <a class=" btn btn-primary btn-lg" asp-action="Home" asp-route-id="@Model.Id">Voltar</a>
+    </div>
+    <div class="botao-editar">
+        <a class=" btn btn-light btn-lg" asp-controller="Usuarios" asp-action="Edit">Editar Perfil</a>
+    </div>
+</section>
+
+
+<section class="comentarios">
+    <div class="">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-12 col-lg-10 col-xl-8">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-start align-items-center">
+                            <img class="rounded-circle shadow-1-strong me-3"
+                                 src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(19).webp" alt="avatar" width="60"
+                                 height="60" />
+                            <div>
+                                <h6 class="fw-bold text-primary mb-1">Lily Coleman</h6>
+                                <p class="text-muted small mb-0">
+                                    Shared publicly - Jan 2020
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="mt-3 mb-4 pb-2">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip consequat.
+                        </p>
+
+                        <div class="small d-flex justify-content-start">
+                            <a href="#!" class="d-flex align-items-center me-3">
+                                <i class="far fa-thumbs-up me-2"></i>
+                                <p class="mb-0">Like</p>
+                            </a>
+                            <a href="#!" class="d-flex align-items-center me-3">
+                                <i class="far fa-comment-dots me-2"></i>
+                                <p class="mb-0">Comment</p>
+                            </a>
+                            <a href="#!" class="d-flex align-items-center me-3">
+                                <i class="fas fa-share me-2"></i>
+                                <p class="mb-0">Share</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-footer py-3 border-0" style="background-color: #f8f9fa;">
+                        <div class="d-flex flex-start w-100">
+                            <img class="rounded-circle shadow-1-strong me-3"
+                                 src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(19).webp" alt="avatar" width="40"
+                                 height="40" />
+                            <div class="form-outline w-100">
+                                <textarea class="form-control" id="textAreaExample" rows="4"
+                                          style="background: #fff;"></textarea>
+                                <label class="form-label" for="textAreaExample">Message</label>
+                            </div>
+                        </div>
+                        <div class="float-end mt-2 pt-1">
+                            <button type="button" class="btn btn-primary btn-sm">Post comment</button>
+                            <button type="button" class="btn btn-outline-primary btn-sm">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@*@if (Model.Jogo == null)
+{
+    <h4 class="text-dark">SEM JOGO SELECIONADO</h4>
+}
+else
+{
+    <h4 class="text-dark">@Model.Jogo.Nome</h4>
+}*@
+
+@*<div class="espaco"></div>*@

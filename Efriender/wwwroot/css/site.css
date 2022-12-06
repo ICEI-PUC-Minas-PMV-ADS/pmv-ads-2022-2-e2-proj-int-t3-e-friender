@@ -758,9 +758,14 @@ body {
 .botao-voltar{
     position:absolute;
     left: 50px;
-    bottom: 50px;
+    top: 100px;
 }
 
+.botao-editar {
+    position: absolute;
+    left: 150px;
+    top: 100px;
+}
 /*------------------------------BLOCO ESQUERDA---------------------------*/
 .info-usuario {
     /*border: 2px solid blue;*/
@@ -908,3 +913,10 @@ body {
 }
 
 /*------------------------------------FIM-USUARIO/SWIPE------------------------------------*/
+
+/*-----------------------------------------PERFIL-----------------------------------------*/
+.comentarios{
+    background: url('../imagens/img-layout/Back Tets-2.png') no-repeat;
+    background-position:100% 25.5%;
+    padding:30px;
+}

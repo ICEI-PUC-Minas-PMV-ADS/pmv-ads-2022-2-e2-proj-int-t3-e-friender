@@ -308,6 +308,44 @@ namespace EFriender.Controllers
 
         // GET: Usuarios/Edit/5
 
+        public async Task<IActionResult> Edit(string id)
+        {
+            ViewData ["JogosId"] = new SelectList(_context.Jogos, "Id", "Nome");
+
+        var usuarioId = _context.Usuarios.ToList();
+
+            
+
+            foreach (var item in usuarioId)
+            {
+                if(item.Nome == User.Identity.Name)
+                {
+                    id = item.Id;
+                }
+            }
+
+
+                Usuario usuarioSessao = _context.Usuarios.Where(u => u.Id == User.FindFirstValue(ClaimTypes.NameIdentifier)).Include(v => v.Jogo).FirstOrDefault();
+
+                //if (id == null || _context.Usuarios == null)
+                //{
+                //    return View("Create");
+                //}
+
+                if (usuarioSessao == null)
+                {
+                    return NotFound();
+                }
+                var urlimg = usuarioSessao.UrlImagem;
+                //var check = new SelectList(_context.Jogos, "JogosId", "Nome");
+                ViewData["JogosId"] = new SelectList(_context.Jogos, "JogosId", "Nome");
+                return View(usuarioSessao);
+                //return View(usuarioSessao);
+
+
+                return Unauthorized();
+        }
+
 
 
         //POST: Usuarios/Edit/5
@@ -353,7 +391,7 @@ namespace EFriender.Controllers
                     // -- atualizando e salvando no db
                     _context.Usuarios.Update(userToUpdate);
                     await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Home));
+                    return RedirectToAction(nameof(Perfil));
 
                 } catch (Exception ex)
                 {

@@ -138,7 +138,14 @@
     <div class="info-usuario d-flex justify-content-between align-items-center ">
         
         <div class="test d-flex justify-content-between align-items-center">
-            <img class="foto-usuario" src="~/imagens/@Model.UrlImagem" width="200px" />
+
+            @if (Model.UrlImagem == null)
+                    {
+                        <img class="rounded-circle" id="PreviewPhoto" src="~/imagens/img-layout/FotoPadrao.png" alt="Imagem Padrão" width="200px" height="200px" margin="20px" />
+                    }
+                    else{
+                        <img class="rounded-circle" id="PreviewPhoto" src="~/imagens/@Model.UrlImagem" alt="Imagem Padrão" width="200px" height="200px" margin="20px" />
+                        }
             <div> 
                 <p class="info-nick">@Model.UserName</p>
             </div>
@@ -185,8 +192,8 @@
 </section>
 
 
-<section style="background-color: #eee;">
-    <div class="container my-5 py-5">
+<section class="comentarios">
+    <div>
         <div class="row d-flex justify-content-center">
             <div class="col-md-12 col-lg-10 col-xl-8">
                 <div class="card">
@@ -246,13 +253,13 @@
     </div>
 </section>
 
-@if (Model.Jogo == null)
+@*@if (Model.Jogo == null)
 {
-    <h4 class="text-white">SEM JOGO SELECIONADO</h4>
+    <h4 class="text-dark">SEM JOGO SELECIONADO</h4>
 }
 else
 {
-    <h4 class="text-white">@Model.Jogo.Nome</h4>
-}
+    <h4 class="text-dark">@Model.Jogo.Nome</h4>
+}*@
 
         @*<div class="espaco"></div>*@
