@@ -14,13 +14,29 @@
     
 </style>
 
+
+
 <div class="usuario-swipe flex-column">
 
+
+
     <div class="row justify-content-center">
+
+
+
         <div class="col my-auto mx-auto align-items-center d-flex justify-content-end">
+            <div class="col col my-auto mx-auto align-items-center d-flex justify-content-end">
+
+                <a class="btn btn-primary m-2" asp-action="Passar" asp-route-usuarioVistoID="@Model.Id" property="@Model.Id">Não é meu duo!</a>
+
+            </div>
+
         </div>
+
+        
         
         <div class="box-info background-grey mt-4 w-20 mx-auto col-sm text-center align-content-center justify-content-center center-block">
+
             <div class="gambiarra  rounded-circle overflow-hidden">
                 <img class="overflow-hidden" src="~/imagens/@Model.UrlImagem" width="300px" height="300px" />
             </div>
@@ -43,14 +59,19 @@
 }
 
 
-
+           
                 
             <div class="botao-swipe justify-content-center d-grid gap-2"><a class="btn btn-primary mt-2 mb-2" asp-action="Details" asp-route-id="@Model.Id">Ver Perfil Completo</a></div>
+
+
+
             
 
         </div>
 
-        <div class="col col my-auto mx-auto align-items-center d-flex justify-content-start"><a class="btn btn-primary m-2" asp-action="Passar" asp-route-usuarioVistoID="@Model.Id" property="@Model.Id">Não é meu duo!</a></div>
+        <div class="col col my-auto mx-auto align-items-center d-flex justify-content-start">
+            <a class="btn btn-primary btn-lg" asp-action="Match" asp-route-usuarioVistoID="@Model.Id" property="@Model.Id"><i class="fa-solid fa-thumbs-up"></i></a>
+            </div>
         
 
        
@@ -80,12 +101,6 @@
         Lista 6: @ViewBag.Id[6]<br />
         Lista 7:@ViewBag.Id[7]<br />*@
 
-        <div class="text-center m-3">
-            
-            
-            
-            <a class="btn btn-primary btn-lg" asp-action="Match" asp-route-usuarioVistoID="@Model.Id" property="@Model.Id"><i class="fa-solid fa-thumbs-up"></i></a>
-        </div>
 
     </div>
     <div>
