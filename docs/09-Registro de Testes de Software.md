@@ -70,8 +70,13 @@ https://user-images.githubusercontent.com/63081926/204156217-e4b16c6c-376e-484a-
 | Objetivo do Teste 	| Verificar se o usuário é capaz de dar like em outro usuário que tenha aparecido na tela de forma aleatória. |
 | Passos 	| - Realizar a autenticação na aplicação <br> - Dar like em usuario que apareça na tela, clicando no icone de "checkmark", localizado a direita da imagem do usuario que será curtido. |
 |Critério de Êxito | - Será registrado o like no sistema e a imagem de outro usuario para avaliação irá substituir a imagem do usuário que levou o like. |
-|Resultado| - Teste não pôde ser realizado, pois a funcionalidade ainda não foi implementada.|
-|Registro| - Virá em atualizações futuras|
+|Resultado| - Teste executado com êxito. |
+|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link:https://user-images.githubusercontent.com/103212087/206325425-9ae6716b-10aa-4484-9a1f-4704a10dfdba.mp4|
+|  	|  	|
+
+https://user-images.githubusercontent.com/103212087/206325303-619eb93e-55eb-4f00-8e3c-97931d7d8f4a.mp4
+
+
 |  	|  	|
 
 | **Caso de Teste** 	| **CT-04B – Pular um usuario** 	|
