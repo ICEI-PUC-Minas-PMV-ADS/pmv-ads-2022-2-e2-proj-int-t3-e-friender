@@ -123,15 +123,19 @@ https://user-images.githubusercontent.com/103212087/206325926-a66788cb-5220-4a2e
 |Registro| - Virá em atualizações futuras|
 |  	|  	|
 
-| **Caso de Teste** 	| **CT-07 – Comunicar por chat com outro usuario que tenha dado Match** 	|
+| **Caso de Teste** 	| **CT-07 – Mandar uma mensagem em um perfil dentro da aplicação** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-07 - Usuários que deram match devem conseguir se comunicarem por chat. |
-| Objetivo do Teste 	| Verificar se o sistema de Chat para troca de mensagem com outros usuários com quem tenha dado Match funciona corretamente. |
-| Passos 	| - Realizar a autenticação na aplicação com uma conta de usuário "a" <br> - Clicar em "Conversar" na barra de navegação superior. <br> - Clicar em um usuário com quem tenha ocorrido match para abrir a janela de chat. <br> - Enviar mensagem para o usuário 'match'." |
-|Critério de Êxito | - A mensagem será enviado com sucesso para o usuário "match". |
-|Resultado| - Teste não pôde ser realizado, pois a funcionalidade ainda não foi implementada.|
-|Registro| - Virá em atualizações futuras|
+|	Requisito Associado 	| RF-07 - Usuários devem conseguir se comunicarem por mensagens nos perfis. |
+| Objetivo do Teste 	| Verificar se o sistema de comentários para troca de mensagem com outros usuários com quem tenha dado Match funciona corretamente. |
+| Passos 	| - Realizar a autenticação na aplicação com uma conta de usuário "a" <br> - Clicar em "Post Comment" na barra de navegação inferior. <br>
+|Critério de Êxito | - A mensagem será enviado com sucesso no perfil do usuário. |
+|Resultado| - Teste realizado, porém com a função apenas visual. A funcionalidade virá em atualizações futuras.|
+|Registro| - Vídeo pode ser visto a baixo ou acesso pelo link: https://user-images.githubusercontent.com/103212087/206326681-468ec12f-66a4-4a04-acb0-ceffee951cd7.mp4|
 |  	|  	|
+
+https://user-images.githubusercontent.com/103212087/206326713-6a65083a-83e8-4e42-99da-b9a47fac2635.mp4
+
+
 
 | **Caso de Teste** 	| **CT-08 – Avaliar o Perfil de outro usuario com quem tenha tido contato** 	|
 |:---:	|:---:	|
