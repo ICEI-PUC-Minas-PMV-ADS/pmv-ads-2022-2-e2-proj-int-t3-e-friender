@@ -26,8 +26,8 @@ Os testes foram feitos de forma remota, o que impediu o registro de imagens do t
 | **TAREFA 4 - VER PERFIL DE USUÁRIOS** | Fácil acesso aos outros usuários.  | Pouca interatividade com outros usuários. | Tarefa realizada com sucesso. | :I |         
 | **TAREFA 5 - DISPOSITIVO MÓVEIS**    | Funcionando perfeitamente nos dispositivos mobile.    | O layout perde a qualidade.   |     Tarefa realizada com sucesso |  :) |         
 | **TAREFA 6 - AVALIAÇÃO DE LAYOUT**    | Layout e design bem ambientados para o propósito da aplicação  | Algumas páginas não seguem o mesmo padrão de design.  | Tarefa realizada com sucesso. |   :D |          
-| **TAREFA 7 - EXECUTAR UM MATCH COM OUTRO USUÁRIO**  | Funcionalidade virá em atualizações futuras. | Funcionalidade virá em atualizações futuras.  |   Tarefa não realizada, pois a funcionalidade ainda não foi implementada. |    :X |          
-| **TAREFA 8 - ENTRAR EM CONTATO COM OUTRO USUÁRIO**    | Funcionalidade virá em atualizações futuras.  | Funcionalidade virá em atualizações futuras.  |      Tarefa não realizada, pois a funcionalidade ainda não foi implementada. |       :X |          
+| **TAREFA 7 - EXECUTAR UM MATCH COM OUTRO USUÁRIO**  | O match está ocorrendo conforme o previsto. | A aparência está muito simples, faltam recursos.  |   Tarefa realizada com sucesso. |    :| |          
+| **TAREFA 8 - ENTRAR EM CONTATO COM OUTRO USUÁRIO**    | Está visivel e clara a forma de comunicação entre os usuários, porém não funcional.  | O comentário não pode ser feito no perfil do usuário.  |     Tarefa não realizada, pois a funcionalidade foi implementada apenas de forma visual.     |       :X |          
 |**OBSERVAÇÕES GERAIS**   | Apresentou pouca dificuldade para interagir com o sistema. Encontrou de forma intuitiva os botões para executar as tarefas.  |     |      | :D  |  
        
 <br />
@@ -43,8 +43,8 @@ Os testes foram feitos de forma remota, o que impediu o registro de imagens do t
 | **TAREFA 4 - VER PERFIL DE USUÁRIOS** | Encontrou os outros usuários de forma intuitiva.  | Incapaz de trazer um ponto negativo.| Tarefa realizada com sucesso. |  :) |         
 | **TAREFA 5 - DISPOSITIVO MÓVEIS**    | Aplicação funcionando no dispositivo mobile.  | Algumas páginas perderam a formatação mas estão legíveis. | Tarefa realizada com sucesso. |  :) |         
 | **TAREFA 6 - AVALIAÇÃO DE LAYOUT**    | Layout muito bonito e chamativo.  | A página de perfil dos usuários poderia ser mais bem trabalhada  |  Tarefa realizada com sucesso. |   :) |          
-| **TAREFA 7 - EXECUTAR UM MATCH COM OUTRO USUÁRIO**  | Funcionalidade virá em atualizações futuras.   | Funcionalidade virá em atualizações futuras.     |   Tarefa não realizada, pois a funcionalidade ainda não foi implementada. |          :X |          
-| **TAREFA 8 - ENTRAR EM CONTATO COM OUTRO USUÁRIO**    | Funcionalidade virá em atualizações futuras.   | Funcionalidade virá em atualizações futuras.   |  Tarefa não realizada, pois a funcionalidade ainda não foi implementada. |  :X |          
+| **TAREFA 7 - EXECUTAR UM MATCH COM OUTRO USUÁRIO**  | Os usuários que trocaram curtidas tem o match com um pop-up na tela.   | Pop-up muito simples e não possui uma opção para conversar diretamente com o usuário após o match.     |   Tarefa realizada com sucesso. |          :|  |          
+| **TAREFA 8 - ENTRAR EM CONTATO COM OUTRO USUÁRIO**    | A forma como será feita a comunicação é clara e eficaz.   |Ainda é impossível de comentar, pois a funcionalidade não foi implementada.   |  Tarefa não realizada, pois a funcionalidade foi implementada apenas de forma visual. |  :X |          
 |**OBSERVAÇÕES GERAIS**   | Apresentou um pouco de dificuldade para criar o usuário, devido ao erro com o nome cadastro, porém teve boa interação com o restante da aplicação. |     |     | :) |   
 
 <br />
@@ -60,8 +60,8 @@ Os testes foram feitos de forma remota, o que impediu o registro de imagens do t
 | **TAREFA 4 - VER PERFIL DE USUÁRIOS** | Gostou da informação principal do perfil dos usuários ser o jogo que eles jogam.    | Acha que poderiam ter mais informações no perfil.   |  Tarefa realizada com sucesso. |  :) |         
 | **TAREFA 5 - DISPOSITIVO MÓVEIS**    | Telas adaptadas e legíveis mesmo em tamanhos pequenos.    | Não encontrou pontos negativos. |  Tarefa realizada com sucesso. |   :D |         
 | **TAREFA 6 - AVALIAÇÃO DE LAYOUT**    | Layout simples porém chamativo e passa credibilidade da qualidade da aplicação.   | Algumas páginas estão fora do padrão da página home.   | Tarefa realizada com sucesso. |  :) |          
-| **TAREFA 7 - EXECUTAR UM MATCH COM OUTRO USUÁRIO**  | Funcionalidade virá em atualizações futuras.  | Funcionalidade virá em atualizações futuras.     |  Tarefa não realizada, pois a funcionalidade ainda não foi implementada. |  :X |          
-| **TAREFA 8 - ENTRAR EM CONTATO COM OUTRO USUÁRIO**    | Funcionalidade virá em atualizações futuras.     | Funcionalidade virá em atualizações futuras.   |  Tarefa não realizada, pois a funcionalidade ainda não foi implementada. |  :X |          
+| **TAREFA 7 - EXECUTAR UM MATCH COM OUTRO USUÁRIO**  | Match funcionou perfeitamente.  | Não é possível visualizar o perfil com quem foi dado o match.     |  Tarefa realizada com sucesso. |  :| |          
+| **TAREFA 8 - ENTRAR EM CONTATO COM OUTRO USUÁRIO**    | Uma caixa de comentários no perfil é uma forma mais eficaz para se estabelecer um primeiro contato.     | Funcionalidade implementada apenas de forma visual.   |  Tarefa não realizada, pois a funcionalidade foi implementada apenas de forma visual. |  :X |          
 |**OBSERVAÇÕES GERAIS**   | Teve facilidade com  o cadastro do perfil, o que facilitou sua interação com o sistema. Acha que faltam informações nos perfis para melhorar o objetivo da aplicação.  |      |     | :D  | 
 
 
