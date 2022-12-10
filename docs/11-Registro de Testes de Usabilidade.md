@@ -66,4 +66,5 @@ Os testes foram feitos de forma remota, o que impediu o registro de imagens do t
 
 
 
+# O relatório final dos testes de Software e de Usabilidade encontra-se disponível através do link: [Relatório dos Testes de Software e Usabilidade.docx](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-2-e2-proj-int-t3-e-friender/files/10198962/Relatorio.dos.Testes.de.Software.e.Usabilidade.docx)
 
