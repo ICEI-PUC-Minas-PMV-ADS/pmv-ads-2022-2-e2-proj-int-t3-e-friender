@@ -234,7 +234,7 @@ https://user-images.githubusercontent.com/63081926/204156575-caa1297b-e245-49bd-
 <br />
 <br />
 
-| **Caso de Teste** 	| **CT-13 – Compatibilidade do sistema com os principais navegadores do mercado** 	|
+| **Caso de Teste** 	| **CT-13 – Sistema Funcional Durante o Dia Todo** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RNF-04 - O sistema deve funcionar 24h por dia, todos os dias da semana. |
 | Objetivo do Teste 	| Verificar a disponibilidade do sistema, que deve ser de 24h durante todos os dias da semana. |
