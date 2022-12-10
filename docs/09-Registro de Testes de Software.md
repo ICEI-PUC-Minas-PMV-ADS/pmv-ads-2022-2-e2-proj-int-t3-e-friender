@@ -167,7 +167,7 @@ https://user-images.githubusercontent.com/63081926/204156312-1074ed73-59d1-4d39-
 
 ### Requisitos não-funcionais:
 
-| **Caso de Teste** 	| **CT-10 – Visualizar o Perfil de outros usuarios** 	|
+| **Caso de Teste** 	| **CT-10 – Acesso público do sistema na Internet** 	|
 |:---:	|:---:	|
 |	Requisito Associado 	| RNF-01 - O sistema deve estar acessível publicamente na internet. |
 | Objetivo do Teste 	| Verificar se a aplicação está disponivel para ser acessda na internet. |
