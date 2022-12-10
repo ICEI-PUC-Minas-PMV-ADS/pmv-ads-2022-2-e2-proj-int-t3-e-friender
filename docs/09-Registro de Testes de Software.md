@@ -267,3 +267,6 @@ Usando o *lighthouse* conseguimos obter feedback externo em como atuar nas melho
 atuação, acessibilidade, melhores praticas, SEO  e PWA, para assim continuarmos melhor atendendo as necessidades dos usuários segue a baixo o vídeo.
 
 https://user-images.githubusercontent.com/100388026/200437874-0ffce784-4919-45fa-98cc-fba5506ebe7f.mp4
+
+**O relatório final dos testes de Software e de Usabilidade encontra-se disponível através do link:** [Relatório dos Testes de Software e Usabilidade.docx](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-2-e2-proj-int-t3-e-friender/files/10198962/Relatorio.dos.Testes.de.Software.e.Usabilidade.docx)
+
